@@ -34,7 +34,7 @@ function matches(r,s){return !invalid(s)&&(s.use==="All"||r.use===s.use)&&(s.age
 function preset(name){
  state={A:base(),B:base()};activePreset=name;query="";exclude=false;$("#search").value="";$("#exclude").checked=false;
  if(name==="primary"){Object.assign(state.A,{use:"Intentional",age:"Primary"});Object.assign(state.B,{use:"Passive",age:"Primary"})}
- if(name==="pisa"){Object.assign(state.A,{use:"Intentional",age:"Adolescent",metric:"PISA points"});Object.assign(state.B,{age:"Adolescent",metric:"PISA points",use:"Mixed"})}
+ if(name==="pisa"){Object.assign(state.A,{age:"Adolescent",metric:"PISA points"});Object.assign(state.B,{age:"Adolescent",metric:"PISA b",use:"Perception"})}
  if(name==="umbrella"){Object.assign(state.A,{use:"Intentional",metric:"r",umbrella:true});Object.assign(state.B,{metric:"r",umbrella:true,use:"Mixed"})}
  if(name==="all"){state.A.use="Intentional"}
  ["A","B"].forEach(buildPanel);updatePresets();render();
@@ -42,7 +42,7 @@ function preset(name){
 function updatePresets(){document.querySelectorAll("[data-preset]").forEach(b=>{b.classList.toggle("active",b.dataset.preset===activePreset);b.setAttribute("aria-pressed",String(b.dataset.preset===activePreset))})}
 function drawPanel(id,rows){
  const s=state[id], color=id==="A"?"#176657":"#9b4c23";
- $(`#${id}-count`).textContent=`${rows.length} estimates`;
+ $(`#${id}-count`).textContent=`${rows.length} ${rows.length===1?"estimate":"estimates"}`;
  $(`#${id}-hint`).innerHTML=invalid(s)?`<span class="error">Minimum must be less than or equal to maximum.</span>`:s.metric==="All"?"Select one scale to enable numeric bounds. Mixed-age studies are not primary-only evidence.":`${esc(familyLabel[s.metric])}. Bounds apply to point estimates, not confidence limits.${s.umbrella?" Umbrella review only.":""}`;
  if(!rows.length){$(`#${id}-plot`).innerHTML=`<div class="empty"><strong>${invalid(s)?"Check the effect-size range":"No matching estimates"}</strong>${invalid(s)?"Correct the bounds to restore this panel.":"Try another age, outcome or scale. Missing evidence is not a zero effect."}<br><button data-clear="${id}">Clear panel ${id} filters</button></div>`;return}
  let html=`<div class="plotheading"><strong>Effect estimates</strong><span>Point + 95% CI where available</span></div>`;

@@ -2,6 +2,8 @@
 
 A source-linked research dashboard for comparing intentional educational technology use, passive viewing, and broader screen exposure. It brings together primary-school academic outcomes, umbrella-review findings, and observational PISA analyses.
 
+**Open the dashboard:** [Screen Use & Academic Outcomes](https://bgraham14072.github.io/screen-use-academic-outcomes/)
+
 ## Dashboard
 
 - Independent comparison panels with filters for use category, intervention or exposure, age, outcome, effect-size scale, and numeric bounds.
@@ -44,9 +46,13 @@ QA.md              Acceptance criteria and verification notes
 
 ## Deployment
 
-Deploy the contents of `site/` to a static web host. Use `index.html` as the entry point; no build command is needed.
+GitHub Pages publishes the contents of `site/` through `.github/workflows/pages.yml`. The workflow checks JavaScript syntax, uploads only the static dashboard folder, and deploys it to GitHub Pages.
 
-The existing [Perplexity dashboard preview](https://www.perplexity.ai/computer/a/screen-use-academic-outcomes-GASZyt2MRHGhImXO_z3DMQ) is separate from this repository. Pushing a commit here does not automatically update that preview or enable GitHub Pages.
+Changes to `site/` or the publishing workflow on the `master` branch automatically trigger deployment. You can also run **Deploy dashboard to GitHub Pages** manually from the repository's **Actions** tab. No build command, backend, database, or deployment secret is required.
+
+Share the [GitHub Pages dashboard](https://bgraham14072.github.io/screen-use-academic-outcomes/) with people who want to use the tool. Share the [repository](https://github.com/bgraham14072/screen-use-academic-outcomes) with people who want to inspect the source. Both are public.
+
+The existing [Perplexity dashboard preview](https://www.perplexity.ai/computer/a/screen-use-academic-outcomes-GASZyt2MRHGhImXO_z3DMQ) is separate. GitHub commits update GitHub Pages when the workflow succeeds, but do not automatically update that preview.
 
 ## Research safeguards
 

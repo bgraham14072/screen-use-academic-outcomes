@@ -100,11 +100,13 @@ $("#search").addEventListener("input",e=>{query=e.target.value.trim().toLowerCas
 $("#exclude").addEventListener("change",e=>{exclude=e.target.checked;render()});
 $("#reset").addEventListener("click",()=>preset("primary"));
 function setTab(which){
- $("#explorer").hidden=which!=="explorer";$("#methods").hidden=which!=="methods";
- ["explorer","methods"].forEach(t=>{const b=$(`#tab-${t}`);b.classList.toggle("selected",t===which);b.setAttribute("aria-pressed",String(t===which))});
+ ["explorer","practice","reflection","methods"].forEach(t=>{
+   $(`#${t}`).hidden=t!==which;
+   const b=$(`#tab-${t}`);b.classList.toggle("selected",t===which);b.setAttribute("aria-pressed",String(t===which));
+ });
 }
-$("#tab-explorer").addEventListener("click",()=>setTab("explorer"));$("#tab-methods").addEventListener("click",()=>setTab("methods"));
-$("#inventory").innerHTML=`<div><strong>${records.length}</strong><span>estimates</span></div><div><strong>${Object.keys(sources).length}</strong><span>source groups</span></div><div><strong>3</strong><span>core subjects</span></div>`;
+["explorer","practice","reflection","methods"].forEach(t=>$(`#tab-${t}`).addEventListener("click",()=>setTab(t)));
+$("#inventory").innerHTML=`<div><strong>${records.length}</strong><span>estimates</span></div><div><strong>${Object.keys(sources).length}</strong><span>estimate sources</span></div><div><strong>3</strong><span>core subjects</span></div>`;
 $("#methods").innerHTML=`<div class="methods-top"><div class="eyebrow">READING THE EVIDENCE</div><h2>A comparison tool, not a causal leaderboard.</h2><p>This is a purposive, source-checked collection of reviews and PISA analyses accessed on 16 November 2026, not an exhaustive systematic review. It emphasizes primary-school learning, adolescent assessment, and the difference between educational purpose and screen exposure. Values are transcribed from the linked sources; missing values stay missing.</p></div>
  <div class="method-grid">
  <div><h3>What “intentional” means here</h3><p>An educational intervention, a stated learning purpose, or adult-supported content. These are dashboard classifications, not standardized research constructs. Educational viewing can be intentional without being cognitively active. Recreational gaming, leisure use and distraction are not automatically labeled passive. ICT autonomy is a perception, kept separate from actual use.</p><p>“Primary / childhood” includes primary-school reviews and the 4–11.9-year television subgroup. K–12, youth-wide and age-unspecified estimates remain “Mixed ages”; a primary filter does not silently include them.</p></div>

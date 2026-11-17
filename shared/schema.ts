@@ -7,3 +7,16 @@ export type Evidence = {
   quality: string; qualityNote: string; note: string; status: string;
   observed_at: string;
 };
+
+// Narrative interpretation is deliberately separate from quantitative Evidence.
+export type PracticeSource = {
+  id: string; label: string; title: string; url: string; type: string;
+  scope: string; finding: string; limits: string; accessed: string;
+};
+export type PracticeCase = {
+  id: string; subject: string; title: string; age: string;
+  research: { text: string; source: string }[];
+  caveat: string; goal: string; strategy: string; contribution: string;
+  teacher: string; alternative: string; protect: string; observe: string;
+};
+// Reflection is unscored and held only in the current page's form controls.

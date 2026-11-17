@@ -12,8 +12,12 @@ A source-linked research dashboard for comparing intentional educational technol
 - Source-detail dialogs with original report links and interpretation limits.
 - CSV export of the filtered findings, including citations and methodological notes.
 - Responsive desktop and mobile layouts.
+- Research to Classroom Practice: four learning-focus views distinguish source-reported findings from illustrative learning goals, strategies, technology contributions, teacher roles and non-digital alternatives.
+- Added Value and Opportunity Cost: an unscored reflection worksheet with downloadable Markdown notes, a learning-evidence prompt and explicit attention to reading, writing, discussion, teacher interaction and hands-on work.
 
 The current snapshot contains 29 estimates from nine source groups, accessed on 16 November 2026. This is a curated collection, not an exhaustive systematic review.
+
+The practice update, checked on 17 November 2026, adds five narrative research sources without changing the numerical register: Furenes et al. (2021), Wörner et al. (2022), EEF/OpenDevEd (2025), Forsström et al./OECD (2025), and Putica & Stanišić (2026). Full source links, scope and limitations appear in both the practice view and Methods & sources. They are not additional independent quantitative estimates or a new pooled analysis. Suggested classroom applications are not tested lesson packages.
 
 ## Run locally
 
@@ -37,6 +41,7 @@ site/
   style.css        Responsive styling
   app.js           Filters, comparison plots, sorting, details, and export
   data.js          Research records and source metadata
+  practice.js      Narrative research, classroom applications and reflection tool
 shared/
   schema.ts        Documentation of the evidence-record shape
 QA.md              Acceptance criteria and verification notes
@@ -74,6 +79,9 @@ Each record includes original source links and limitations in the dashboard and 
 ```sh
 node --check site/app.js
 node --check site/data.js
+node --check site/practice.js
 ```
 
 Filters are held in memory and reset on reload. The app does not store student records or require user sign-in.
+
+Reflection notes also remain only in the open page and are not submitted to a server. Switching tabs preserves notes; reloading or closing clears them. Users can download notes before leaving and should not enter student names or confidential information. Clearing notes requires an in-page confirmation. There is no localStorage, scoring algorithm or generated effectiveness verdict.

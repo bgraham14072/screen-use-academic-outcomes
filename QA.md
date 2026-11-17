@@ -27,3 +27,31 @@
 - No page-level horizontal overflow or JavaScript errors observed.
 - Table intentionally scrolls horizontally on narrow screens; panel comparisons stack.
 - Primary science evidence limitations and absence of a numeric PISA reading contrast are disclosed.
+
+## Classroom-practice update: 17 November 2026
+
+- All original presets rechecked: Primary 10, PISA 5, Umbrella 7, All 29.
+- Both panels' filter controls, numeric bounds, invalid-range recovery, search, seven sorts, quality exclusion, plot expansion, detail dialogs and CSV rechecked using browser inputs.
+- Original source link opened its destination; one publisher presented a verification wall. External publisher access is not guaranteed by dashboard availability.
+- All four practice focuses render the five requested application fields and separate research/application provenance labels.
+- Math practice opens its existing Dorris estimate; new narrative sources do not alter the 29-row register or CSV.
+- Supporting research includes six entries (one existing and five additional); Methods contains the five additional entries.
+- Source links and EEF navigation activated in browser. Sources are summaries, with scope, missing sample/context information and appraisal limitations explicit.
+- Reflection focus handoff, nine note fields, tab persistence, focus changes without note loss, Markdown download and blank-template download passed.
+- Multiline notes, angle brackets, quotation marks and a formula-like string exported as text; leading/trailing whitespace is trimmed.
+- Clear cancellation preserves notes; confirmation clears notes and focus. Reload clears notes as disclosed.
+- Desktop 1440×900, short desktop 1440×520, mobile 375×812 and responsive roundtrip checked.
+- Mobile opening views, research/application separation, all five application fields, preservation prompts and filled reflection controls visually inspected.
+- No page-level horizontal overflow or browser JavaScript errors observed.
+- New-label contrast checked: muted text on white 6.38:1, green on pale green 6.26:1, white button text on green 6.83:1.
+- Keyboard traversal from download to clear and focus movement into reflection checked.
+
+## Research handling for this update
+
+- Furenes et al. (2021): publisher article and abstract used for book-design, adult-support and outcome distinctions.
+- EEF/OpenDevEd (2025): explicitly labeled commissioned-review summary; no full-review quality appraisal claimed.
+- Forsström et al./OECD (2025): publisher abstract used for framing; not an independent quantitative estimate.
+- Wörner et al. (2022): original PDF confirms title, 42 studies, combination findings and lack of a superior sequence. Mixed-level scope remains explicit.
+- Putica & Stanišić (2026): full text checked for 43 studies, elementary/secondary/university distribution, conceptual outcome, high heterogeneity, missing full texts and authors' JBI appraisal.
+- Dorris et al. (2024): existing register retained, with its sensitivity limitation and joint literacy/numeracy outcome made visible in the math application.
+- No universal displacement penalty, causal mechanism score, primary-only science effect or writing-specific effect was invented.

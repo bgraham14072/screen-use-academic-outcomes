@@ -1,0 +1,35 @@
+# Dashboard flows and practice additions
+
+## Existing evidence explorer
+- Open the public dashboard. Primary school starts with 10 rows.
+- Choose PISA context, Umbrella findings, All evidence, and Primary school; each changes the comparison and register. All evidence shows 29 rows.
+- Change each A/B use, age, outcome, intervention, and scale filter. The opposite panel stays independent.
+- Set numeric bounds after choosing one scale. Reversed bounds show an error; clear panel recovers.
+- Search for a country and a nonexistent term; reset restores the default.
+- Hide reporting-concern estimates in All evidence; count changes from 29 to 28 and back.
+- Sort all seven columns in both directions. Effect sorting stays within metric and design.
+- Expand and collapse a plot group. Open plot and table details, follow an original source, close by button and Escape.
+- Export CSV; downloaded rows match the current register and include sources and caveats.
+- Open Methods & sources and return; evidence filters remain unchanged.
+
+## Research to Classroom Practice
+- Open the new tab; selected findings show reported research separately from illustrative applications.
+- Each practice entry includes learning goal, instructional strategy, possible technology contribution, teacher role, and a non-digital alternative.
+- Select reading, math, science and cross-subject entries. Check contextual limits and original source links.
+- Supporting research has source dates, scope, comparison/limitations and no fabricated quality rating.
+- New narrative sources are not added to numerical estimate counts or CSV as if they were independent estimates.
+- Open the reflection check from a practice entry. Its selected context appears, without overwriting notes.
+
+## Added Value and Opportunity Cost
+- Open the new check; all five requested questions are present.
+- Enter notes about the proposed use, strengthened activity, alternative activity, preserved experiences, and learning evidence.
+- Switch tabs and return; notes persist until reload, with a clear in-memory-only notice.
+- Download reflection notes; verify text, context and source links. No score or recommendation is generated.
+- Clear notes with an in-page confirmation; cancel preserves notes, confirm clears them.
+- Off-happy paths: blank download works as a template; long text and punctuation export intact.
+
+## Visual and deployment checks
+- Inspect all views at desktop and 375px, plus a short desktop and a desktop-mobile-desktop transition.
+- No page-level horizontal overflow. Table horizontal scrolling stays contained.
+- Check console errors, keyboard focus and active navigation states.
+- After deployment, open fresh contexts for GitHub Pages and the existing preview. Test new tabs, reflection, source links and one evidence regression flow.

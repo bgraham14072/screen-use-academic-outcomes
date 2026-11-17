@@ -55,3 +55,12 @@
 - Putica & Stanišić (2026): full text checked for 43 studies, elementary/secondary/university distribution, conceptual outcome, high heterogeneity, missing full texts and authors' JBI appraisal.
 - Dorris et al. (2024): existing register retained, with its sensitivity limitation and joint literacy/numeracy outcome made visible in the math application.
 - No universal displacement penalty, causal mechanism score, primary-only science effect or writing-specific effect was invented.
+
+## Hosted verification for the practice update
+
+- GitHub Pages deployment of `e2ff19c` completed successfully in Actions run `44080810343`.
+- Fresh signed-out browser context returned HTTP 200 from the existing public dashboard URL and displayed both new views.
+- All four practice selections, five application fields, focus handoff, note persistence across tabs, downloaded Markdown content, clear cancellation/confirmation and five additional source entries passed on GitHub Pages.
+- Existing All evidence count and country search passed on the published site; 375px checks found no page-level horizontal overflow.
+- The same existing Perplexity preview was updated in place. New practice views, reflection download, source navigation, Methods additions and original evidence count passed in a fresh preview context.
+- No JavaScript errors observed in either hosted context. Source links reached publisher URLs; some publishers requested browser verification. The dashboard cannot guarantee access through publisher restrictions or workplace network policies.

@@ -24,7 +24,8 @@
 - New views inspected visually on desktop/mobile. Original-source link clicked and resulting destination confirmed.
 - Final PDF has two pages; qpdf reports no syntax/stream errors; Lato regular/bold are embedded. Both pages visually inspected for clipping and readability. QR decoded to the public GitHub Pages URL.
 - Source access restrictions, numerical discrepancies, synthesis limits and the two-sided policy balance review are documented in site/evidence-audit.md.
-- Live hosting checks follow deployment of the same site folder to the existing preview and GitHub Pages.
+- GitHub Pages deployment succeeded. Fresh preview and GitHub contexts passed default policy view, new-view navigation, all-evidence count and actual narrative/detail source-link clicks.
+- All eighteen GitHub assets match local bytes; sixteen non-HTML preview assets match as well. Preview HTML includes host-injected editor and email-protection scripts. Rendered new-view/Methods text and complete brief text match; decoded email destination matches.
 
 ## Earlier baseline verification
 

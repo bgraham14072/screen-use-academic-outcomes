@@ -126,4 +126,9 @@ No included source was confirmed to be a dead 404 during the audit. A restrictio
 
 ## Release checks
 
-Functional, visual, print, accessibility and live-asset checks are recorded in the repository’s QA report. Final deployment verification is completed after the same site folder is uploaded to the existing preview and GitHub Pages; policymakers should receive only the public GitHub Pages URL.
+Functional, visual, print, accessibility and live-asset checks are recorded in the repository’s QA report. The GitHub Pages deployment succeeded, and fresh browser contexts confirmed the default policy view, new views, the 33-row register and working source-link navigation.
+
+- **Accessibility and layout:** axe-core reported no WCAG 2 A/AA or 2.1 AA violations in the eleven desktop views or mobile policy view. Keyboard skip-to-main and Escape dismissal passed. Desktop, 375px mobile, short-viewport and 720px reflow checks found no page-level overflow or captured JavaScript errors. Automated checks are not a complete accessibility certification.
+- **Print:** The final PDF contains two pages, embedded Lato fonts and no qpdf syntax/stream errors. Both rendered pages were inspected. The QR decodes directly to the public GitHub Pages address, with no redirect service.
+- **Deployment parity:** All eighteen GitHub assets matched the local release bytes. The sixteen non-HTML preview assets matched too, including the PDF, original data, scripts, styles, ledger and audit. The preview host injects an editor script into HTML and applies email protection to the brief; therefore the served HTML is not byte-identical. Rendered policy, wellbeing, analog, emerging, About, Methods and complete brief text matched, and the preview email link decoded to the same mailto address.
+- **Distribution:** Policymakers should receive only https://bgraham14072.github.io/screen-use-academic-outcomes/. Public availability and these tests do not guarantee access through every district network.

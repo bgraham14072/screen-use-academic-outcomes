@@ -33,3 +33,21 @@
 - No page-level horizontal overflow. Table horizontal scrolling stays contained.
 - Check console errors, keyboard focus and active navigation states.
 - After deployment, open fresh contexts for GitHub Pages and the existing preview. Test new tabs, reflection, source links and one evidence regression flow.
+
+## Instructional added-value update
+- Open Instructional Added Value. Distinguish technology as the objective, a possible support for another objective, and convenience without demonstrated benefit. No legal classification or numerical rating.
+- Enter goal, learners, feature, adult role, equivalent non-digital instruction, protected experiences, local evidence and review plan. Choose a research source and descriptive technology role.
+- Build an explanation. User claims, source-reported evidence, limitations and unresolved questions remain separate. Missing fields are explicitly marked, not invented.
+- Edit a field after building; the old draft is marked outdated and cannot be downloaded until rebuilt.
+- Download Markdown with entered text, research URLs and legal caveat. Cancel clearing preserves notes; confirm clears both draft and inputs.
+- Switch tabs; notes persist. Reload clears notes as disclosed.
+- Read the illustrative example; it is not labeled as a tested lesson.
+
+## Balanced early-reading collection
+- Open Early Reading Evidence: four peer-reviewed publications, two syntheses and two primary studies, including benefit and caution findings.
+- Filter by outcome and study design; zero matches show a reset action. Reset restores four records. No total participant count across potentially overlapping studies.
+- Inspect population, sample, adult support, comparison, feature, findings, limitations, review depth and source URL for each publication.
+- Keep word reading, comprehension, vocabulary and interaction outcomes distinct; adult mediation is not merely adult presence.
+- Select a study for the explanation panel; only the reference changes, existing notes remain. A draft must be rebuilt after changing reference.
+- Original numerical register stays at 29 estimates and nine sources; narrative references become eight additions, with no fabricated quality grades.
+- Test blank template, long text/HTML-like input, filter empty state, source navigation and Markdown contents on localhost and hosted destinations.

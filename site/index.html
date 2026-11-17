@@ -6,8 +6,8 @@
   <title>Screen use & academic outcomes | Evidence explorer</title>
   <link rel="preconnect" href="https://api.fontshare.com">
   <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
-  <link href="style.css" rel="stylesheet">
-  <script src="data.js" defer></script><script src="app.js" defer></script><script src="practice.js" defer></script>
+  <link href="style.css?v=20261117-reading" rel="stylesheet">
+  <script src="data.js" defer></script><script src="app.js?v=20261117-reading" defer></script><script src="practice.js?v=20261117-reading" defer></script><script src="reading.js?v=20261117-reading" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to evidence</a>
@@ -20,6 +20,8 @@
   <nav class="tabs" aria-label="Dashboard views">
     <button data-testid="tab-explorer" id="tab-explorer" class="selected" aria-pressed="true">Evidence explorer</button>
     <button data-testid="tab-practice" id="tab-practice" aria-pressed="false">Research to Classroom Practice</button>
+    <button data-testid="tab-added" id="tab-added" aria-pressed="false">Instructional Added Value</button>
+    <button data-testid="tab-reading" id="tab-reading" aria-pressed="false">Early Reading Evidence</button>
     <button data-testid="tab-reflection" id="tab-reflection" aria-pressed="false">Added Value & Opportunity Cost</button>
     <button data-testid="tab-methods" id="tab-methods" aria-pressed="false">Methods & sources</button>
   </nav>
@@ -39,6 +41,8 @@
     </div></section>
   </div>
   <section id="practice" hidden aria-label="Research to Classroom Practice"></section>
+  <section id="added" hidden aria-label="Instructional Added Value"></section>
+  <section id="reading" hidden aria-label="Early Reading Evidence"></section>
   <section id="reflection" hidden aria-label="Added Value and Opportunity Cost"></section>
   <section id="methods" hidden></section>
   <footer><span>Curated evidence, not a systematic review or a policy prescription.</span><span>Source-linked · No synthetic research values</span></footer>

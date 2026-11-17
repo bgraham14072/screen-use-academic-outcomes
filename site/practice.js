@@ -19,6 +19,36 @@ const practiceSources = {
     limits: "Results depend on the outcome, book features and adult support in the comparison. They do not establish that every digital book is better or worse. No formal review-quality rating was extracted; none is assigned here.",
     accessed: "17 November 2026"
   },
+  takacs: {
+    id: "takacs", label: "Takacs, Swart & Bus · 2015",
+    title: "Benefits and Pitfalls of Multimedia and Interactive Features in Technology-Enhanced Storybooks: A Meta-Analysis",
+    url: "https://journals.sagepub.com/doi/pdf/10.3102/0034654314566989",
+    type: "Additional research · peer-reviewed meta-analysis · Review of Educational Research",
+    scope: "43 studies; 2,147 children. Young children's story learning across varied settings and media; exact age range and country breakdown not extracted here.",
+    finding: "Small average benefits were reported for story comprehension and expressive vocabulary. Multimedia-only stories showed benefits; interactive features did not add a significant benefit and could distract from the narrative.",
+    limits: "Broad technology-enhanced story formats and varied comparisons are not equivalent to a single current e-book product. Limited primary studies prevented separation of individual feature effects or their narrative congruence. No independent formal review-quality rating assigned.",
+    accessed: "17 November 2026"
+  },
+  segal: {
+    id: "segal", label: "Segal-Drori et al. · 2010",
+    title: "Reading electronic and printed books with and without adult instruction: effects on emergent reading",
+    url: "https://doi.org/10.1007/s11145-009-9182-x",
+    type: "Additional research · peer-reviewed randomized study · Reading and Writing",
+    scope: "128 kindergarten children aged 5–6 from low-SES families; four groups of 32. Four reading sessions per intervention. Country not confirmed in the accessed publisher abstract. Print publication 2010; online publication 2009.",
+    finding: "Adult-instructed e-book reading produced greater gains in word reading and concepts about print than independent e-book reading, adult-instructed print reading and regular kindergarten. Phonological-awareness gains exceeded independent e-book reading and control, not a reported advantage over adult-instructed print.",
+    limits: "Publisher abstract reviewed, not full text or an independent risk-of-bias appraisal. Short intervention and specific sample; no long-term or universal benefit established. The instructional package does not isolate a device or individual feature effect.",
+    accessed: "17 November 2026"
+  },
+  munzer: {
+    id: "munzer", label: "Munzer et al. · 2019",
+    title: "Differences in Parent-Toddler Interactions With Electronic Versus Print Books",
+    url: "https://www.ncbi.nlm.nih.gov/pmc/articles/6564071",
+    type: "Additional research · peer-reviewed counterbalanced laboratory study · Pediatrics",
+    scope: "37 parent–toddler pairs; children aged 24–36 months. University of Michigan/community recruitment, United States. Each pair read print, basic electronic and enhanced electronic books.",
+    finding: "Print elicited more parent dialogic verbalizations, more child book-related verbalizations and higher collaboration than the tested electronic formats. Electronic reading prompted more format-related talk.",
+    limits: "Small laboratory sample, specific commercial books and five-minute conditions. Interaction outcomes, not a test of long-term reading achievement. Narration was disabled for shared reading. Findings do not establish that every digital book reduces interaction. No formal risk-of-bias rating assigned.",
+    accessed: "17 November 2026"
+  },
   eef: {
     id: "eef", label: "EEF / OpenDevEd · 2025",
     title: "Harnessing the potential of EdTech: a new review on the How",
@@ -131,7 +161,8 @@ function sourceEntry(s) {
 }
 $("#practice").innerHTML = `<div class="practice-top"><div class="eyebrow">FROM EVIDENCE TO INSTRUCTION</div><h2>Research to Classroom Practice</h2>
 <p>Start with the learning goal, then ask what the technology contributes. The findings are source-reported; the classroom applications are illustrative suggestions, not tested lesson packages.</p></div>
-<div class="practice-toolbar"><label class="filter" for="practice-focus">Learning focus<select id="practice-focus" data-testid="select-practice-focus">${practiceCases.map(c=>`<option value="${c.id}">${esc(c.subject)} · ${esc(c.title)}</option>`).join("")}</select></label><span class="small muted">Four practice lenses · five additional research sources</span></div>
+<div class="practice-toolbar"><label class="filter" for="practice-focus">Learning focus<select id="practice-focus" data-testid="select-practice-focus">${practiceCases.map(c=>`<option value="${c.id}">${esc(c.subject)} · ${esc(c.title)}</option>`).join("")}</select></label><span class="small muted">Four practice lenses · ${Object.keys(practiceSources).length-1} additional research sources</span></div>
+<div class="practice-navigation"><button class="outlined" data-testid="button-practice-added" onclick="setTab('added')">Explain instructional added value →</button><button class="outlined" data-testid="button-practice-reading" onclick="setTab('reading')">Explore early-reading evidence →</button></div>
 <div id="practice-case" aria-live="polite"></div>
 <details class="research-context"><summary data-testid="button-practice-sources">Supporting research and interpretation limits</summary><p class="small muted">This purposive update was checked on 17 November 2026, not conducted as an exhaustive systematic review. Sources may overlap with one another or with existing umbrella reviews. They are not pooled or ranked. Original estimate counts and CSV remain unchanged.</p><div class="source-list">${Object.values(practiceSources).map(sourceEntry).join("")}</div></details>`;
 
@@ -203,4 +234,4 @@ $("#confirm-clear").addEventListener("click",()=>{
   $("#clear-prompt").hidden=true;$("#reflection-status").textContent="Notes and selected focus cleared.";
   $("#note-lesson").focus();
 });
-$("#methods").insertAdjacentHTML("beforeend",`<section class="practice-methods"><h2>Additional classroom-practice research</h2><p class="small muted">Added 17 November 2026. Five additional narrative sources inform the practice and reflection views. They are separate from the 29 estimates and nine source groups in the original register. No source counts or participant totals are summed across these reviews.</p><div class="source-list">${Object.values(practiceSources).filter(s=>s.id!=="campbell").map(sourceEntry).join("")}</div><p class="small muted">Reported research is attributed inline. Learning goals, strategies, technology contributions, teacher roles, alternatives and observation prompts are editorial applications. They carry no borrowed effect sizes or invented methodological ratings. Evidence does not establish a universal displacement effect or an optimal screen-time dose.</p></section>`);
+$("#methods").insertAdjacentHTML("beforeend",`<section class="practice-methods"><h2>Additional classroom-practice research</h2><p class="small muted">Checked 17 November 2026. ${Object.keys(practiceSources).length-1} additional narrative sources inform the practice, early-reading and reflection views. They are separate from the 29 estimates and nine source groups in the original register. No source counts or participant totals are summed across these reviews and studies.</p><div class="source-list">${Object.values(practiceSources).filter(s=>s.id!=="campbell").map(sourceEntry).join("")}</div><p class="small muted">Reported research is attributed inline. Learning goals, strategies, technology contributions, teacher roles, alternatives and observation prompts are editorial applications. They carry no borrowed effect sizes or invented methodological ratings. Evidence does not establish a universal displacement effect or an optimal screen-time dose.</p></section>`);

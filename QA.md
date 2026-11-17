@@ -64,3 +64,23 @@
 - Existing All evidence count and country search passed on the published site; 375px checks found no page-level horizontal overflow.
 - The same existing Perplexity preview was updated in place. New practice views, reflection download, source navigation, Methods additions and original evidence count passed in a fresh preview context.
 - No JavaScript errors observed in either hosted context. Source links reached publisher URLs; some publishers requested browser verification. The dashboard cannot guarantee access through publisher restrictions or workplace network policies.
+
+## Instructional added value and early reading: local verification
+
+- Two new views: Instructional Added Value and Early Reading Evidence. Existing four views remain available.
+- Four early-reading publications: Furenes (existing), Takacs, Segal-Drori and Munzer. Two meta-analyses and two primary studies; no sum of overlapping participants or new pooled estimates.
+- Three new narrative references bring additional sources to eight. The original numerical data file is unchanged.
+- All six outcome choices, both study-design categories, incompatible-filter empty state and reset checked with browser inputs.
+- All four comparison/adult-support/appraisal disclosures open and close.
+- Reference handoff preserves existing explanation notes and invalidates any outdated draft.
+- All eight note fields, descriptive role and source selection tested. Filled and incomplete templates, escaped HTML-like text, multiline notes and source-linked Markdown download passed.
+- Editing after generation disables downloading until the draft is rebuilt. Clearing requires in-page confirmation; cancel preserves notes.
+- Original presets, independent A/B controls, bounds errors and recovery, search, quality exclusion, all seven sorts, plot expansion, table/plot details and CSV regression checks passed.
+- Four practice focuses, the five application fields, math estimate dialog, all reflection fields, context handoff, tab persistence, reflection export and clearing rechecked.
+- Munzer source navigation reached the PMC article. Bill navigation reached the Senate URL; a publisher/site verification challenge may appear.
+- New views inspected at 1440×900, 1440×520 and 375×812, including filled explanation and expanded reading detail. Six views show no page-level horizontal overflow at 375px; form state survives a responsive roundtrip.
+- Research safeguards: Segal-Drori is an abstract-based summary, not a full appraisal; its phonological-awareness finding is not represented as an advantage over adult-instructed print. Munzer interaction outcomes are not achievement outcomes. Takacs covers broader story media and does not isolate individual feature effects.
+- Missing age/country details and unperformed formal quality assessments remain explicit. Source-reported findings, editorial planning implications and user-entered claims remain distinct.
+- No numerical score, legal eligibility badge, inferred effectiveness verdict, AI call, database or browser persistence added.
+- Reload clears explanation notes as disclosed; keyboard activation builds the draft. New muted/status/provenance text colors tested at 6.02:1 or better on their actual resolved backgrounds.
+- No browser JavaScript errors observed during local checks.

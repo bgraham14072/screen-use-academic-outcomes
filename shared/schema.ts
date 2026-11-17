@@ -20,3 +20,16 @@ export type PracticeCase = {
   teacher: string; alternative: string; protect: string; observe: string;
 };
 // Reflection is unscored and held only in the current page's form controls.
+
+// A purposive collection, not new numeric estimates or independent pooled samples.
+export type EarlyReadingRecord = {
+  source: string; design: "synthesis" | "primary"; outcomes: string[];
+  comparison: string; features: string; adult: string;
+  takeaway: string; caution: string; application: string; reviewed: string;
+};
+export type AddedValueNotes = {
+  goal: string; learners: string; role: string; feature: string;
+  adult: string; alternative: string; preserve: string;
+  local: string; review: string; source: string;
+};
+// Added-value notes and draft remain in page memory. No legal status or score.

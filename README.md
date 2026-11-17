@@ -13,11 +13,13 @@ A source-linked research dashboard for comparing intentional educational technol
 - CSV export of the filtered findings, including citations and methodological notes.
 - Responsive desktop and mobile layouts.
 - Research to Classroom Practice: four learning-focus views distinguish source-reported findings from illustrative learning goals, strategies, technology contributions, teacher roles and non-digital alternatives.
+- Instructional Added Value: an explanation panel distinguishes technology as the objective, support for another objective and convenience. User notes, attributed research, limitations and unanswered questions are combined into a downloadable Markdown planning rationale, not a legal verdict or effectiveness rating.
+- Early Reading Evidence: a balanced, filterable collection of four peer-reviewed publications, with outcomes, comparisons, adult support, study limitations and review depth. References can be carried into the explanation panel without overwriting notes.
 - Added Value and Opportunity Cost: an unscored reflection worksheet with downloadable Markdown notes, a learning-evidence prompt and explicit attention to reading, writing, discussion, teacher interaction and hands-on work.
 
 The current snapshot contains 29 estimates from nine source groups, accessed on 16 November 2026. This is a curated collection, not an exhaustive systematic review.
 
-The practice update, checked on 17 November 2026, adds five narrative research sources without changing the numerical register: Furenes et al. (2021), Wörner et al. (2022), EEF/OpenDevEd (2025), Forsström et al./OECD (2025), and Putica & Stanišić (2026). Full source links, scope and limitations appear in both the practice view and Methods & sources. They are not additional independent quantitative estimates or a new pooled analysis. Suggested classroom applications are not tested lesson packages.
+The updates checked on 17 November 2026 add eight narrative research sources without changing the numerical register. The first five are Furenes et al. (2021), Wörner et al. (2022), EEF/OpenDevEd (2025), Forsström et al./OECD (2025), and Putica & Stanišić (2026). Three further peer-reviewed publications join Furenes in the balanced early-reading collection: [Takacs et al. (2015)](https://journals.sagepub.com/doi/pdf/10.3102/0034654314566989), [Segal-Drori et al. (2010)](https://doi.org/10.1007/s11145-009-9182-x), and [Munzer et al. (2019)](https://www.ncbi.nlm.nih.gov/pmc/articles/6564071). Full source links, scope and limitations appear in the practice view and Methods & sources. These are not additional independent quantitative estimates or a new pooled analysis. Suggested classroom applications are not tested lesson packages.
 
 ## Run locally
 
@@ -42,6 +44,7 @@ site/
   app.js           Filters, comparison plots, sorting, details, and export
   data.js          Research records and source metadata
   practice.js      Narrative research, classroom applications and reflection tool
+  reading.js       Balanced early-reading collection and added-value explanation panel
 shared/
   schema.ts        Documentation of the evidence-record shape
 QA.md              Acceptance criteria and verification notes

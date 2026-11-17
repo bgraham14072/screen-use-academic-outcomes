@@ -1,11 +1,14 @@
 # Dashboard flows and practice additions
 
 ## Policy revision acceptance inventory
+- P7 is the published +49 adjusted leisure contrast, up to one hour versus five to seven hours at school, with CI/N NR and direct press-release provenance.
+- Policy and brief distinguish the figure's unadjusted time-band pattern from the adjusted headline contrast. The one-to-five-hour learning statement remains narrative, with no derived numerical effect.
+- Public Source Verification Report and its legacy audit URL contain no build-process notes; About omits the requesting-contributor sentence.
 - Default to For Policymakers, followed by Explorer. No statistical notation in the policy view; five balanced, source-linked findings and explicit limits.
 - Header and footer About links work from every view; About includes supplied biographies, purpose, disclosure, contact and citation.
 - Deep links select a tab or open a register record, including after a reload. Unknown fragments recover to the policy view.
 - Preserve the original data.js SHA-256 6d6798992562ee89aeecd8304fd732c543209f4f195cf8db0fda442496dddf12 and original 29 records. Explicitly requested additions are separate.
-- Display exact source precision without rounding; each original effect-size scale and design has a separate plot and sort group.
+- Display PISA point differences as whole points, retain exact values in CSV/filtering/sorting, and keep all other scales at source precision; each original effect-size scale and design has a separate plot and sort group.
 - New PISA contrasts retain reported comparison groups, adjustment, missing sample/CI and noncausal warnings.
 - Wellbeing, analog-learning and emerging-research narratives remain outside the numerical register unless an explicitly authorized estimate has been verified.
 - Policy crosswalk cites operative S10685 sections and distinguishes evidence from implementation questions and legal conclusions.
@@ -18,11 +21,11 @@
 
 ## Existing evidence explorer
 - Open the public dashboard. Primary school starts with 10 rows.
-- Choose PISA context, Umbrella findings, All evidence, and Primary school; each changes the comparison and register. All evidence shows 33 rows, including the preserved original 29.
+- Choose PISA context, Umbrella findings, All evidence, and Primary school; each changes the comparison and register. All evidence shows 34 rows, including the preserved original 29.
 - Change each A/B use, age, outcome, intervention, and scale filter. The opposite panel stays independent.
 - Set numeric bounds after choosing one scale. Reversed bounds show an error; clear panel recovers.
 - Search for a country and a nonexistent term; reset restores the default.
-- Hide reporting-concern estimates in All evidence; count changes from 33 to 32 and back.
+- Hide reporting-concern estimates in All evidence; count changes from 34 to 33 and back.
 - Sort all seven columns in both directions. Effect sorting stays within metric and design.
 - Expand and collapse a plot group. Open plot and table details, follow an original source, close by button and Escape.
 - Export CSV; downloaded rows match the current register and include sources and caveats.

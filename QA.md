@@ -1,5 +1,16 @@
 # Acceptance and QA inventory
 
+## OECD headline and public-report revision: 17 November 2026
+
+- P7 reproduces OECD's published +49 adjusted mathematics-point contrast for school leisure use up to one hour versus five to seven hours. Its original-source link opens the December 2023 OECD press release; confidence interval and analytic N remain NR.
+- The policy view and brief describe the broader time-band pattern and retain the one-to-five-hour learning statement as narrative. Adjusted contrasts are distinguished from unadjusted Figure II.5.14 means; neither is described as a causal dose.
+- Collection contains 34 rows; PISA preset shows nine; reporting-concern exclusion returns 33. The original data.js SHA-256 remains `6d6798992562ee89aeecd8304fd732c543209f4f195cf8db0fda442496dddf12`.
+- PISA labels show whole points: P5 −14, P6 +8 and P7 +49. CSV keeps P5 −13.58600513267465 and P6 8.103342643669569. Numeric bounds −13.7 to −13.5 still select P5, demonstrating that filtering uses exact stored values.
+- Other scales retain their precision, including D1's 0.0707 lower interval and C1's 8.93 coefficient.
+- Methods report download tested through an actual download event. Source Verification Report and legacy evidence-audit.md contain identical clean content; About no longer contains the requesting-contributor sentence.
+- axe-core checks report no violations in policy, explorer, methods and About. Automated checks do not establish full accessibility conformance.
+- Desktop and mobile policy screenshots inspected. No captured JavaScript errors. Final brief has two letter-sized pages, passes qpdf, and both pages were visually inspected after the final URL update.
+
 - Compare independent A/B filters: use, intervention, age, subject, metric, numeric bounds.
 - Presets: primary-school default; PISA; umbrella; all evidence. Reset restores default.
 - Charts show estimates and intervals without combining scales or designs; missing CIs disclosed.

@@ -10,6 +10,10 @@
 - Methods report download tested through an actual download event. Source Verification Report and legacy evidence-audit.md contain identical clean content; About no longer contains the requesting-contributor sentence.
 - axe-core checks report no violations in policy, explorer, methods and About. Automated checks do not establish full accessibility conformance.
 - Desktop and mobile policy screenshots inspected. No captured JavaScript errors. Final brief has two letter-sized pages, passes qpdf, and both pages were visually inspected after the final URL update.
+- All eleven tabs and both directions of all seven table sorts rechecked. Preset counts: primary 10, PISA nine, umbrella seven, all 34. Runtime original-register snapshot comparison passes.
+- GitHub Pages deployment of `8ca4a55` completed successfully in Actions run `44109137690`. Fresh browser checks passed P7 details and actual OECD source navigation, whole-point labels, exact CSV download, clean About, report download and mobile layout.
+- Ten checked GitHub assets, including all changed runtime files, the PDF, both report URLs, the ledger and original data.js, match local bytes. Eight non-HTML preview assets also match; preview checks passed P7, register count, whole points, empty-state recovery and clean About.
+- The Perplexity preview opens the Markdown report as a readable page despite the download attribute; GitHub Pages delivers the expected download. The public distribution destination remains GitHub Pages.
 
 - Compare independent A/B filters: use, intervention, age, subject, metric, numeric bounds.
 - Presets: primary-school default; PISA; umbrella; all evidence. Reset restores default.

@@ -14,7 +14,7 @@ const practiceSources = {
     title: "A Comparison of Children’s Reading on Paper Versus Screen: A Meta-Analysis",
     url: "https://journals.sagepub.com/doi/full/10.3102/0034654321998074",
     type: "Additional research · meta-analysis",
-    scope: "39 studies in 30 articles; 1,812 children aged 1–8. Includes preschool as well as early primary ages; not primary-only. Country breakdown not extracted.",
+    scope: "39 studies in 30 articles/reports; 1,812 children. Review describes target ages 1–8, although one Table 1 entry includes ages 7–9. Includes preschool as well as early primary ages; not primary-only. Country breakdown not extracted.",
     finding: "Simple digitization was associated with lower story comprehension than paper, while story-congruent enhancements favored digital books. Adult-mediated print reading outperformed independently read enhanced digital books. Dictionary features could help vocabulary without helping story comprehension.",
     limits: "Results depend on the outcome, book features and adult support in the comparison. They do not establish that every digital book is better or worse. No formal review-quality rating was extracted; none is assigned here.",
     accessed: "17 November 2026"
@@ -86,7 +86,7 @@ const practiceSources = {
     type: "Additional research · meta-analysis",
     scope: "43 studies from 2005–2025: three elementary, 20 secondary and 20 university. Europe, Asia, North America and Africa; participant total not extracted.",
     finding: "The pooled comparison favored virtual over hands-on laboratories for conceptual science knowledge. This review did not pool blended virtual-plus-hands-on instruction.",
-    limits: "High heterogeneity (I² ≈ 88%); 41 potentially eligible full texts could not be retrieved. Authors used a JBI checklist and identified limitations in 14 studies. Only three elementary studies; conceptual outcomes cannot establish superiority for practical skills or all primary classrooms.",
+    limits: "High heterogeneity (I² = 88.139%); 41 potentially eligible full texts could not be retrieved. Authors used a JBI checklist and identified limitations in 14 studies. Only three elementary studies; conceptual outcomes cannot establish superiority for practical skills or all primary classrooms.",
     accessed: "17 November 2026"
   }
 };

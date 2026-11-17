@@ -1,7 +1,7 @@
 const $=s=>document.querySelector(s), esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-const fmt=v=>(v>0?"+":"")+Number(v.toFixed(3)), ci=r=>r.low==null?"CI not reported":`[${fmt(r.low)}, ${fmt(r.high)}]`;
-const family=r=>["d","g","SMD"].includes(r.metric)?"SMD":r.metric;
-const families=["SMD","r","PISA points","PISA b","Reported ES"], familyLabel={SMD:"Standardized effects (d / g / SMD)",r:"Correlation / harmonized r","PISA points":"PISA adjusted score differences","PISA b":"PISA regression coefficients","Reported ES":"Reported ES: scale unconfirmed"};
+const fmt=v=>(v>0?"+":"")+String(v), ci=r=>r.low==null?"CI: NR":`[${fmt(r.low)}, ${fmt(r.high)}]`;
+const family=r=>r.metric;
+const families=["d","g","SMD","r","PISA points","PISA b","Reported ES"], familyLabel={d:"Cohen’s d",g:"Hedges’ g",SMD:"SMD (as reported)",r:"Correlation / harmonized r","PISA points":"PISA adjusted score differences","PISA b":"PISA regression coefficients","Reported ES":"Reported ES: scale unconfirmed"};
 const useOptions=["All","Intentional","Passive","Mixed","Perception"], useNames={All:"All use types",Intentional:"Intentional / supported",Passive:"Passive viewing",Mixed:"Mixed / leisure / exposure",Perception:"Learner perceptions"};
 const base=()=>({use:"All",age:"All",subject:"All",intervention:"All",metric:"All",min:"",max:"",umbrella:false,expanded:false});
 let state={A:base(),B:base()},query="",exclude=false,sort={key:"title",dir:1},activePreset="primary";
@@ -17,7 +17,7 @@ function buildPanel(id){
  ${field(id,"age","Age group",["All","Primary","Adolescent","Mixed ages"],{All:"All age groups",Primary:"Primary / childhood",Adolescent:"Adolescent / PISA"})}
  ${field(id,"subject","Academic outcome",["All","Math","Reading","Science","Language","General learning"],{All:"All outcomes",Language:"Language (not reading-only)"})}
  ${field(id,"intervention","Intervention / exposure",interventions,{All:"All interventions"})}
- ${field(id,"metric","Effect-size scale",["All",...families],{All:"All scales (separate)",SMD:"Standardized d / g / SMD",r:"Correlation / harmonized r","PISA b":"PISA b per index unit"})}
+ ${field(id,"metric","Effect-size scale",["All",...families],{All:"All scales (separate)",d:"Cohen’s d",g:"Hedges’ g",SMD:"SMD (as reported)",r:"Correlation / harmonized r","PISA b":"PISA b per index unit"})}
  <label class="filter">Effect-size range<div class="rangebox"><input type="number" step="0.01" id="${id}-min" aria-label="Panel ${id} minimum effect size" data-panel="${id}" data-key="min" placeholder="Min" value="${esc(s.min)}" ${s.metric==="All"?"disabled":""}><span>to</span><input type="number" step="0.01" id="${id}-max" aria-label="Panel ${id} maximum effect size" data-panel="${id}" data-key="max" placeholder="Max" value="${esc(s.max)}" ${s.metric==="All"?"disabled":""}></div></label></div>
  <div class="filterhint" id="${id}-hint"></div><div class="plotarea" id="${id}-plot"></div>`;
  $(`#panel-${id}`).querySelectorAll("select,input").forEach(el=>el.addEventListener("change",()=>{
@@ -78,10 +78,11 @@ function render(){
  $("#table-status").textContent=sort.key==="value"?`${currentRows.length} findings · effect sorting is within metric and design only`:`${currentRows.length} findings · ${new Set(currentRows.map(r=>r.source)).size} sources · samples may overlap`;
 }
 function detail(id){
- const r=records.find(r=>r.id===id),s=sources[r.source];
+ const r=records.find(r=>r.id===id);if(!r)return;
+ const s=sources[r.source];
  $("#detail-content").innerHTML=`<div class="detailhead"><div><span class="eyebrow">${esc(s.label)} · ${esc(r.status)}</span><h2>${esc(r.title)}</h2></div><button class="close" aria-label="Close evidence details" data-testid="button-close">×</button></div><div class="detailbody">
  <div class="detail-number">${esc(r.metric)} ${fmt(r.value)} <span>${esc(ci(r))}${r.low!=null?" · 95%":""}</span></div>
- <p>${esc(r.design)} · ${esc(r.outcome)} · ${esc(r.ageLabel)}</p>
+ <p>${esc(r.design)} · ${esc(r.outcome)} · ${esc(r.ageLabel)}</p><p class="small">${esc(sourceCategory(r.source))} · Record ${esc(r.id)}</p>${recordAudit[r.id]?`<aside class="audit-notice">${recordAudit[r.id]}</aside>`:""}
  <dl class="detailgrid"><div><dt>Sample for this row</dt><dd>${esc(r.sample)}</dd></div><div><dt>Evidence units</dt><dd>${esc(r.k)}</dd></div><div><dt>Country context</dt><dd>${esc(r.context)}</dd></div><div><dt>Classification</dt><dd>${esc(r.use)} · ${esc(r.intervention)}</dd></div></dl>
  <div class="detailnote">${esc(r.note)}</div><h3>Methodological quality: ${esc(r.quality)}</h3><p>${esc(r.qualityNote)}</p><h3>Review scope & reported appraisal</h3><p>${esc(s.scope)}</p><p>${esc(s.quality)}</p><h3>Source context</h3><p>${esc(s.context)}</p>
  <div class="detail-links"><a href="${s.url}" target="_blank" rel="noopener" data-testid="link-original">Open original source ↗</a>${s.extra?`<a href="${s.extra}" target="_blank" rel="noopener">Open supporting full text ↗</a>`:""}${s.sampleUrl?`<a href="${s.sampleUrl}" target="_blank" rel="noopener">PISA sample context ↗</a>`:""}</div><p class="small">Accessed 16 November 2026. “Not reported” means unavailable in the accessed material, not a zero sample or zero effect.</p></div>`;
@@ -100,12 +101,13 @@ $("#search").addEventListener("input",e=>{query=e.target.value.trim().toLowerCas
 $("#exclude").addEventListener("change",e=>{exclude=e.target.checked;render()});
 $("#reset").addEventListener("click",()=>preset("primary"));
 function setTab(which){
- ["explorer","practice","added","reading","reflection","methods"].forEach(t=>{
+ viewNames.forEach(t=>{
    $(`#${t}`).hidden=t!==which;
    const b=$(`#tab-${t}`);b.classList.toggle("selected",t===which);b.setAttribute("aria-pressed",String(t===which));
  });
+ document.body.dataset.view=which;
 }
-["explorer","practice","added","reading","reflection","methods"].forEach(t=>$(`#tab-${t}`).addEventListener("click",()=>setTab(t)));
+viewNames.forEach(t=>$(`#tab-${t}`).addEventListener("click",()=>{setTab(t);history.replaceState(null,"",`#${t}`)}));
 $("#inventory").innerHTML=`<div><strong>${records.length}</strong><span>estimates</span></div><div><strong>${Object.keys(sources).length}</strong><span>estimate sources</span></div><div><strong>3</strong><span>core subjects</span></div>`;
 $("#methods").innerHTML=`<div class="methods-top"><div class="eyebrow">READING THE EVIDENCE</div><h2>A comparison tool, not a causal leaderboard.</h2><p>This is a purposive, source-checked collection of reviews and PISA analyses accessed on 16 November 2026, not an exhaustive systematic review. It emphasizes primary-school learning, adolescent assessment, and the difference between educational purpose and screen exposure. Values are transcribed from the linked sources; missing values stay missing.</p></div>
  <div class="method-grid">
@@ -117,9 +119,9 @@ $("#methods").innerHTML=`<div class="methods-top"><div class="eyebrow">READING T
  <div><h3>How to assess “strongest gains”</h3><p>Choose the same outcome, age, scale and design before sorting by effect. Inspect quality and sample scope, then examine sensitivity estimates and confidence intervals. A large estimate from a small or inconsistent review is not automatically a stronger basis for a decision.</p><p>Within the included reading review, subgroup differences were not statistically significant; larger phonics point estimates should not be treated as proof of superiority. <a href="${sources.literacy.url}" target="_blank" rel="noopener">Dahl-Leonard et al.</a> </p></div>
  </div><h2>Source register</h2><p class="small muted">Open the original reports for definitions, methods and complete tables.</p><div class="source-list">${Object.entries(sources).map(([id,s])=>`<article class="source-item"><div class="source-label">${esc(s.label)}<span>${esc(s.type)}</span></div><div><h3>${esc(s.title)}</h3><p>${esc(s.scope)} <a href="${s.url}" target="_blank" rel="noopener">Original report ↗</a></p><p>${esc(s.quality)} <a href="${s.extra||s.url}" target="_blank" rel="noopener">Appraisal context ↗</a></p><p>${esc(s.context)} <a href="${s.extra||s.url}" target="_blank" rel="noopener">Study context ↗</a></p></div></article>`).join("")}</div>`;
 $("#export").addEventListener("click",()=>{
- const fields=["id","panel","source","finding","outcome","use","intervention","age","design","metric","effect","ci_low","ci_high","evidence_units","participants","sample_scope","country_context","quality_label","quality_note","limitations","verification","accessed","source_url","supporting_url"];
+ const fields=["id","panel","source","finding","outcome","use","intervention","age","design","metric","effect","ci_low","ci_high","evidence_units","participants","sample_scope","country_context","quality_label","quality_note","limitations","verification","accessed","source_url","supporting_url","source_category","separate_audit_notice"];
  const quote=v=>'"'+String(v??"").replace(/"/g,'""')+'"';
- const rows=currentRows.map(r=>[r.id,["A","B"].filter(id=>panelRows[id].some(v=>v.id===r.id)).join("+"),sources[r.source].label,r.title,r.outcome,r.use,r.intervention,r.ageLabel,r.design,r.metric,r.value,r.low,r.high,r.k,r.n,r.sample,r.context,r.quality,r.qualityNote,r.note,r.status,r.observed_at,sources[r.source].url,sources[r.source].extra||""]);
+ const rows=currentRows.map(r=>[r.id,["A","B"].filter(id=>panelRows[id].some(v=>v.id===r.id)).join("+"),sources[r.source].label,r.title,r.outcome,r.use,r.intervention,r.ageLabel,r.design,r.metric,r.value,r.low,r.high,r.k,r.n,r.sample,r.context,r.quality,r.qualityNote,r.note,r.status,r.observed_at,sources[r.source].url,sources[r.source].extra||"",sourceCategory(r.source),(recordAudit[r.id]||"").replace(/<a href="([^"]+)"[^>]*>(.*?)<\/a>/g,"$2 ($1)").replace(/<[^>]+>/g,"")]);
  const csv="\uFEFF"+[fields,...rows].map(row=>row.map(quote).join(",")).join("\r\n"),blob=new Blob([csv],{type:"text/csv;charset=utf-8"}),url=URL.createObjectURL(blob),a=document.createElement("a");
  a.href=url;a.download="screen-use-academic-evidence.csv";a.click();setTimeout(()=>URL.revokeObjectURL(url),10000);
  $("#toast").textContent=`CSV prepared: ${rows.length} findings with source URLs and limitations.`;$("#toast").style.display="block";setTimeout(()=>$("#toast").style.display="none",4500);

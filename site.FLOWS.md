@@ -1,12 +1,28 @@
 # Dashboard flows and practice additions
 
+## Policy revision acceptance inventory
+- Default to For Policymakers, followed by Explorer. No statistical notation in the policy view; five balanced, source-linked findings and explicit limits.
+- Header and footer About links work from every view; About includes supplied biographies, purpose, disclosure, contact and citation.
+- Deep links select a tab or open a register record, including after a reload. Unknown fragments recover to the policy view.
+- Preserve the original data.js SHA-256 6d6798992562ee89aeecd8304fd732c543209f4f195cf8db0fda442496dddf12 and original 29 records. Explicitly requested additions are separate.
+- Display exact source precision without rounding; each original effect-size scale and design has a separate plot and sort group.
+- New PISA contrasts retain reported comparison groups, adjustment, missing sample/CI and noncausal warnings.
+- Wellbeing, analog-learning and emerging-research narratives remain outside the numerical register unless an explicitly authorized estimate has been verified.
+- Policy crosswalk cites operative S10685 sections and distinguishes evidence from implementation questions and legal conclusions.
+- Two-page print view and PDF match, include source URLs, public GitHub QR, contact, disclosure and no statistical notation.
+- Verify desktop, 375px, short viewport and print. Test keyboard focus, About links, source links, CSV, each tab and evidence deep links.
+- Off-happy paths: unknown record/hash and filtered empty state; back navigation from a record to the landing view.
+- Open all source URLs and report access limits; audit original and new numerical fields without silently correcting preserved records.
+- Compare deployed GitHub and preview assets, and distribute only the GitHub URL to policymakers.
+- Read final content from both a skeptical NYSUT perspective and an enthusiastic technology-policy perspective; document balance fixes.
+
 ## Existing evidence explorer
 - Open the public dashboard. Primary school starts with 10 rows.
-- Choose PISA context, Umbrella findings, All evidence, and Primary school; each changes the comparison and register. All evidence shows 29 rows.
+- Choose PISA context, Umbrella findings, All evidence, and Primary school; each changes the comparison and register. All evidence shows 33 rows, including the preserved original 29.
 - Change each A/B use, age, outcome, intervention, and scale filter. The opposite panel stays independent.
 - Set numeric bounds after choosing one scale. Reversed bounds show an error; clear panel recovers.
 - Search for a country and a nonexistent term; reset restores the default.
-- Hide reporting-concern estimates in All evidence; count changes from 29 to 28 and back.
+- Hide reporting-concern estimates in All evidence; count changes from 33 to 32 and back.
 - Sort all seven columns in both directions. Effect sorting stays within metric and design.
 - Expand and collapse a plot group. Open plot and table details, follow an original source, close by button and Escape.
 - Export CSV; downloaded rows match the current register and include sources and caveats.

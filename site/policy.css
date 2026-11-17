@@ -1,0 +1,76 @@
+/* Policy views share the established dashboard type, spacing and color tokens. */
+[hidden]{display:none!important}
+.policy-section{padding:var(--s6) 0}
+.policy-heading{max-width:1000px;margin-bottom:var(--s6)}
+.policy-heading h2{font-size:var(--text-xl)}
+.policy-heading p{max-width:85ch}
+.policy-lede{background:var(--ink);color:white;padding:var(--s6);border-radius:6px;margin-bottom:var(--s6)}
+.policy-lede h2{font-size:var(--text-xl);max-width:50ch}
+.policy-lede p{max-width:90ch}
+.policy-lede .eyebrow{color:#d3e3e8}
+.policy-lede a{color:#e0f5ed}
+.policy-columns{display:grid;grid-template-columns:1fr 1fr;gap:var(--s6)}
+.policy-column{border-top:3px solid var(--ink)}
+.policy-column>h3{padding:var(--s4) 0;font-size:var(--text-lg)}
+.policy-finding{padding:var(--s4) 0;border-top:1px solid var(--line)}
+.policy-finding p{font-size:var(--text-base)}
+.source-line{font-size:var(--text-xs);color:var(--muted);margin-top:var(--s3)}
+.policy-limits,.scope-note,.audit-notice{padding:var(--s4);border-left:3px solid var(--muted);background:var(--soft);margin:var(--s4) 0;font-size:var(--text-sm)}
+.audit-notice{border-color:#9b4c23;background:#fff4ed;color:#442d21}
+.policy-limits h3{margin-bottom:var(--s2)}
+.question-strip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--s4);margin:var(--s5) 0}
+.question-strip>div{padding:var(--s4);border:1px solid var(--line);background:var(--paper)}
+.question-strip p{font-size:var(--text-sm)}
+.policy-actions{display:flex;flex-wrap:wrap;gap:var(--s3);align-items:center;margin:var(--s5) 0}
+.policy-actions a{padding:var(--s3) var(--s4);border:1px solid var(--line);border-radius:4px;background:white;font-size:var(--text-sm)}
+.evidence-card{padding:var(--s5) 0;border-top:1px solid var(--line)}
+.evidence-card h3{font-size:var(--text-lg);margin-bottom:var(--s2)}
+.evidence-card dl{display:grid;grid-template-columns:1fr 1fr;gap:var(--s4);margin:var(--s4) 0}
+.evidence-card dt{font-size:var(--text-xs);font-weight:700;color:var(--muted)}
+.evidence-card dd{margin:var(--s1) 0 0;font-size:var(--text-sm)}
+.evidence-card .limitation{border-left:3px solid var(--line);padding-left:var(--s4)}
+.crosswalk{min-width:850px;font-size:var(--text-sm)}
+.crosswalk th{padding:var(--s3)}
+.crosswalk td{width:25%;padding:var(--s4);min-width:160px}
+.bio-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--s6);margin:var(--s6) 0}
+.bio-grid article{border-top:1px solid var(--line);padding-top:var(--s4)}
+.about-credit{max-width:1100px;line-height:1.5!important}
+.about-block{max-width:1000px;margin:var(--s6) 0}
+.about-block h3{margin-bottom:var(--s2)}
+.citation{overflow-wrap:anywhere;background:var(--paper);padding:var(--s4);border:1px solid var(--line)}
+.audit-list{padding-left:var(--s5)}
+.audit-list li{margin:var(--s3) 0;font-size:var(--text-sm)}
+.masthead>a{font-size:var(--text-sm)}
+body[data-view=policy] #inventory{display:none}
+.tabs{gap:0 var(--s5)}
+.tabs button{font-size:var(--text-sm)}
+.plotrow,.axis{grid-template-columns:minmax(80px,1.4fr) minmax(50px,1fr) minmax(60px,.9fr)}
+.plotrow .value,.detail-number{overflow-wrap:anywhere}
+@media(max-width:900px){.question-strip{grid-template-columns:1fr 1fr}.masthead{flex-wrap:wrap;gap:var(--s2)}}
+@media(max-width:760px){
+ .tabs{display:flex;flex-wrap:nowrap;overflow-x:auto;gap:var(--s4);padding-bottom:var(--s1);scrollbar-width:thin}
+ .tabs button{white-space:nowrap;min-height:48px;font-size:var(--text-sm);flex-shrink:0}
+ .policy-columns,.bio-grid,.evidence-card dl{grid-template-columns:1fr}
+ .policy-lede{padding:var(--s4)}
+ .policy-section{padding-top:var(--s5)}
+ .policy-column{margin-bottom:var(--s4)}
+ .masthead .edition{display:none}
+ .masthead{padding:var(--s3) var(--s4)}
+ .masthead>a{font-size:var(--text-xs)}
+ .policy-actions a{width:100%}
+ footer{flex-wrap:wrap}
+}
+@media print{
+ .masthead,.tabs,.inventory,footer,.skip,.policy-actions{display:none!important}
+ body{background:white;color:#182b3a;font-size:11pt}
+ main{padding:0;max-width:none}
+ .intro{padding:0 0 12pt}
+ .policy-lede{background:white;color:#182b3a;border:1px solid #52616e}
+ .policy-lede .eyebrow{color:#52616e}
+ .policy-columns{gap:16pt}
+ .policy-finding,.evidence-card,.bio-grid article{break-inside:avoid}
+ a{color:#176657}
+ .tablewrap{overflow:visible}
+ .crosswalk{min-width:0;font-size:9pt}
+ .crosswalk td{min-width:0;padding:6pt}
+}

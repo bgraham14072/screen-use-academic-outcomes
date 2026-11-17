@@ -7,3 +7,4 @@ test-export.csv
 .DS_Store
 node_modules/
 __pycache__/
+audit-inputs/

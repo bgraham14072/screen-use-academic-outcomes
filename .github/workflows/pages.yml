@@ -32,6 +32,9 @@ jobs:
           node --check site/data.js
           node --check site/practice.js
           node --check site/reading.js
+          node --check site/policy-data.js
+          node --check site/policy.js
+          node --check site/brief.js
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
       - name: Upload static dashboard

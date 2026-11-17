@@ -12,7 +12,21 @@
 - Hosted preview: filters, detail source link and export tested.
 - Curated review not exhaustive; no causal ranking, no sum of overlapping samples, no invented ratings.
 
-## Verification completed
+## Policy revision verification: 17 November 2026
+
+- Original data.js SHA-256 remains `6d6798992562ee89aeecd8304fd732c543209f4f195cf8db0fda442496dddf12`. Runtime original-object comparison passes.
+- Current collection: 33 rows, consisting of the preserved 29 plus P4, P5, P6 and R1. Presets return primary 10, PISA 8, umbrella 7 and all 33; reporting-concern exclusion returns 32.
+- All eleven views, header/footer About navigation, valid and unknown record links, filters, sorting, invalid bounds and empty-state recovery tested.
+- Added-value explanation build, stale-draft protection, downloads and clear/cancel cycles passed. Early-reading filter/reset and reflection preservation/download/clear passed.
+- CSV retains exact precision and adds source category and separate audit notices without rewriting original evidence fields.
+- axe-core WCAG 2 A/AA and 2.1 AA scan: no violations reported in any of the eleven desktop views or the mobile policy view. Automated scanning does not establish complete accessibility conformance.
+- Keyboard skip link focuses main; detail dismissal by Escape works. Desktop 1440px, 375px mobile, 1440×500 short viewport, and 720px reflow checked. No page-level horizontal overflow or captured JavaScript errors; wide tables and the mobile navigation intentionally scroll within their containers.
+- New views inspected visually on desktop/mobile. Original-source link clicked and resulting destination confirmed.
+- Final PDF has two pages; qpdf reports no syntax/stream errors; Lato regular/bold are embedded. Both pages visually inspected for clipping and readability. QR decoded to the public GitHub Pages URL.
+- Source access restrictions, numerical discrepancies, synthesis limits and the two-sided policy balance review are documented in site/evidence-audit.md.
+- Live hosting checks follow deployment of the same site folder to the existing preview and GitHub Pages.
+
+## Earlier baseline verification
 
 - 29 distinct records, nine source groups. All extracted CIs bracket point estimates.
 - Primary default: 10 rows; updated PISA preset: five rows including science autonomy.

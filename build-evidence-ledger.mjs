@@ -1,0 +1,10 @@
+import fs from "node:fs";
+import vm from "node:vm";
+const context=vm.createContext({});
+vm.runInContext(fs.readFileSync("site/data.js","utf8")+"\n"+fs.readFileSync("site/policy-data.js","utf8")+"\nthis.rows=records.slice(29);this.catalog=sources;this.workbook=pisaWorkbook;",context);
+const fields=["id","finding","design","metric","value","ci_low","ci_high","evidence_units","participants","sample_scope","source_category","source_url","locator","limitations"];
+const locators={P4:"Chapter 5: Moderate use of digital devices in school is related to higher performance",P5:"Table II.B1.5.67; OECD average; cell AC48",P6:"Table II.B1.5.67; OECD average; cell AO48",R1:"Author accepted manuscript section 3.2.1, printed page 13"};
+const rows=context.rows.map(r=>[r.id,r.title,r.design,r.metric,r.value,r.low??"NR",r.high??"NR",r.k,r.n??"NR",r.sample,r.source==="oecd"?"Government/intergovernmental report":"Peer-reviewed",r.id==="P5"||r.id==="P6"?context.workbook:context.catalog[r.source].extra&&r.id==="R1"?context.catalog[r.source].extra:context.catalog[r.source].url,locators[r.id],r.note]);
+const quote=x=>'"'+String(x).replaceAll('"','""')+'"';
+fs.writeFileSync("site/new-values-ledger.csv",[fields,...rows].map(r=>r.map(quote).join(",")).join("\r\n"));
+console.log(`Wrote ${rows.length} explicitly requested additions; original records unchanged.`);

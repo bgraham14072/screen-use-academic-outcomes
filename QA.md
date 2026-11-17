@@ -84,3 +84,15 @@
 - No numerical score, legal eligibility badge, inferred effectiveness verdict, AI call, database or browser persistence added.
 - Reload clears explanation notes as disclosed; keyboard activation builds the draft. New muted/status/provenance text colors tested at 6.02:1 or better on their actual resolved backgrounds.
 - No browser JavaScript errors observed during local checks.
+
+## Hosted verification for added value and early reading
+
+- Site commit `ab90e21` deployed successfully through [GitHub Actions run 44087834286](https://github.com/bgraham14072/screen-use-academic-outcomes/actions/runs/44087834286).
+- A fresh signed-out context received HTTP 200 from the existing GitHub Pages URL and showed both new views.
+- The same existing Perplexity preview asset, `180499ca-dd8c-4471-a122-65ceff3dc331`, was updated in place and opened in a fresh browser context.
+- Both hosted destinations passed collection count, all four disclosures, outcome/design filtering, empty-state recovery, reference handoff, complete notes, generation, downloaded Markdown contents, stale-draft prevention and clear/cancel tests.
+- Original All evidence count (29), country search and eight additional narrative-source entries passed on both hosts.
+- Practice navigation into both new views, the opportunity-cost link and preservation of existing reflection notes passed.
+- Munzer's source link was activated on both hosts and reached the PMC article.
+- Hosted mobile checks at 375×812 found no page-level horizontal overflow in either new view. Hosted mobile collection and desktop explanation screenshots were visually inspected.
+- No JavaScript errors observed in either hosted context. Notes are ephemeral and must be downloaded before reload or closing.

@@ -1,5 +1,16 @@
 # Dashboard flows and practice additions
 
+## Essential Questions entry point, November 18, 2026
+- Supersedes earlier default-view instructions: no-fragment visits open Start with a question, not For Policymakers. The eight primary tabs remain unchanged; a separate entry link returns to the questions, which link to the policymaker summary.
+- Preserve the user's exact 16 questions and five uppercase group headings, in order. Most asked links expose questions 6, 8 and 11 without reordering the main list.
+- Every answer has the same fields: short answer (2–3 plain-language sentences), one allowed confidence label, shows/doesn't-show columns, classroom line, specific evidence that could change the answer, internal evidence links and a date.
+- Draft for co-author review remains visible. No author approval is inferred or recorded; release status cannot change automatically.
+- Define the four editorial labels once in Methods; no formal grades. No new sources, research numbers or register changes.
+- Each question opens via its own plain fragment, including cold load, reload, repeat link, Back/Forward and keyboard use. Category menu links select and scroll to the right group.
+- Specific narrative-card anchors route to the right existing view. Reading-card anchors reset conflicting filters so the cited record is visible, without erasing educator notes.
+- Test all question-field cells, evidence targets, exact wording/order and all original main flows. Inspect 375px, desktop, expanded answers, long headings, short desktop and responsive return.
+- Deliver the per-answer citation map with thin-evidence flags, sourced from the same answer data as the page.
+
 ## Digital equity narrative card, November 18, 2026
 - Wellbeing retains the exact pulling-back card first, followed by “Could limiting school technology widen the digital divide?” No FAQ or primary tab is added.
 - #digital-divide directly selects Wellbeing and focuses the new card. Reload and Back/Forward preserve routing; old #pulling-back and record links remain valid.

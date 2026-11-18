@@ -112,8 +112,13 @@ const pullingBackTable=$("#pulling-back .tablewrap");
 pullingBackTable.tabIndex=0;
 pullingBackTable.setAttribute("role","region");
 pullingBackTable.setAttribute("aria-label","Where the evidence agrees and differs. Scroll horizontally on small screens.");
+renderEssentialQuestions();
 function route(){
  const hash=location.hash.slice(1);
+ if(routeEssentialQuestion(hash)){
+  if($("#detail").open)$("#detail").close();
+  return;
+ }
  if(hash.startsWith("record-")){
   const id=hash.slice(7);setTab("explorer");
   if(records.some(r=>r.id===id)){preset("all");if($("#detail").open)$("#detail").close();detail(id)}
@@ -124,16 +129,16 @@ function route(){
   $(`#${hash}`).focus({preventScroll:true});
   $(`#${hash}`).scrollIntoView({block:"start"});
  }else if(hash==="main"){document.querySelector("#main").scrollIntoView()}
- else {if($("#detail").open)$("#detail").close();setTab(viewNames.includes(hash)||hash==="educators"?hash:"policy")}
+ else {if($("#detail").open)$("#detail").close();setTab(viewNames.includes(hash)||hash==="educators"?hash:"questions")}
 }
 document.addEventListener("click",e=>{
  const a=e.target.closest("a[data-view]");if(a){e.preventDefault();setTab(a.dataset.view);try{history.pushState(null,"",`#${a.dataset.view}`)}catch{}window.scrollTo({top:0})}
- const same=e.target.closest('a[href^="#record-"],a[href="#pulling-back"],a[href="#digital-divide"]');if(same&&same.hash===location.hash){e.preventDefault();route()}
+ const same=e.target.closest('a[href^="#"]:not([data-view])');if(same&&same.hash===location.hash){e.preventDefault();route()}
 });
 window.addEventListener("hashchange",route);
 // Reapply narrative anchors after browser reload/restoration has laid out the page.
 window.addEventListener("pageshow",()=>{
- if(["#pulling-back","#digital-divide"].includes(location.hash))requestAnimationFrame(route);
+ if(location.hash&&location.hash!=="#questions")requestAnimationFrame(route);
 });
 route();
 if(JSON.stringify(records.slice(0,29))!==originalRegisterSnapshot)throw new Error("Original evidence register changed");

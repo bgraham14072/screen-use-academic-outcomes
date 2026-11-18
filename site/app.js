@@ -104,7 +104,10 @@ const educatorViews=["practice","added","reading","reflection"];
 let lastEducatorView="practice";
 function setTab(which){
  if(which==="educators")which=lastEducatorView;
- if(!viewNames.includes(which))which="policy";
+ if(!viewNames.includes(which)&&which!=="questions")which="questions";
+ $("#questions").hidden=which!=="questions";
+ if(which==="questions")$(".questions-entry").setAttribute("aria-current","page");
+ else $(".questions-entry").removeAttribute("aria-current");
  const isEducator=educatorViews.includes(which);
  if(isEducator)lastEducatorView=which;
  $("#educators").hidden=!isEducator;

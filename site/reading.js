@@ -62,7 +62,7 @@ function renderReading() {
   $("#reading-count").textContent=`${records.length} of ${earlyReading.length} publications shown · Samples are not summed`;
   $("#reading-results").innerHTML=records.length?records.map(r=>{
     const s=practiceSources[r.source];
-    return `<article class="reading-record" data-testid="reading-record-${r.source}">
+    return `<article class="reading-record" id="reading-${r.source}" tabindex="-1" data-testid="reading-record-${r.source}">
       <div class="reading-record-head"><div><div class="provenance">${r.design==="synthesis"?"META-ANALYSIS":"PRIMARY STUDY"} · PEER-REVIEWED</div><h3>${esc(s.label)}</h3><p class="small muted">${esc(s.title)}</p></div>${readingLink(r.source,"record")}</div>
       <p class="reading-takeaway">${esc(r.takeaway)}</p>
       <p class="small"><b>Population and scope:</b> ${esc(s.scope)} ${readingLink(r.source,"scope")}</p>

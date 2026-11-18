@@ -1,5 +1,28 @@
 # Acceptance and QA inventory
 
+## Essential Questions: 18 November 2026
+
+Acceptance inventory:
+- Exact 16 questions and five headings, main-list order and fixed answer-field matrix; plain-language short answers, allowed labels, date and draft status on every answer.
+- Root opens Start with a question. Eight primary tabs remain; policymakers summary is linked, category menu works, and Most asked exposes only Q6/Q8/Q11.
+- Every question opens and closes by pointer/keyboard; direct fragments, reload, repeat activation and Back/Forward work. Draft notice remains visible for direct-answer arrivals.
+- Each evidence link reaches the named record, narrative card or explicitly labeled planning tool. Reading targets recover from conflicting filters.
+- Methods defines labels once and links back. No new external sources or research numbers. Original data, both Wellbeing narratives and brief remain intact.
+- Existing main flows in site.FLOWS.md remain in scope: filters, sorting, downloads, educator forms, note retention, clearing and source navigation.
+- Visual checks: root, expanded answer, two-column evidence, Methods, 375px stack, long question, short desktop and responsive roundtrip.
+- Off-happy paths: unknown fragment/record, closed current-hash answer, filtered-out reading citation, empty filters and rapid category/question navigation.
+
+Local verification completed:
+- `node tests/questions.test.mjs` passes exact wording, order, headings, required fields, allowed labels, short-answer sentence counts, and absence of new external sources or research numbers.
+- All 16 direct question fragments survived reload. All 62 per-answer evidence links were clicked and reached visible destinations. All questions passed pointer, Enter and Space open/close cycles.
+- Topic menu, Most asked repeat-link reopening, Methods return, policymaker link, Back/Forward, unknown fragments and unknown records passed. A reading-card deep link cleared a conflicting study-design filter.
+- Existing navigation, evidence presets, reporting-concern exclusion, search empty/reset, seven-column sorting, details/Escape and CSV download passed. Practice focus selection, reflection handoff/note retention/download/clear-cancel, reading reference handoff, and explanation generation/download/clear-cancel passed.
+- Desktop entry view, expanded two-column answer, 1280×520 short desktop, and expanded long answers/references at 375×812 were visually inspected. All existing views had no page-level horizontal overflow at 375px. Evidence columns stack on mobile and return to two columns on desktop.
+- Question metadata, label, guidance and topic-link colors were measured against their resolved backgrounds; all tested small-text combinations exceed 4.5:1. No browser page errors were observed.
+- The first long browser-test batch timed out. Smaller batches were rerun successfully; the timed-out run is not used as signoff evidence.
+- `site/data.js` retains SHA-256 `6d6798992562ee89aeecd8304fd732c543209f4f195cf8db0fda442496dddf12`. No evidence data, existing narrative prose, source URLs or policy-brief files changed. This is not a new full-text source audit.
+- Hosted verification is recorded separately after publication; no co-author approval has been inferred.
+
 ## Digital equity card: 18 November 2026
 
 Acceptance inventory:

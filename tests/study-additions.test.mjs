@@ -38,7 +38,8 @@ for(const [n,refs] of [[1,["ran"]],[6,["bettinger"]],[7,["allcott","vuorre","odg
 }
 assert(read("site/new-values-ledger.csv").startsWith(prior("site/new-values-ledger.csv")),"Ledger is append-only");
 assert.equal(read("site/brief.js"),prior("site/brief.js"));
-assert.equal(read("site/leave-behind.html"),prior("site/leave-behind.html"));
+// Brief revisions are now explicitly authorized by the personalized-instruction request.
+assert(read("site/leave-behind.html").includes("Adaptive math practice that teachers actively use has produced meaningful gains in rigorous trials, but broad personalization initiatives and off-the-shelf software have often shown small or no effects."));
 assert.equal(read("site/digital-divide.js"),prior("site/digital-divide.js"));
 assert(!/EdTech Leaders Alliance|Balanced Screen Time/i.test(read("site/study-additions.js")));
-console.log("PASS: original and prior supplemental records, single g addition, seven distinct studies, exact requested question placements, row-3-only narrative update, append-only ledger, unchanged brief and equity card.");
+console.log("PASS: earlier additions preserved, seven original companion cards, question placements, row-3-only prior narrative update, append-only ledger, authorized brief sentence and unchanged equity source.");

@@ -100,6 +100,13 @@ const roleOptions={
   convenience:"Convenience without demonstrated learning benefit",
   uncertain:"Role or added value is not yet clear"
 };
+const personalizationPrompts=[
+ ["level","Actual student level","What evidence shows that practice matches current understanding rather than only the enrolled grade?"],
+ ["action","Teacher action","What will the teacher do differently in response to the diagnostic information?"],
+ ["subject","Subject-specific goal","Which defined knowledge or skill is targeted, and why is this approach suitable for it?"],
+ ["support","Implementation support","What preparation, coaching, time and access are needed, and are they available?"],
+ ["independent","Independent learning check","What assessment outside the vendor’s platform will check learning, transfer and differences across learners?"]
+];
 const billUrl="https://www.nysenate.gov/legislation/bills/2025/S10685";
 $("#added").innerHTML=`<div class="practice-top"><div class="eyebrow">EXPLAIN THE CHOICE, NOT THE DEVICE</div><h2 id="added-heading" tabindex="-1">Instructional Added Value</h2><p>A goal can be taught without a device and still merit a careful comparison of digital and non-digital approaches. Use this panel to explain a proposed contribution, its evidence and the conditions for continuing it.</p></div>
 <div class="role-grid">
@@ -113,6 +120,7 @@ ${addedFields.slice(0,2).map(([id,label,hint])=>addedField(id,label,hint)).join(
 <label class="reflection-field" for="added-role"><span>How are you using technology?</span><small>Descriptive planning categories, not legal classifications.</small><select id="added-role" data-testid="select-added-role"><option value="">Choose a role</option>${Object.entries(roleOptions).map(([id,label])=>`<option value="${id}">${label}</option>`).join("")}</select></label>
 ${addedFields.slice(2).map(([id,label,hint])=>addedField(id,label,hint)).join("")}
 <label class="reflection-field" for="added-source"><span>Research reference</span><small>Include the selected finding and its limitations. A reference does not prove your proposed approach works.</small><select id="added-source" data-testid="select-added-source"><option value="">No reference selected</option>${earlyReading.map(r=>`<option value="${r.source}">${esc(practiceSources[r.source].label)}</option>`).join("")}</select></label>
+<details class="personalization-prompts"><summary>Optional: five checks for personalized or differentiated instruction</summary><p>Planning prompts informed by contrasting studies, not a validated checklist or legal certification. <a href="#q16-worth-it">Read Question 16 and its evidence</a>.</p>${personalizationPrompts.map(([id,label,hint])=>addedField("personal-"+id,label+" (optional)",hint)).join("")}</details>
 <div class="reflection-actions"><button type="submit" class="primary-action" data-testid="button-build-explanation">Build explanation</button><button type="button" id="clear-added" class="outlined" data-testid="button-clear-added">Clear explanation notes</button></div>
 <div class="clear-prompt" id="clear-added-prompt" hidden><p>Clear the inputs, reference and built explanation? Download first to keep a copy.</p><button type="button" class="outlined" data-testid="button-cancel-added" id="cancel-added">Keep notes</button><button type="button" class="outlined" data-testid="button-confirm-added" id="confirm-added">Yes, clear notes</button></div>
 <p id="added-status" role="status" class="small"></p></form>
@@ -144,6 +152,7 @@ $("#added-form").addEventListener("submit",e=>{
     ["Unresolved questions","Does the evidence match the learners, feature, adult support and measured outcome? Was the non-digital comparison equally well taught? Could any difference reflect instruction rather than technology? A local observation alone does not establish causation."],
     ["Legal and interpretation boundary",`This is an instructional planning document, not a legal classification, validated rating or proof that the lesson works. Research on possible learning benefits does not determine whether a use is “inherent to the learning objective” under proposed legislation.\nBill context checked 17 November 2026: ${billUrl}\nConsult current guidance and counsel. No legal protection is implied.`]
   ];
+  sections.splice(5,0,["Personalization checks · optional user notes",personalizationPrompts.map(([id,label])=>`${label}: ${$(`#added-personal-${id}`).value.trim()||"[Optional; not recorded]"}`).join("\n")]);
   const plainSections=sections.map(([heading,text])=>`## ${heading}\n\n${text}`).join("\n\n");
   explanationText=`# Instructional Added Value\n\n${plainSections}\n\nDashboard: https://bgraham14072.github.io/screen-use-academic-outcomes/\n`;
   $("#explanation-output").innerHTML=sections.map(([heading,text])=>`<section><h4>${esc(heading)}</h4><p>${esc(text)}</p>${heading==="Research context · source-reported"&&s?readingLink(id,"draft"):""}</section>`).join("");

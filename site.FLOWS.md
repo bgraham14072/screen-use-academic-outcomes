@@ -1,5 +1,16 @@
 # Dashboard flows and practice additions
 
+## Personalized-instruction draft, November 18, 2026
+- Private preview only until review. Published GitHub Pages and published Project snapshot remain unchanged.
+- Preserve original 29 and all prior additions byte-for-byte; append only M2, the Maine reanalysis, yielding 36 numerical rows in All evidence. No cross-scale ranking or overlapping sample totals.
+- Eleven new same-format contextual cards cover favorable, mixed and null results. Létourneau is reused, never duplicated.
+- Q1, Q6, Q11, Q13, Q15 and Q16 use verified studies; exact questions, labels, five groups, dates and draft status remain.
+- Check Mindspark, Maine and North Carolina cold-load/reload anchors, M2 details and CSV, and every new internal citation.
+- Check paired policy findings, digital-divide addition, §31 and §35(2)(h) only, Methods test alignment, and the exact brief sentence.
+- Five optional Added Value prompts retain notes across tabs, export with the rationale, invalidate stale exports and reset with confirmed clearing. Blank optional prompts do not count as missing required fields.
+- No edits to unrelated Wellbeing, pulling-back or NY research content. Retain Bettinger, original educator tools and other source cards.
+- Review full Q1/Q16 text, audit and withheld list, ledger, two-page PDF; test desktop, 375px, short-desktop, unknown hash, filtered empty state and hosted preview exports.
+
 ## Seven-study original-source update, November 18, 2026
 - Add one compatible Ran overall Hedges' g estimate, separately from the immutable original register. All evidence becomes 35; other presets retain their previous scope.
 - Add six narrative-only studies and a Ran contextual companion, without duplicate study records. Preserve existing Furenes, Goodyear and Orben content.

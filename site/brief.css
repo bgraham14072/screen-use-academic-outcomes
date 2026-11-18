@@ -24,6 +24,11 @@ p{margin-top:6px}.kicker{font-size:var(--small);font-weight:700;letter-spacing:.
 .share-block img{width:1.1in;height:1.1in;flex-shrink:0}
 .share-block h2{font-size:13pt}.share-block p{font-size:10pt}
 .disclosure,.legal{font-size:9.5pt;margin-top:10px}
+.print-page+.print-page{font-size:10.5pt;padding-top:.45in;padding-bottom:.3in}
+.print-page+.print-page .consideration{margin:8px 0}
+.print-page+.print-page .classroom-questions{padding:9px;margin:10px 0}
+.print-page+.print-page .share-block{margin:8px 0}
+.print-page+.print-page .page-sources{margin-top:8px}
 sup{font-size:9pt;line-height:0;vertical-align:super}
 @page{size:Letter;margin:0}
 @media print{body{background:white}.print-toolbar{display:none}.print-page{margin:0;min-height:11in;height:11in;break-after:page;overflow:visible}.print-page:last-child{break-after:auto}a{color:#176657}*{-webkit-print-color-adjust:exact;print-color-adjust:exact}}

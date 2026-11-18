@@ -2,11 +2,11 @@
 import fs from "node:fs";
 import vm from "node:vm";
 const {questions,groups,evidence}=JSON.parse(vm.runInNewContext(
- fs.readFileSync("site/questions.js","utf8")+";JSON.stringify({questions:essentialQuestions,groups:questionGroups,evidence:questionEvidence})"
+ ["pulling-back.js","study-additions.js","questions.js","personalized-studies.js"].map(p=>fs.readFileSync("site/"+p,"utf8")).join("\n")+";JSON.stringify({questions:essentialQuestions,groups:questionGroups,evidence:questionEvidence})"
 ));
 const base="https://bgraham14072.github.io/screen-use-academic-outcomes/";
 let md="# Essential Questions: Citation Map and Review Flags\n\nDraft for co-author review, updated November 18, 2026. The wording remains proposed until all five authors approve it; no approval is inferred from publication of this dashboard.\n\n";
-md+="## Scope of this revision\n\nThe question titles, group order and answer structure are unchanged. Questions 1, 6, 7, 10, 12, 13, 15 and 16 now incorporate the requested original-source additions; the study audit and exact-value ledger document numerical provenance and withheld discrepancies.\n\n";
+md+="## Scope of this revision\n\nPrivate draft for review, not a public release. This revision adds personalized-instruction evidence to Questions 1, 6, 11, 13, 15 and 16; the question titles, group order, labels and answer structure remain unchanged. Earlier source additions to the other answers remain intact. The personalized-learning audit and append-only ledger document provenance and withheld items.\n\n";
 for(let i=0;i<groups.length;i++){
  md+=`## ${groups[i].title}\n\n`;
  for(const q of questions.filter(q=>q.group===i)){

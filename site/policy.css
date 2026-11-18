@@ -1,4 +1,27 @@
 /* Policy views share the established dashboard type, spacing and color tokens. */
+.pulling-back-card{padding:var(--s6);margin-bottom:var(--s6);background:var(--paper);border:1px solid var(--line);border-top:4px solid var(--ink);border-radius:6px;scroll-margin-top:24px}
+.pulling-back-card:focus{outline:none}
+.pulling-back-card:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
+.pulling-back-card .skeptic-card{background:var(--soft);padding:var(--s5);border-radius:4px}
+.pulling-back-card h3{font-size:var(--text-lg);line-height:1.4}
+.pulling-back-card .claims{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s5);margin-top:var(--s5)}
+.pulling-back-card .claim-num{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border:1px solid var(--line);border-radius:50%;font-size:var(--text-sm);font-weight:700;margin-bottom:var(--s3)}
+.pulling-back-card h4{font-size:var(--text-base);line-height:1.4;margin:0}
+.pulling-back-card .claim p{font-size:var(--text-sm);line-height:1.65}
+.pulling-back-card .claim .source-line{font-size:var(--text-xs)}
+.pulling-back-card .table-title{margin:var(--s6) 0 var(--s4)}
+.pulling-back-card .weigh{width:100%;min-width:0;table-layout:fixed;font-size:var(--text-sm)}
+.pulling-back-card .weigh th,.pulling-back-card .weigh td{padding:var(--s4);vertical-align:top;white-space:normal}
+.pulling-back-card .weigh th:first-child{width:18%}
+.pulling-back-card .weigh ul{margin:0;padding-left:18px}
+.pulling-back-card .weigh li{margin-bottom:var(--s4);line-height:1.6}
+.pulling-back-card .weigh li:last-child{margin-bottom:0}
+.pulling-back-card .agree{background:#f3f8f5}
+.pulling-back-card .differ{background:#faf8f3}
+.pulling-back-card a{overflow-wrap:anywhere}
+.pulling-back-card .bottom-line{margin-top:var(--s6);border-left:4px solid var(--accent);padding:var(--s5);background:var(--soft)}
+@media(max-width:1000px){.pulling-back-card .claims{grid-template-columns:1fr}.pulling-back-card .claim+.claim{border-top:1px solid var(--line);padding-top:var(--s4)}}
+@media(max-width:700px){.pulling-back-card{padding:var(--s4)}.pulling-back-card .skeptic-card,.pulling-back-card .bottom-line{padding:var(--s4)}.pulling-back-card .weigh{min-width:760px}.pulling-back-card .tablewrap{overflow-x:auto}}
 [hidden]{display:none!important}
 .policy-section{padding:var(--s6) 0}
 .policy-heading{max-width:1000px;margin-bottom:var(--s6)}

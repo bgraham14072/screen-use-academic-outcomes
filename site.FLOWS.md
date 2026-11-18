@@ -1,5 +1,13 @@
 # Dashboard flows and practice additions
 
+## Pulling-back narrative card, November 18, 2026
+- The Wellbeing view begins with the complete Claude draft card, unchanged except citation labels and destinations. Original draft: https://claude.ai/artifact/Uyogfr6g2MgXTNBUy3n1na.
+- The policymaker landing link opens and focuses the card at #pulling-back; direct loading, refresh, repeat activation and browser back work.
+- Page 2 of the print brief and PDF contains the exact requested sentence and public card link. The PDF remains two pages, with page 1 unchanged.
+- Compare prose with the captured original after excluding citation links. Check three claims, three comparison rows, the conclusion and disclaimer.
+- Source updates point to Senate transcript, original AP, dated Swedish government update, NYSED and its linked state implementation definitions, original PNAS paper and original Goodyear study. Retain the district-example citation for the Pine Plains-specific claim.
+- No numerical records or data files change. Check existing presets, all navigation, educator tools, sources, downloads and mobile overflow.
+
 ## Navigation simplification, November 18, 2026
 - Primary navigation contains exactly eight groups, in this order: For Policymakers, Evidence, Wellbeing, Paper & Notes, NY Research & FOCUS Act, For Educators, Methods, About.
 - For Policymakers remains the default. All existing content and evidence data remain unchanged.

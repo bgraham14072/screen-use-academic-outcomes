@@ -16,6 +16,7 @@ const disclosureText="Contributors may hold consulting, speaking, advisory, or p
 $("#policy").className="policy-section";
 $("#policy").innerHTML=`
  <div class="policy-lede"><div class="eyebrow">FOR POLICYMAKERS</div><h2>Start with the learning goal, not the device.</h2><p>This collection supports neither a blanket ban nor unlimited device use. Our policy judgment is to favor purposeful, limited, teacher-led use matched to the learning goal, while protecting non-digital learning and student attention.</p><p class="small">This is a judgment informed by the findings below, not a tested comparison of statewide policies.</p></div>
+ <aside class="policy-limits"><p>We take the case for pulling back seriously; <a href="#pulling-back">see how the evidence weighs it</a>.</p></aside>
  <div class="policy-columns">
   <section class="policy-column"><h3>Where technology may help</h3>
   ${finding("Instruction can improve learning.","Some technology-supported reading and mathematics lessons improved learning. In the elementary mobile-learning review, the average benefit became smaller and uncertain when weaker studies were removed.",`${rec("D1","Mobile learning")} · ${rec("D2","Stronger-study check")} · ${rec("L1","Literacy instruction")} · Peer-reviewed`)}
@@ -104,18 +105,28 @@ document.querySelectorAll(".practice-methods .source-item,.research-context .sou
  const a=el.querySelector("a");const entry=Object.values(practiceSources).find(s=>s.url===a?.href);
  if(entry)el.querySelector(".source-label")?.insertAdjacentHTML("beforeend",`<span>${practiceCategories[entry.id]||"Peer-reviewed"}</span>`);
 });
+$("#wellbeing").insertAdjacentHTML("afterbegin",pullingBackCard);
+const pullingBackTable=$("#pulling-back .tablewrap");
+pullingBackTable.tabIndex=0;
+pullingBackTable.setAttribute("role","region");
+pullingBackTable.setAttribute("aria-label","Where the evidence agrees and differs. Scroll horizontally on small screens.");
 function route(){
  const hash=location.hash.slice(1);
  if(hash.startsWith("record-")){
   const id=hash.slice(7);setTab("explorer");
   if(records.some(r=>r.id===id)){preset("all");if($("#detail").open)$("#detail").close();detail(id)}
   else {$("#toast").textContent="Record not found. Showing the evidence explorer.";$("#toast").style.display="block";setTimeout(()=>$("#toast").style.display="none",4000)}
+ }else if(hash==="pulling-back"){
+  if($("#detail").open)$("#detail").close();
+  setTab("wellbeing");
+  $("#pulling-back").focus({preventScroll:true});
+  $("#pulling-back").scrollIntoView({block:"start"});
  }else if(hash==="main"){document.querySelector("#main").scrollIntoView()}
  else {if($("#detail").open)$("#detail").close();setTab(viewNames.includes(hash)||hash==="educators"?hash:"policy")}
 }
 document.addEventListener("click",e=>{
  const a=e.target.closest("a[data-view]");if(a){e.preventDefault();setTab(a.dataset.view);try{history.pushState(null,"",`#${a.dataset.view}`)}catch{}window.scrollTo({top:0})}
- const same=e.target.closest('a[href^="#record-"]');if(same&&same.hash===location.hash){e.preventDefault();route()}
+ const same=e.target.closest('a[href^="#record-"],a[href="#pulling-back"]');if(same&&same.hash===location.hash){e.preventDefault();route()}
 });
 window.addEventListener("hashchange",route);
 route();

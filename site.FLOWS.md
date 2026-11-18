@@ -1,5 +1,16 @@
 # Dashboard flows and practice additions
 
+## Navigation simplification, November 18, 2026
+- Primary navigation contains exactly eight groups, in this order: For Policymakers, Evidence, Wellbeing, Paper & Notes, NY Research & FOCUS Act, For Educators, Methods, About.
+- For Policymakers remains the default. All existing content and evidence data remain unchanged.
+- For Educators reveals four secondary choices: Research to Classroom Practice, Instructional Added Value, Early Reading Evidence, Added Value & Opportunity Cost.
+- Educator secondary navigation appears only within the educator group. Returning to For Educators remembers the last educator tool for this page session.
+- Existing tool fragments, record links, About links, cross-tool actions and browser navigation select the correct primary group and secondary choice. Unknown fragments recover to For Policymakers.
+- Test all eight primary buttons and four educator buttons by mouse and keyboard. Check note retention when moving between tools and primary groups.
+- Check the evidence presets, search/empty/reset, sorting, detail dialog and CSV; practice focus choices; reading filters and reference transfer; explanation generation/download; reflection download/clear; policy downloads and source links.
+- Inspect primary navigation and educator navigation at desktop, 375px, and short-desktop sizes. Check visible active states, no page-wide overflow, and no new console errors.
+- Recheck changed navigation and an evidence flow in fresh contexts after deployment; preserve the updated source in Project storage.
+
 ## Policy revision acceptance inventory
 - P7 is the published +49 adjusted leisure contrast, up to one hour versus five to seven hours at school, with CI/N NR and direct press-release provenance.
 - Policy and brief distinguish the figure's unadjusted time-band pattern from the adjusted headline contrast. The one-to-five-hour learning statement remains narrative, with no derived numerical effect.

@@ -126,3 +126,11 @@
 - Munzer's source link was activated on both hosts and reached the PMC article.
 - Hosted mobile checks at 375×812 found no page-level horizontal overflow in either new view. Hosted mobile collection and desktop explanation screenshots were visually inspected.
 - No JavaScript errors observed in either hosted context. Notes are ephemeral and must be downloaded before reload or closing.
+# Navigation grouping: November 18, 2026
+
+- Reduced the primary navigation from eleven choices to the eight requested labels and order. Four existing educator tools now share a secondary navigation within For Educators.
+- Local browser checks passed for all primary and secondary choices, selected states, keyboard activation, educator-view memory, legacy tool fragments, record P7, unknown-fragment recovery, and browser Back/Forward.
+- Regression checks passed for evidence presets (10 primary, 9 PISA, 7 umbrella and 34 all-evidence rows), search empty state/reset, seven-column sorting, details/Escape and CSV download.
+- Educator checks passed for all four practice focuses, practice-to-reflection transfer, note retention across primary navigation, reflection download and clear/cancel, explanation generation/download, reading outcome filters/reset and reference transfer without overwriting notes.
+- Responsive checks covered desktop, 375px, desktop/mobile/desktop transitions, and a 1280-by-600 short viewport. No page-wide horizontal overflow or new JavaScript page errors were observed.
+- Research data, content, source URLs and downloadable policy documents were not edited or newly reverified in this navigation-only change.

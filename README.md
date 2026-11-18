@@ -6,6 +6,8 @@ A source-linked research dashboard for comparing intentional educational technol
 
 ## Dashboard
 
+Primary navigation has eight groups: For Policymakers, Evidence, Wellbeing, Paper & Notes, NY Research & FOCUS Act, For Educators, Methods, and About. For Educators contains Research to Classroom Practice, Instructional Added Value, Early Reading Evidence, and Added Value & Opportunity Cost. Existing section fragments remain supported, including `#practice`, `#added`, `#reading`, and `#reflection`; `#educators` opens the educator group.
+
 - Independent comparison panels with filters for use category, intervention or exposure, age, outcome, effect-size scale, and numeric bounds.
 - Sortable evidence register with sample scope, country context, reported methodological quality, and confidence intervals.
 - Research presets for primary school, PISA context, umbrella findings, and the full collection.

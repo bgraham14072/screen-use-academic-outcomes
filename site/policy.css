@@ -42,14 +42,22 @@
 .audit-list li{margin:var(--s3) 0;font-size:var(--text-sm)}
 .masthead>a{font-size:var(--text-sm)}
 body[data-view=policy] #inventory{display:none}
-.tabs{gap:0 var(--s5)}
-.tabs button{font-size:var(--text-sm)}
+.tabs{gap:0 var(--s5);flex-wrap:wrap}
+.tabs button{font-size:var(--text-sm);white-space:nowrap}
+.educators-heading{padding-top:var(--s6)}
+.educators-heading p{font-size:var(--text-sm);color:var(--muted)}
+.educator-tabs{display:flex;flex-wrap:wrap;gap:var(--s2);padding:var(--s4) 0;border-bottom:1px solid var(--line)}
+.educator-tabs button{padding:var(--s2) var(--s3);border:1px solid var(--line);border-radius:4px;background:var(--paper);font-size:var(--text-sm);text-align:left}
+.educator-tabs button:hover{background:var(--soft)}
+.educator-tabs button.selected{background:var(--active-tint);border-color:var(--active);color:var(--active);font-weight:700}
 .plotrow,.axis{grid-template-columns:minmax(80px,1.4fr) minmax(50px,1fr) minmax(60px,.9fr)}
 .plotrow .value,.detail-number{overflow-wrap:anywhere}
 @media(max-width:900px){.question-strip{grid-template-columns:1fr 1fr}.masthead{flex-wrap:wrap;gap:var(--s2)}}
 @media(max-width:760px){
- .tabs{display:flex;flex-wrap:nowrap;overflow-x:auto;gap:var(--s4);padding-bottom:var(--s1);scrollbar-width:thin}
+ .tabs{display:flex;flex-wrap:wrap;overflow:visible;gap:0 var(--s4);padding-bottom:var(--s1)}
  .tabs button{white-space:nowrap;min-height:48px;font-size:var(--text-sm);flex-shrink:0}
+ .educator-tabs{display:grid;grid-template-columns:1fr 1fr}
+ .educator-tabs button{min-width:0}
  .policy-columns,.bio-grid,.evidence-card dl{grid-template-columns:1fr}
  .policy-lede{padding:var(--s4)}
  .policy-section{padding-top:var(--s5)}
@@ -61,7 +69,7 @@ body[data-view=policy] #inventory{display:none}
  footer{flex-wrap:wrap}
 }
 @media print{
- .masthead,.tabs,.inventory,footer,.skip,.policy-actions{display:none!important}
+ .masthead,.tabs,.educator-tabs,.inventory,footer,.skip,.policy-actions{display:none!important}
  body{background:white;color:#182b3a;font-size:11pt}
  main{padding:0;max-width:none}
  .intro{padding:0 0 12pt}

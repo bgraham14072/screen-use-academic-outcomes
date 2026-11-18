@@ -111,10 +111,10 @@ function route(){
   if(records.some(r=>r.id===id)){preset("all");if($("#detail").open)$("#detail").close();detail(id)}
   else {$("#toast").textContent="Record not found. Showing the evidence explorer.";$("#toast").style.display="block";setTimeout(()=>$("#toast").style.display="none",4000)}
  }else if(hash==="main"){document.querySelector("#main").scrollIntoView()}
- else {if($("#detail").open)$("#detail").close();setTab(viewNames.includes(hash)?hash:"policy")}
+ else {if($("#detail").open)$("#detail").close();setTab(viewNames.includes(hash)||hash==="educators"?hash:"policy")}
 }
 document.addEventListener("click",e=>{
- const a=e.target.closest("a[data-view]");if(a){e.preventDefault();setTab(a.dataset.view);history.pushState(null,"",`#${a.dataset.view}`);window.scrollTo({top:0})}
+ const a=e.target.closest("a[data-view]");if(a){e.preventDefault();setTab(a.dataset.view);try{history.pushState(null,"",`#${a.dataset.view}`)}catch{}window.scrollTo({top:0})}
  const same=e.target.closest('a[href^="#record-"]');if(same&&same.hash===location.hash){e.preventDefault();route()}
 });
 window.addEventListener("hashchange",route);

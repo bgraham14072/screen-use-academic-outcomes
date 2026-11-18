@@ -1,5 +1,15 @@
 # Dashboard flows and practice additions
 
+## Seven-study original-source update, November 18, 2026
+- Add one compatible Ran overall Hedges' g estimate, separately from the immutable original register. All evidence becomes 35; other presets retain their previous scope.
+- Add six narrative-only studies and a Ran contextual companion, without duplicate study records. Preserve existing Furenes, Goodyear and Orben content.
+- Update Q1, Q6, Q7, Q10, Q12, Q13, Q15 and Q16 only; preserve exact question wording, structure, labels and draft status.
+- Allcott, Vuorre and Odgers appear in Wellbeing beside existing harm-related evidence. Other study cards appear under Evidence; each has a stable internal anchor.
+- Update only comparison row 3 of the pulling-back card. Link the §37(3) IEP/504 provision to the assistive-technology review without implying legal eligibility.
+- All new research values have original-publication page/table locators in the append-only ledger. No computed intervals, mixed scales, pooled overlapping samples or discovery-site citations.
+- Verify all new citation clicks, cold-load/reload anchors, new register detail/CSV, source-link opening, desktop and 375px; rerun original navigation and educator/export flows.
+- The dated study audit records publication metadata, design labels, placement, every displayed number and withheld discrepancies.
+
 ## Essential Questions entry point, November 18, 2026
 - Supersedes earlier default-view instructions: no-fragment visits open Start with a question, not For Policymakers. The eight primary tabs remain unchanged; a separate entry link returns to the questions, which link to the policymaker summary.
 - Preserve the user's exact 16 questions and five uppercase group headings, in order. Most asked links expose questions 6, 8 and 11 without reordering the main list.

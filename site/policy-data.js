@@ -3,7 +3,7 @@ const originalRegisterSnapshot = JSON.stringify(records);
 const viewNames = ["policy","explorer","wellbeing","emerging","practice","added","reading","analog","reflection","methods","about"];
 const academicScope = "This dashboard focuses on academic outcomes. Health and wellbeing effects are summarized separately on the Wellbeing Context tab and are not part of the numerical evidence register.";
 const publicDashboard = "https://bgraham14072.github.io/screen-use-academic-outcomes/";
-const sourceCategory = id => id==="oecd" ? "Government/intergovernmental report" : id==="liao" ? "Secondary summary (commissioned government review)" : "Peer-reviewed";
+const sourceCategory = id => id==="ran" ? "Review/meta-analysis · peer-reviewed" : id==="oecd" ? "Government/intergovernmental report" : id==="liao" ? "Secondary summary (commissioned government review)" : "Peer-reviewed";
 const recordAudit = {
  D2:"Audit clarification: the stored count of 13 studies is derived from 18 minus the five removed studies, not an explicitly printed sensitivity count. The effect and interval are directly reported; sensitivity participant N is NR. Original record preserved.",
  L2:'Audit enrichment, not a change to this record: Table 7 reports a 95% CI of [0.20, 0.38]. The original register’s missing interval is incomplete. <a href="https://link.springer.com/content/pdf/10.1007/s11423-024-10354-0.pdf" target="_blank" rel="noopener">Original publication, Table 7</a>.',
@@ -21,6 +21,20 @@ const recordAudit = {
 };
 add("P4","oecd","Heavier school learning use: 5–7 vs 3–5 hours","Mathematics",["Math"],"Intentional","School learning use","Adolescent","15-year-olds","Association","PISA points",-10,null,null,"PISA 2022",null,"Analytic N: NR","OECD average","Observational; unrated","Adjusted for student and school socioeconomic profile.","Reported Chapter 5 contrast: between 5 and 7 hours per day versus between 3 and 5 hours per day of digital learning at school. Not versus zero use. Self-report; residual confounding and reverse causation remain. No recommended dose; CI NR in narrative.");
 records[records.length-1].observed_at="2026-11-17";
+// Authorized addition, independently verified in the original publication.
+sources.ran={
+ label:"Ran, Kim & Secada · 2022",
+ title:"A meta-analysis on the effects of technology's functions and roles on students' mathematics achievement in K-12 classrooms",
+ url:"https://doi.org/10.1111/jcal.12611",
+ extra:"https://onlinelibrary.wiley.com/doi/epdf/10.1111/jcal.12611",
+ type:"Review/meta-analysis · peer-reviewed",
+ scope:"77 studies; 151 effect sizes; 54,988 students in K–12 general-education mathematics classrooms. No aggregate country count reported.",
+ quality:"Randomized and quasi-experimental studies; no new formal quality grade assigned. I² = 68.5 as reported in §7.1, p. 266. Sparse moderator groups and reporting inconsistencies warrant caution.",
+ context:"Technology interventions versus instruction without the technology intervention. Function moderators are not randomized head-to-head comparisons. Do not add samples across overlapping reviews."
+};
+add("M1","ran","Technology-supported K–12 mathematics","Mathematics",["Math"],"Intentional","Math instruction","Mixed ages","K–12","Intervention","g",.23,.19,.27,"77 studies; 151 effect sizes",54988,"54,988 in the review; samples may overlap other reviews","K–12 mathematics classrooms; aggregate country count NR","Not formally rated","Random-effects meta-analysis of randomized and quasi-experimental interventions; I² = 68.5 as reported.","Hedges’ g and reported 95% CI copied from §7.1, p. 266. Positive favors technology-supported mathematics. Not randomized-only, not a screen-time-dose estimate, and not a head-to-head ranking of functions.");
+records[records.length-1].observed_at="2026-11-18";
+recordAudit.M1='<a href="#study-ran">Read the full scope, moderators, null findings and reporting cautions</a>. Original effect and CI: p. 266; study/effect counts: pp. 258, 263; student count: p. 269. No confidence interval was calculated.';
 add("P5","oecd","Heavier school leisure use: >3–5 vs >2–3 hours","Mathematics",["Math"],"Mixed","Leisure use","Adolescent","15-year-olds","Association","PISA points",-13.58600513267465,null,null,"PISA 2022",null,"Analytic N: NR","OECD average","Observational; unrated","Adjusted for student and school socioeconomic profile.","Exact stored OECD workbook value, Table II.B1.5.67, cell AC48. More than 3 up to 5 hours versus more than 2 up to 3 hours per day. Displayed as whole points, matching OECD’s presentation; CSV retains the exact stored value. CI NR; no causal or dose inference.");
 records[records.length-1].observed_at="2026-11-17";
 add("P6","oecd","Very high school leisure use: >7 vs >5–7 hours","Mathematics",["Math"],"Mixed","Leisure use","Adolescent","15-year-olds","Association","PISA points",8.103342643669569,null,null,"PISA 2022",null,"Analytic N: NR","OECD average","Observational; unrated","Adjusted for student and school socioeconomic profile.","Exact stored OECD workbook value, Table II.B1.5.67, cell AO48. More than 7 hours versus more than 5 up to 7 hours per day. This positive adjacent-category contrast prevents a false claim that every higher category scores lower. Self-reported extreme durations require caution. CI NR; not evidence of a beneficial dose.");

@@ -1,5 +1,18 @@
 # Acceptance and QA inventory
 
+## Seven-study update: 18 November 2026
+
+Local acceptance checks passed against baseline `a688b1d04cc95fa828c9b2d1d7f4aa1f480bb9e2`. Hosted verification and the preserved release revision are recorded in the session and Project storage provenance.
+
+- Both `tests/questions.test.mjs` and `tests/study-additions.test.mjs` pass. The protected data.js hash, all original records and earlier supplementary records are unchanged. Ran M1 is the sole added numerical estimate.
+- Requested question citations, all seven study cold-load/reload fragments, the disability-exception link, M1 detail and its contextual-card link work through normal browser clicks.
+- All eight primary navigation groups and four educator views work. Existing preset counts remain 10 for primary, nine for PISA and seven for umbrella; all evidence now contains 35. The reporting-concern filter changes 35 to 34 and back.
+- Both panels' categorical filters, invalid numeric bounds, clear/reset, empty search, all column sort directions, expanded plots, modal close/Escape and actual CSV download pass. Downloaded M1 retains g 0.23, CI 0.19–0.27, review sample 54,988 and source/limitation fields.
+- Practice focus choices, reading filters, reference transfer, note retention, reflection/explanation downloads, stale-draft blocking, cancel clearing and confirm clearing pass. Synthetic notes were cleared after testing.
+- Desktop, 375px, short-desktop and desktop/mobile/desktop checks found no page-wide overflow. New cards, expanded question, register dialog, footers and limits were visually inspected. Long evidence prose remains scrollable, not clamped.
+- Back/Forward, unknown-fragment recovery and an actual original-source popup pass. No JavaScript page errors were captured.
+- Source metadata, result locators and withheld discrepancies are documented in `site/study-additions-audit.md`. This is not an independent replication of the publications or a formal quality grade.
+
 ## Essential Questions: 18 November 2026
 
 Acceptance inventory:

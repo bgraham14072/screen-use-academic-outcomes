@@ -64,6 +64,7 @@ const crosswalk=[
  ["§32 · Analog learning and homework","PK–8 homework must not require internet access, electronic devices or educational technology; schools prioritize non-digital in-class methods where feasible and provide a process to refuse devices when a reasonable alternative exists.","R1 and the paper-reading narratives give reasons to preserve print; the register does not measure the effect of this statewide homework rule.","What makes the analog alternative genuinely equivalent, accessible and available without penalty? Which learning activities actually require a device rather than merely benefit from one?",["R1"]],
  ["§33(1)(e)–(g) · AI and cameras","School-issued devices may not contain generative AI, conversational AI or hardware cameras; the conversational-AI clause expressly preserves assistive technology for users with disabilities.","The older academic evidence does not establish current generative-AI safety or efficacy; AIRE and the proposed multimodal Screener are research projects, not proven classroom outcomes.","How do §37 exceptions interact with these restrictions? Could approved, independently evaluated research be distinguished from unrestricted chatbots or surveillance, with consent, data minimization and human review?",["D1","P3"]],
  ["§35(2)(h) · Product evidence","A provider must self-attest that at least one independent study proves improved academic performance related to specific curriculum objectives; schools may offer only registered technology.","Category-level reviews cannot validate an individual product or version; a screening-accuracy result is not the same outcome as improved academic performance.","What independence, design, population, outcomes and version requirements should apply? How would screening, accessibility, translation and research-stage tools be assessed fairly?",["L1","N4"]],
+ ["§37(3) · IEP/504 exception","Preserves school-issued-device uses included in an individualized education program or Section 504 plan, or otherwise as an assistive tool for disability accessibility; read this with the other provisions.",'The <a href="#study-fernandez">Fernández-Batanero assistive-technology review</a> describes inclusion and access benefits alongside implementation barriers. It does not establish a pooled causal achievement effect or determine legal eligibility.',"Would a restriction preserve the individual learner’s required supports, with specialist review and accessible alternatives?",[]],
  ["§37 · Construction and exceptions","Preserves technology inherent to the learning objective, IEP/504 uses, other disability-accessibility tools and translation; these provisions must be read together with the restrictions.","Instructional added value is not automatically legal necessity; no record determines eligibility for an exception or whether universal screening before identification qualifies.","Can guidance distinguish technology as the learning objective from optional support? Will universal early screening be addressed before a child has an IEP or 504 plan, without assuming the broader accessibility wording resolves every case?",["P1","L1"]]
 ];
 $("#emerging").className="policy-section";
@@ -105,13 +106,31 @@ document.querySelectorAll(".practice-methods .source-item,.research-context .sou
  const a=el.querySelector("a");const entry=Object.values(practiceSources).find(s=>s.url===a?.href);
  if(entry)el.querySelector(".source-label")?.insertAdjacentHTML("beforeend",`<span>${practiceCategories[entry.id]||"Peer-reviewed"}</span>`);
 });
-$("#wellbeing").insertAdjacentHTML("afterbegin",pullingBackCard);
+$("#wellbeing").insertAdjacentHTML("afterbegin",updatedPullingBackCard);
 $("#pulling-back").insertAdjacentHTML("afterend",digitalDivideCard);
-$("#wellbeing").insertAdjacentHTML("afterbegin",'<nav class="wellbeing-topics" aria-label="Wellbeing sections"><span>In this section:</span><a href="#pulling-back">The case for pulling back</a><a href="#digital-divide">Digital divide</a></nav>');
+$("#wellbeing").insertAdjacentHTML("afterbegin",'<nav class="wellbeing-topics" aria-label="Wellbeing sections"><span>In this section:</span><a href="#pulling-back">The case for pulling back</a><a href="#digital-divide">Digital divide</a><a href="#study-allcott">Phone restrictions</a><a href="#study-vuorre">Global wellbeing</a><a href="#study-odgers">Adolescent mental health</a></nav>');
 const pullingBackTable=$("#pulling-back .tablewrap");
 pullingBackTable.tabIndex=0;
 pullingBackTable.setAttribute("role","region");
 pullingBackTable.setAttribute("aria-label","Where the evidence agrees and differs. Scroll horizontally on small screens.");
+// Append, rather than reorder, so existing narrative-card anchors stay stable.
+function addedStudyCard(c){
+ const cite=out(c.full,"Original publication");
+ const prose=s=>s.split(/(?<=[.!?]) (?=[A-Z])/).map(t=>`${t} ${cite}`).join(" ");
+ return `<article class="evidence-card" id="${c.id}" tabindex="-1" data-testid="${c.id}">
+ <div class="eyebrow">${c.category} · ${c.label}</div>
+ <h3>${c.title}</h3><p class="small">${c.authors}. ${c.venue}. ${out(c.url,"Publication record")}</p>
+ <p>${prose(c.finding)}</p>
+ <dl><div><dt>Study design</dt><dd>${prose(c.design)}</dd></div>
+ <div><dt>Population and sample</dt><dd>${prose(c.population)}</dd></div>
+ <div><dt>Use context</dt><dd>${prose(c.context)}</dd></div>
+ <div><dt>Limits and disagreement</dt><dd>${prose(c.limits)}</dd></div></dl>
+ <p class="source-line">Source locations: ${c.locator} ${cite}</p>
+ <p class="source-line">${c.register?`${rec(c.register,"Inspect the sole numerical register estimate")}; this card adds no second estimate.`:"Narrative only; not a numerical register entry."} Verified 18 November 2026.</p></article>`;
+}
+$("#wellbeing").insertAdjacentHTML("beforeend",addedStudies.filter(c=>c.view==="wellbeing").map(addedStudyCard).join(""));
+$("#explorer").insertAdjacentHTML("beforeend",`<section class="policy-section" aria-label="Instructional study context"><h2>Instructional study context</h2><p>Read findings with their comparison, design and limits. Narrative cards do not enter the numerical plots or participant counts.</p>${addedStudies.filter(c=>c.view==="explorer").map(addedStudyCard).join("")}</section>`);
+$("#methods").insertAdjacentHTML("beforeend",'<section class="about-block"><h2>Original-source addition audit</h2><p>The new study cards identify publication status, design, mixed findings and limits. <a href="study-additions-audit.md">Read the study-by-study audit and withheld items</a> or <a href="new-values-ledger.csv" download>download the exact-value ledger</a>.</p></section>');
 renderEssentialQuestions();
 function route(){
  const hash=location.hash.slice(1);

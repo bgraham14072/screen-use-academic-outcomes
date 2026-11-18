@@ -1,4 +1,26 @@
 /* Policy views share the established dashboard type, spacing and color tokens. */
+.wellbeing-topics{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s3) var(--s5);font-size:var(--text-sm);margin-bottom:var(--s5)}
+.wellbeing-topics span{color:var(--muted)}
+.wellbeing-topics a{display:inline-flex;align-items:center;min-height:44px}
+.equity-card{padding:var(--s6);margin-bottom:var(--s6);background:var(--paper);border:1px solid var(--line);border-top:4px solid var(--active);border-radius:6px;scroll-margin-top:24px}
+.equity-card:focus{outline:none}
+.equity-card:focus-visible{outline:3px solid var(--active);outline-offset:4px}
+.equity-card h3{font-size:var(--text-lg);margin-bottom:var(--s4)}
+.equity-card h4{font-size:var(--text-base);line-height:1.4;margin:0}
+.equity-card p{max-width:100ch}
+.equity-divides{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s5)}
+.equity-divides>section{padding:var(--s4);background:var(--soft);border-radius:4px}
+.equity-divides p,.equity-policy p{font-size:var(--text-sm);line-height:1.65}
+.equity-section{margin-top:var(--s6);padding-top:var(--s5);border-top:1px solid var(--line)}
+.equity-policy{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s5);margin-top:var(--s5)}
+.equity-sources{margin-top:var(--s6);border-top:1px solid var(--line);padding-top:var(--s4)}
+.equity-sources summary{cursor:pointer;font-weight:700;padding:var(--s3) 0}
+.equity-source-list{display:grid;grid-template-columns:1fr 1fr;gap:var(--s5);margin:var(--s5) 0}
+.equity-source-list section{padding-top:var(--s3);border-top:1px solid var(--line)}
+.equity-source-list p{font-size:var(--text-sm)}
+.equity-card a{overflow-wrap:anywhere}
+@media(max-width:1000px){.equity-divides,.equity-policy{grid-template-columns:1fr}.equity-policy section+section{border-top:1px solid var(--line);padding-top:var(--s4)}}
+@media(max-width:700px){.equity-card{padding:var(--s4)}.equity-source-list{grid-template-columns:1fr}}
 .pulling-back-card{padding:var(--s6);margin-bottom:var(--s6);background:var(--paper);border:1px solid var(--line);border-top:4px solid var(--ink);border-radius:6px;scroll-margin-top:24px}
 .pulling-back-card:focus{outline:none}
 .pulling-back-card:focus-visible{outline:3px solid var(--accent);outline-offset:4px}

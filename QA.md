@@ -1,5 +1,28 @@
 # Acceptance and QA inventory
 
+## Digital equity card: 18 November 2026
+
+Acceptance inventory:
+- Exact requested title in Wellbeing, after the unchanged pulling-back card. Topic links and #digital-divide route select and focus the correct card.
+- Three divides; explicit no-direct-policy-test statement; mixed home-computer evidence; proposed §§31–33 interpreted with §37 exceptions.
+- Seven requested journal sources and the Quello/RAND reports only, with the official bill used for statutory text. All ten source entries identify source type/design and original verification scope.
+- No new numerical estimates. Existing register, source metadata, exact values, brief PDF and pulling-back narrative remain unchanged.
+- Expand/collapse original-source details with pointer and keyboard. Activate representative journal, report and bill links; confirm destinations.
+- Desktop, mobile and short-height layout, source-details expanded state, mobile-to-desktop roundtrip and existing navigation/explorer/educator controls.
+- Off-happy-path checks: reload a deep link; Back/Forward between narrative anchors; unknown-record recovery; repeated same-anchor activation.
+
+Local verification:
+- Exact title, required caveat and ten source-design entries verified in rendered DOM. Original publisher abstract/preview directly checked for Hohlfeld, Malamud and Fairlie; full-article verification is not claimed for them. Other cited original texts/reports checked.
+- Pointer, Enter and Space expand/collapse the disclosure. Actual journal, RAND and bill link clicks reached their expected hosts; the Senate host displayed a human-check page in the test browser. External access restrictions are not controlled by this dashboard.
+- All eight main navigation groups and four educator tools tested. Educator notes persisted across navigation. Narrative links, same-anchor repeat, Back/Forward and deep-link reload passed.
+- Explorer presets remained primary 10, PISA 9, umbrella 7 and all 34. Empty-state recovery and unknown-record recovery passed. Runtime comparison of the original 29 records passed.
+- `site/data.js` retains SHA-256 `6d6798992562ee89aeecd8304fd732c543209f4f195cf8db0fda442496dddf12`. No changes to policy-data.js, app.js, practice.js, reading.js, pulling-back.js, brief or PDF.
+- Desktop card top, evidence balance, statutory implications and expanded source details visually inspected. Mobile 375px top and source details inspected, plus 1440×520 short desktop and mobile-to-desktop return. No page-wide horizontal overflow or captured JavaScript errors.
+- New small labels and links checked using computed colors: muted labels on white 6.38:1, source links on pale panels 6.23:1, topic label on page background 6.02:1. These checks do not establish full accessibility conformance.
+- `node --check` passed for the new narrative module and updated router; `git diff --check` passed.
+
+Hosted verification is recorded in the release completion message after publication.
+
 ## OECD headline and public-report revision: 17 November 2026
 
 - P7 reproduces OECD's published +49 adjusted mathematics-point contrast for school leisure use up to one hour versus five to seven hours. Its original-source link opens the December 2023 OECD press release; confidence interval and analytic N remain NR.

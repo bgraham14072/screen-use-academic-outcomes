@@ -106,6 +106,8 @@ document.querySelectorAll(".practice-methods .source-item,.research-context .sou
  if(entry)el.querySelector(".source-label")?.insertAdjacentHTML("beforeend",`<span>${practiceCategories[entry.id]||"Peer-reviewed"}</span>`);
 });
 $("#wellbeing").insertAdjacentHTML("afterbegin",pullingBackCard);
+$("#pulling-back").insertAdjacentHTML("afterend",digitalDivideCard);
+$("#wellbeing").insertAdjacentHTML("afterbegin",'<nav class="wellbeing-topics" aria-label="Wellbeing sections"><span>In this section:</span><a href="#pulling-back">The case for pulling back</a><a href="#digital-divide">Digital divide</a></nav>');
 const pullingBackTable=$("#pulling-back .tablewrap");
 pullingBackTable.tabIndex=0;
 pullingBackTable.setAttribute("role","region");
@@ -116,18 +118,22 @@ function route(){
   const id=hash.slice(7);setTab("explorer");
   if(records.some(r=>r.id===id)){preset("all");if($("#detail").open)$("#detail").close();detail(id)}
   else {$("#toast").textContent="Record not found. Showing the evidence explorer.";$("#toast").style.display="block";setTimeout(()=>$("#toast").style.display="none",4000)}
- }else if(hash==="pulling-back"){
+ }else if(hash==="pulling-back"||hash==="digital-divide"){
   if($("#detail").open)$("#detail").close();
   setTab("wellbeing");
-  $("#pulling-back").focus({preventScroll:true});
-  $("#pulling-back").scrollIntoView({block:"start"});
+  $(`#${hash}`).focus({preventScroll:true});
+  $(`#${hash}`).scrollIntoView({block:"start"});
  }else if(hash==="main"){document.querySelector("#main").scrollIntoView()}
  else {if($("#detail").open)$("#detail").close();setTab(viewNames.includes(hash)||hash==="educators"?hash:"policy")}
 }
 document.addEventListener("click",e=>{
  const a=e.target.closest("a[data-view]");if(a){e.preventDefault();setTab(a.dataset.view);try{history.pushState(null,"",`#${a.dataset.view}`)}catch{}window.scrollTo({top:0})}
- const same=e.target.closest('a[href^="#record-"],a[href="#pulling-back"]');if(same&&same.hash===location.hash){e.preventDefault();route()}
+ const same=e.target.closest('a[href^="#record-"],a[href="#pulling-back"],a[href="#digital-divide"]');if(same&&same.hash===location.hash){e.preventDefault();route()}
 });
 window.addEventListener("hashchange",route);
+// Reapply narrative anchors after browser reload/restoration has laid out the page.
+window.addEventListener("pageshow",()=>{
+ if(["#pulling-back","#digital-divide"].includes(location.hash))requestAnimationFrame(route);
+});
 route();
 if(JSON.stringify(records.slice(0,29))!==originalRegisterSnapshot)throw new Error("Original evidence register changed");

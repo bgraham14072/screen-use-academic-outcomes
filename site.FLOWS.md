@@ -1,5 +1,15 @@
 # Dashboard flows and practice additions
 
+## Digital equity narrative card, November 18, 2026
+- Wellbeing retains the exact pulling-back card first, followed by “Could limiting school technology widen the digital divide?” No FAQ or primary tab is added.
+- #digital-divide directly selects Wellbeing and focuses the new card. Reload and Back/Forward preserve routing; old #pulling-back and record links remain valid.
+- Wellbeing section links expose both narrative cards without adding another primary tab.
+- Three distinct divides: access/skills, use, and home exposure/support. State explicitly that no cited study directly tests the equity effects of removing school technology.
+- Include only the seven specified journal publications, Quello 2020 and RAND 2024–25 reports. Label reports distinctly; identify original abstract-only verification and observational versus experimental designs.
+- Qualify the mixed home-computer results and policy inferences. Cover §31, §32 and §33 using original bill language, read with §37 exceptions.
+- Source-design details expand/collapse by mouse and keyboard. Text and links remain readable at 375px and desktop, without page-wide overflow.
+- Keep all evidence data, pulling-back text, print brief/PDF and educator note behavior unchanged; rerun main navigation, explorer and educator flows.
+
 ## Pulling-back narrative card, November 18, 2026
 - The Wellbeing view begins with the complete Claude draft card, unchanged except citation labels and destinations. Original draft: https://claude.ai/artifact/Uyogfr6g2MgXTNBUy3n1na.
 - The policymaker landing link opens and focuses the card at #pulling-back; direct loading, refresh, repeat activation and browser back work.

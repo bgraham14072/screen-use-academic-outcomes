@@ -88,6 +88,16 @@ const practiceSources = {
     finding: "The pooled comparison favored virtual over hands-on laboratories for conceptual science knowledge. This review did not pool blended virtual-plus-hands-on instruction.",
     limits: "High heterogeneity (I² = 88.139%); 41 potentially eligible full texts could not be retrieved. Authors used a JBI checklist and identified limitations in 14 studies. Only three elementary studies; conceptual outcomes cannot establish superiority for practical skills or all primary classrooms.",
     accessed: "17 November 2026"
+  },
+  apa2026: {
+    id: "apa2026", label: "American Psychological Association · Sept. 3, 2026",
+    title: "APA Expert Report on Children’s and Adolescents’ Learning With Educational Technology",
+    url: "https://www.apa.org/pubs/reports/childrens-adolescents-learning-educational-technology.pdf",
+    type: "Professional-association evidence synthesis",
+    scope: "Expert synthesis across early childhood, K–12 and home learning contexts; 6 overarching conclusions and 10 evidence-based recommendations (released September 3, 2026). No single pooled participant N.",
+    finding: "Engagement, enjoyment and completion metrics do not demonstrate learning. Recommendation 2 urges off-screen “show me” checks asking whether students can remember, explain and apply concepts after the app is closed, and calls for independent validation showing retention or skill transfer at least one week after use.",
+    limits: "Professional-association evidence synthesis rather than a single randomized trial or product certification. Evaluates broad principles of learning science, adult mediation, distraction-free design, subgroup equity and displacement rather than certifying individual products.",
+    accessed: "19 November 2026"
   }
 };
 

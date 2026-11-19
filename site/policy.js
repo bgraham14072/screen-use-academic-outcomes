@@ -61,6 +61,8 @@ $("#analog").innerHTML=`<div class="policy-heading"><div class="eyebrow">PAPER &
 
 const crosswalk=[
  ["§31 · Access and grade bands","The operative text generally prohibits school-issued devices and access to other electronic/internet-enabled devices in PK–5; grades 6–8 use supervised labs or carts, subject to the bill’s construction provisions.","D1/D2 show possible elementary instructional benefits and quality limits; P3 supports attention to distraction but is adolescent observational evidence. <a href=\"#study-mindspark\">Mindspark</a> and <a href=\"#study-assistments-maine\">ASSISTments</a> mainly concern secondary grades. Those trials neither support nor directly refute the proposed elementary restriction.","How would restrictions preserve strong non-digital instruction while allowing carefully evaluated, goal-specific uses? How would general K–2 AIRE research access be handled, rather than assuming a disability exception applies?",["D1","D2","P3"]],
+ ["§31 vs §33 · Targeted exclusions versus a blanket elementary ban","§33(1) already bars school-issued devices containing embedded or downloadable social media, gaming, messaging, AI companions, generative AI, conversational AI (preserving disability assistive technology) or hardware cameras, and §33(2) limits devices to instructional media. §31(1) separately bars school-issued devices in pre-K–5 and generally prohibits pupil access to internet-enabled and electronic devices on school grounds.","P3 and the wellbeing reviews address recreational, social-media and off-task risks targeted by §33, whereas elementary studies (D1, D2, L1, N4) examine structured instructional uses. No study in the dashboard tests whether adding a blanket pre-K–5 prohibition atop §33’s category exclusions improves learning or wellbeing.","Since §33 already names the problem categories for school-issued devices (social media, gaming, messaging, AI companions, generative or conversational AI and cameras), does a blanket pre-K–5 ban in §31 sweep in structured instructional and assessment uses that §33 would otherwise permit? This is an educational question, not legal advice.",["D1","D2","L1","N4","P3"]],
+ ["§31 & §37(2) · K–5 screening and diagnostic assessment","§31(1) restricts pupil device access in pre-K–5, while §37(2) states that nothing in the article constrains providing or requiring an internet-enabled device or related technology where use is “inherent to the learning objective of an activity, assignment, assessment or task,” alongside §37(3)’s IEP, Section 504 and disability-accessibility protections.","Universal screening and diagnostic assessments are given across general-education classrooms to identify foundational reading or mathematics needs before an IEP or Section 504 plan exists; screening-accuracy validation (<a href=\"#research-screener\">UB Screener research</a>) is distinct from an instructional efficacy trial. Other 2026 K–5 screen limits (<a href=\"#federal-policy-context\">Iowa Code § 279.89</a>; <a href=\"#nyc-screen-policy\">NYC Public Schools</a>) expressly exempt digital screeners and diagnostic assessments.","Would §31 restrict computer-adaptive universal screening and diagnostic assessment in K–5, and does §37(2) (“inherent to the learning objective of an activity, assignment, assessment or task”) cover them when reading or mathematics is the underlying domain, or is explicit assessment language needed? This is an educational question, not legal advice.",["D1","L1"]],
  ["§32 · Analog learning and homework","PK–8 homework must not require internet access, electronic devices or educational technology; schools prioritize non-digital in-class methods where feasible and provide a process to refuse devices when a reasonable alternative exists.","R1 and the paper-reading narratives give reasons to preserve print; the register does not measure the effect of this statewide homework rule.","What makes the analog alternative genuinely equivalent, accessible and available without penalty? Which learning activities actually require a device rather than merely benefit from one?",["R1"]],
  ["§33(1)(e)–(g) · AI and cameras","School-issued devices may not contain generative AI, conversational AI or hardware cameras; the conversational-AI clause expressly preserves assistive technology for users with disabilities.","The older academic evidence does not establish current generative-AI safety or efficacy; AIRE and the proposed multimodal Screener are research projects, not proven classroom outcomes.","How do §37 exceptions interact with these restrictions? Could approved, independently evaluated research be distinguished from unrestricted chatbots or surveillance, with consent, data minimization and human review?",["D1","P3"]],
  ["§35(2)(h) · Product evidence","A provider must self-attest that at least one independent study proves improved academic performance related to specific curriculum objectives; schools may offer only registered technology.","Category-level reviews cannot validate an individual product or version. <a href=\"#study-assistments-maine\">ASSISTments</a> pairs a favorable cluster-randomized trial with an independent achievement measure; the <a href=\"#study-federal2009\">federal evaluation</a> has mostly null product findings with exceptions; <a href=\"#study-cognitive-tutor\">Cognitive Tutor</a> shows why implementation year, cohort and multiple-comparison rules matter. A screening-accuracy result is not improved academic performance.","What would make an independent study meaningful: evaluator and funder disclosure, a credible comparison, matching grades and product version, independent curriculum-relevant outcomes, prespecified analysis, and transparent nulls and uncertainty? How would screening, accessibility, translation and research-stage tools be assessed fairly? These are review questions, not certification that any product satisfies the bill.",["L1","N4"]],
@@ -88,7 +90,7 @@ $("#about").className="policy-section";
 $("#about").innerHTML=`<div class="policy-heading"><div class="eyebrow">ABOUT THIS RESOURCE</div><h2 class="about-credit">${contributorTitle}</h2></div>
  <div class="about-block"><h3>Purpose</h3><p>${purposeText}</p></div>
  <div class="bio-grid">${bios.map(([name,title,bio])=>`<article><h3>${name}</h3><p class="source-line">${title}</p><p>${bio}</p></article>`).join("")}</div>
- <div class="about-block"><h3>Disclosure</h3><p>${disclosureText}</p></div>
+ <div class="about-block"><h3>Disclosure</h3><p>${disclosureText}</p><p>Organizations, including an education technology company, suggested sources for this dashboard. Every source was independently verified against the original, and no vendor reviewed or approved the content.</p></div>
  <div class="about-block"><h3>AI assistance and verification</h3><p>This dashboard was built with AI assistance. Source checks and unresolved verification limits are documented in Methods & sources.</p></div>
  <div class="about-block"><h3>Contact</h3><p>Brian S. Graham, Ed.D., Superintendent of Schools, Grand Island Central School District. <a href="mailto:BrianGraham@gicsd.org">BrianGraham@gicsd.org</a> · ${out("https://www.grandislandschools.org/our-district/superintendents-office","Public superintendent’s office contact")}</p></div>
  <div class="about-block"><h3>Suggested citation (APA style)</h3><p class="citation">Graham, B. S., DeSiato, D., Sinha, K., Bloom, J., & Gaven, M. (2026). Screen use & academic outcomes [Interactive evidence dashboard]. <a href="${publicDashboard}">${publicDashboard}</a></p></div>`;
@@ -101,7 +103,7 @@ $("#methods").insertAdjacentHTML("afterbegin",`${scopeBlock}<section class="abou
 // Correct the old display-family explanation, without touching evidence data.
 const scaleItem=[...document.querySelectorAll("#methods li")].find(e=>e.textContent.startsWith("d, g and SMD:"));
 if(scaleItem)scaleItem.innerHTML="<b>d, g and SMD:</b> standardized differences, each kept in its own plot and sort group. No combined ranking across these scales; intervention and association designs remain separate.";
-const practiceCategories={eef:"Commissioned review · secondary summary",oecd2025:"Government/intergovernmental report"};
+const practiceCategories={eef:"Commissioned review · secondary summary",oecd2025:"Government/intergovernmental report",apa2026:"Professional-association evidence synthesis"};
 document.querySelectorAll(".practice-methods .source-item,.research-context .source-item").forEach(el=>{
  const a=el.querySelector("a");const entry=Object.values(practiceSources).find(s=>s.url===a?.href);
  if(entry)el.querySelector(".source-label")?.insertAdjacentHTML("beforeend",`<span>${practiceCategories[entry.id]||"Peer-reviewed"}</span>`);
@@ -128,7 +130,7 @@ function addedStudyCard(c){
  <div><dt>Limits and disagreement</dt><dd>${prose(c.limits,"limits")}</dd></div></dl>
  <p class="source-line">Source locations: ${c.locator} ${cite}</p>
  ${c.companions?`<p class="source-line">${c.companions.map(([u,l])=>out(u,l)).join(" · ")}</p>`:""}
- <p class="source-line">${c.register?`${rec(c.register,"Inspect the sole numerical register estimate")}; this card adds no second estimate.`:"Narrative only; not a numerical register entry."} Verified 18 November 2026.</p></article>`;
+ <p class="source-line">${c.register?`${rec(c.register,"Inspect the sole numerical register estimate")}; this card adds no second estimate.`:"Narrative only; not a numerical register entry."} Verified ${c.verified||"18 November 2026"}.</p></article>`;
 }
 $("#wellbeing").insertAdjacentHTML("beforeend",addedStudies.filter(c=>c.view==="wellbeing").map(addedStudyCard).join(""));
 $("#explorer").insertAdjacentHTML("beforeend",`<section class="policy-section" aria-label="Instructional study context"><h2>Instructional study context</h2><p>Read findings with their comparison, design and limits. Narrative cards do not enter the numerical plots or participant counts.</p>${addedStudies.filter(c=>c.view==="explorer").map(addedStudyCard).join("")}</section>`);
@@ -144,11 +146,26 @@ function route(){
   const id=hash.slice(7);setTab("explorer");
   if(records.some(r=>r.id===id)){preset("all");if($("#detail").open)$("#detail").close();detail(id)}
   else {$("#toast").textContent="Record not found. Showing the evidence explorer.";$("#toast").style.display="block";setTimeout(()=>$("#toast").style.display="none",4000)}
- }else if(hash==="pulling-back"||hash==="digital-divide"){
+ }else if(hash==="pulling-back"||hash==="digital-divide"||hash==="public-opinion-equity"){
   if($("#detail").open)$("#detail").close();
   setTab("wellbeing");
-  $(`#${hash}`).focus({preventScroll:true});
-  $(`#${hash}`).scrollIntoView({block:"start"});
+  $(`#${hash}`)?.focus({preventScroll:true});
+  $(`#${hash}`)?.scrollIntoView({block:"start"});
+ }else if(hash==="federal-policy-context"||hash==="nyc-screen-policy"){
+  if($("#detail").open)$("#detail").close();
+  setTab("emerging");
+  $(`#${hash}`)?.focus({preventScroll:true});
+  $(`#${hash}`)?.scrollIntoView({block:"start"});
+ }else if(hash==="public-opinion-policy"){
+  if($("#detail").open)$("#detail").close();
+  setTab("policy");
+  $(`#${hash}`)?.focus({preventScroll:true});
+  $(`#${hash}`)?.scrollIntoView({block:"start"});
+ }else if(hash==="apa-synthesis-methods"){
+  if($("#detail").open)$("#detail").close();
+  setTab("methods");
+  $(`#${hash}`)?.focus({preventScroll:true});
+  $(`#${hash}`)?.scrollIntoView({block:"start"});
  }else if(hash==="main"){document.querySelector("#main").scrollIntoView()}
  else {if($("#detail").open)$("#detail").close();setTab(viewNames.includes(hash)||hash==="educators"?hash:"questions")}
 }

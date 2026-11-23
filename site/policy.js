@@ -33,6 +33,22 @@ $("#policy").innerHTML=`
  <h3>Four questions before a device is used</h3>
  <div class="question-strip"><div><h3>Purpose</h3><p>What should students learn?</p></div><div><h3>Added value</h3><p>What does this feature add beyond a good non-digital lesson?</p></div><div><h3>Adult support</h3><p>How will the teacher guide, check and respond?</p></div><div><h3>Opportunity cost</h3><p>What reading, writing, talk, play or hands-on work might it replace?</p></div></div>
  ${scopeBlock}
+ <section class="about-block" aria-labelledby="policy-resources-title">
+  <h2 id="policy-resources-title">Policy guidance and implementation resources</h2>
+  <p>These resources offer approaches to writing policy. Neither is New York bill text or a study of student achievement.</p>
+  <div class="policy-columns">
+   <article class="policy-column"><h3>InnovateEDU: a model state policy</h3>
+    <p class="source-line">Proposed policy · Pre-K through grade 5 · Not enacted law</p>
+    <p>The model asks schools to explain what a digital activity adds and what it replaces. It protects time for print, handwriting, play and recess while preserving access to required assistive technology.</p>
+    <p>${out("https://www.responsibletechuse.org/_files/ugd/f384a6_2de92d5ef1744dd8adc6a867c7f86894.pdf","Read the model state policy (PDF)")} · ${out("https://www.responsibletechuse.org/_files/ugd/5be6a9_63414e9021354b8a94d5c3fc4f088034.pdf","Read the legislator overview (PDF)")}</p>
+   </article>
+   <article class="policy-column"><h3>CoSN: a guide for district leaders</h3>
+    <p class="source-line">Secondary summary · Professional-association guidance</p>
+    <p>CoSN distinguishes time spent on a device from the purpose it serves. Its public summary illustrates why a board might treat recreational scrolling differently from a student using text-to-speech to read grade-level material.</p>
+    <p>${out("https://www.cosn.org/wp-content/uploads/2026/08/CoSN-Screen-Time-Mandates-to-Purposeful-Tech-ExecSumm-0826_v4.pdf","Read CoSN’s public executive summary (PDF)")}</p>
+   </article>
+  </div>
+ </section>
  <div class="policy-actions"><a href="leave-behind.html">Read or print the two-page brief</a><a href="screen-use-policy-brief.pdf" download>Download the two-page PDF</a><a href="#emerging" data-view="emerging">New York research & FOCUS Act crosswalk</a></div>`;
 
 const wellbeingCards=[

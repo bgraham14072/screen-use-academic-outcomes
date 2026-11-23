@@ -72,6 +72,7 @@
 - Recheck changed navigation and an evidence flow in fresh contexts after deployment; preserve the updated source in Project storage.
 
 ## Policy revision acceptance inventory
+- For Policymakers includes a separate policy resources section: InnovateEDU's model and legislator overview, and CoSN's public extended executive summary. Test all three source links and verify mobile reflow. Do not change evidence records or the two-page brief.
 - P7 is the published +49 adjusted leisure contrast, up to one hour versus five to seven hours at school, with CI/N NR and direct press-release provenance.
 - Policy and brief distinguish the figure's unadjusted time-band pattern from the adjusted headline contrast. The one-to-five-hour learning statement remains narrative, with no derived numerical effect.
 - Public Source Verification Report and its legacy audit URL contain no build-process notes; About omits the requesting-contributor sentence.

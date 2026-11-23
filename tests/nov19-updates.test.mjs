@@ -26,13 +26,14 @@ assert.equal(apa.category,"Professional-association evidence synthesis");
 assert(ip.category.includes("Qualitative classroom observation by a nonprofit")&&ip.category.includes("not outcome evidence"));
 assert.equal(full.studies.filter(c=>c.register).length,2,"No new numerical register rows");
 
+assert.equal(full.q.length,13);
 for(const q of full.q){
  const sentences=q.short.trim().split(/(?<=[.!?])\s+/);
  assert(sentences.length>=2&&sentences.length<=3,`Question ${q.n} short answer must be 2–3 sentences`);
  for(const key of ["short","shows","doesnt","classroom","change"]){
   assert(q[key].length>20,`Question ${q.n} ${key} non-empty`);
   const stripped=q[key].replace(/K–12|K-12|1:1/g,"");
-  if([1,13,15,16].includes(q.n)){
+  if([1,10,11,12,13].includes(q.n)){
    assert(!/https?:\/\//.test(q[key]),`Question ${q.n} ${key} must not contain external URLs`);
    assert(!/\d/.test(stripped)||key==="shows"&&/49|nine|fourth|seventh/.test(q[key]),`Question ${q.n} ${key} unexpected digits`);
   }
@@ -44,8 +45,9 @@ const nov19ProseBlock=read("site/nov19-sources.js").split("const q1=essentialQue
 assert(!/https?:\/\//.test(nov19ProseBlock),"No external URLs in nov19 question prose");
 assert(!/—|\s–\s/.test(nov19ProseBlock),"Dash-free prose in nov19 question updates");
 assert(full.q.find(q=>q.n===1).refs.includes("study-apa-2026"));
-assert(full.q.find(q=>q.n===16).refs.includes("study-apa-2026"));
-for(const n of [13,15,16])assert(full.q.find(q=>q.n===n).refs.includes("study-instruction-partners"));
+assert(full.q.find(q=>q.n===10).refs.includes("study-apa-2026"));
+assert(full.q.find(q=>q.n===13).refs.includes("study-apa-2026"));
+for(const n of [10,12,13])assert(full.q.find(q=>q.n===n).refs.includes("study-instruction-partners"));
 
 // 3. Instructional Added Value tool ("show-me" transfer test)
 const readingJs=read("site/reading.js");

@@ -29,11 +29,20 @@ assert(studyData.updated.includes("Average academic effects are near zero"));
 assert(!studyData.updated.includes("New York’s law is one year old"));
 const qs=evaluate(read("site/questions.js"),"essentialQuestions");
 const oldQs=evaluate(prior("site/questions.js"),"essentialQuestions");
+assert.equal(qs.length,13);
+const oldIndexByNewN={1:0,2:4,3:5,4:6,5:7,6:8,7:9,8:10,9:11,10:12,11:13,12:14,13:15};
 for(const q of qs){
- assert.equal(q.question,oldQs[q.n-1].question);
- if(![1,6,7,10,12,13,15,16].includes(q.n))assert.deepEqual(q,oldQs[q.n-1]);
+ const prev=oldQs[oldIndexByNewN[q.n]];
+ if(![10,11].includes(q.n)){
+  assert.equal(q.question,prev.question);
+ }
+ if([2,5,6,8].includes(q.n)){
+  const {n: _n1,id: _id1,...restNow}=q;
+  const {n: _n0,id: _id0,...restPrev}=prev;
+  assert.deepEqual(restNow,restPrev);
+ }
 }
-for(const [n,refs] of [[1,["ran"]],[6,["bettinger"]],[7,["allcott","vuorre","odgers"]],[10,["allcott"]],[12,["fernandez"]],[13,["letourneau"]],[15,["letourneau"]],[16,["bettinger"]]]){
+for(const [n,refs] of [[1,["ran"]],[3,["bettinger"]],[4,["allcott","vuorre","odgers"]],[7,["allcott"]],[9,["fernandez"]],[10,["letourneau"]],[11,["ran"]],[12,["letourneau"]],[13,["bettinger"]]]){
  for(const r of refs)assert(qs[n-1].refs.includes(r));
 }
 assert(read("site/new-values-ledger.csv").startsWith(prior("site/new-values-ledger.csv")),"Ledger is append-only");

@@ -1,6 +1,7 @@
 .questions-entry{display:inline-flex;align-items:center;min-height:44px;margin-bottom:var(--s2);font-size:var(--text-sm);font-weight:700}
 .questions-entry[aria-current="page"]{text-decoration-thickness:2px}
-.questions-heading{display:flex;justify-content:space-between;gap:var(--s6);align-items:flex-start;margin-bottom:var(--s5)}
+#questions{padding-top:var(--s6)}
+.questions-heading{display:flex;justify-content:space-between;gap:var(--s6);align-items:center;margin-bottom:var(--s5)}
 .questions-heading h2{margin:var(--s2) 0}
 .questions-heading p{max-width:70ch;color:var(--muted);font-size:var(--text-sm)}
 .questions-policy-link{display:inline-flex;align-items:center;min-height:44px;flex-shrink:0;font-size:var(--text-sm)}

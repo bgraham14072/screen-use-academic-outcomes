@@ -1,5 +1,11 @@
 # Dashboard flows and practice additions
 
+## November 23, 2026 Essential Questions and policy resources update
+- Eliminate earlier Essential Questions 2, 3 and 4 (retaining their underlying paper-versus-screen and early-reading studies in Paper & Notes and Early Reading Evidence) and renumber the remaining 13 Essential Questions (`1`–`13`) across the same five uppercase group headings.
+- Update Most asked to expose Questions 3, 5 and 8 (`#q3-school-screen-time`, `#q5-test-score-declines` and `#q8-digital-divide`), and preserve legacy bookmark routing (`#q2-paper-reading` -> Paper & Notes, `#q3-reading-features` / `#q4-adult-support` -> Early Reading Evidence, and `#q5-handwritten-notes`..`#q16-worth-it` -> `#q2-handwritten-notes`..`#q13-worth-it`).
+- Update Question 10 (`#q10-ai-reading`) to `"Can AI help teachers differentiate or personalize reading instruction in early grades?"` (`not yet studied`) and Question 11 (`#q11-screening-and-learning`) to `"If an AI tool can spot reading difficulties in young children will that support targeted reading instruction?"` (`limited`), revising both answers using only existing verified dashboard sources without adding numerical register rows.
+- Update Instructional Added Value cross-link (`site/reading.js`) to `#q13-worth-it` (`Question 13`).
+
 ## November 19, 2026 primary-source additions
 - Preserve the 29 original records, M1 and M2 (36 numerical rows total) without modification. Cite only verified primary sources; exclude vendor packets, press clips and vendor-commissioned product efficacy studies.
 - Add APA (released Sept. 3, 2026; 10 recommendations) as a professional-association evidence synthesis (`#study-apa-2026`), linked in Essential Questions #1 and #16, the Instructional Added Value off-screen “show-me” transfer test (can students remember, explain and apply learning after the app is closed?), and Methods (engagement ≠ learning; independent validation persisting at least one week after use).

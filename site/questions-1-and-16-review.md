@@ -1,6 +1,6 @@
-# Essential Questions 1 and 16: Review Draft
+# Essential Questions 1 and 13: Review Draft
 
-November 19, 2026. Full answer text from the public dashboard, retained as draft wording for co-author review. These are editorial summaries, not new pooled research results.
+November 23, 2026. Full answer text from the public dashboard, retained as draft wording for co-author review. These are editorial summaries, not new pooled research results.
 
 ## Question 1: Does technology help children learn, and does it matter how it's used?
 
@@ -48,7 +48,7 @@ Independent trials of the same lessons with and without the digital feature, wit
 - **Campuzano et al. · 2009 (Government evaluation report):** [Original publication](https://ies.ed.gov/ncee/pubs/20094041); [full text or primary report](https://ies.ed.gov/sites/default/files/migrated/nces_pubs/ncee/pubs/20094041/pdf/20094041.pdf).
 - **American Psychological Association · Sept. 3, 2026 (Professional-association evidence synthesis):** [Original publication](https://www.apa.org/pubs/reports/children-adolescent-learning-educational-technology); [full text or primary report](https://www.apa.org/pubs/reports/childrens-adolescents-learning-educational-technology.pdf).
 
-## Question 16: How can a school tell whether a digital activity is worth it, and when should it scale back or stop?
+## Question 13: How can a school tell whether a digital activity is worth it, and when should it scale back or stop?
 
 ### Short answer
 

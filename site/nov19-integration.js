@@ -148,16 +148,23 @@
   </section>`);
  }
 
- // Update Essential Questions draft banner and modified question dates (Q1, Q13, Q15, Q16) to November 19, 2026
+ // Update Essential Questions draft banner and modified question dates
  const draftNote=document.querySelector("#questions .questions-draft p");
  if(draftNote){
-  draftNote.textContent=draftNote.textContent.replace("November 18, 2026","November 19, 2026");
+  draftNote.textContent=draftNote.textContent.replace("November 18, 2026","November 23, 2026");
  }
- for(const qid of ["q1-learning","q13-ai-reading","q15-ai-evidence-gaps","q16-worth-it"]){
+ for(const qid of ["q1-learning","q12-ai-evidence-gaps","q13-worth-it"]){
   const timeEl=document.querySelector(`#${qid} .question-meta time`);
   if(timeEl){
    timeEl.setAttribute("datetime","2026-11-19");
    timeEl.textContent="November 19, 2026";
+  }
+ }
+ for(const qid of ["q10-ai-reading","q11-screening-and-learning"]){
+  const timeEl=document.querySelector(`#${qid} .question-meta time`);
+  if(timeEl){
+   timeEl.setAttribute("datetime","2026-11-23");
+   timeEl.textContent="November 23, 2026";
   }
  }
 

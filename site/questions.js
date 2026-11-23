@@ -64,34 +64,7 @@ const essentialQuestions=[
  classroom:"Choose the learning goal first, then compare the digital lesson with a strong non-digital option.",
  change:"Independent trials of the same lessons with and without the digital feature, with comparable teaching and lasting learning measured outside the tool.",
  refs:["D1","D2","L1","N4","ran"],thin:"Mixed findings, not an evidence gap; no confident claim about every tool. Ran combines randomized and quasi-experimental interventions and does not establish a causal ranking of functions."},
- {n:2,id:"q2-paper-reading",group:0,
- question:"Is reading on paper better than reading on a screen? When is print the better choice?",
- short:"Paper often helps readers understand the same text better, especially for fact-based reading or under time pressure. That does not mean print is best for every reader, story or task.",
- certainty:"fairly consistent",
- shows:"Reviews of comparable texts generally favor paper for comprehension, with clearer advantages for informational text than stories. Young children’s results also depend on digital features and adult support.",
- doesnt:"This is not proof that print beats every enhanced e-book, that all ages respond alike, or that a paper advantage in comprehension also applies to vocabulary.",
- classroom:"Consider print for demanding informational reading, while preserving needed access supports and checking the actual task.",
- change:"Well-controlled comparisons of current formats, with matched adult support and accessibility, showing different results for the same readers, texts and learning goals.",
- refs:["R1","paper","clinton","furenes"],thin:"The scoped comprehension finding is fairly consistent; universal format rules are not supported."},
- {n:3,id:"q3-reading-features",group:0,
- question:"Which e-book and reading-app features help, and which get in the way?",
- short:"Features that support the story can help, while extra games and taps can get in the way. A feature that helps children learn words may not help them understand the story. The evidence does not tell us which current app is best.",
- certainty:"mixed",
- shows:"The storybook reviews distinguish useful story-related multimedia from distracting interactions. Dictionary support can help vocabulary without helping story comprehension; some tested electronic books also reduced story-related talk.",
- doesnt:"The reviews cannot cleanly isolate every feature, and a category-level finding does not validate a particular app. A vocabulary gain is not the same as better comprehension.",
- classroom:"Preview the exact book and keep only features that serve the intended reading goal.",
- change:"Trials that turn individual features on or off in otherwise identical books and measure comprehension, word learning and adult–child talk separately.",
- refs:["furenes","takacs","munzer"],thin:"Mixed feature findings; existing evidence cannot rank individual current apps."},
- {n:4,id:"q4-adult-support",group:0,
- question:"How much does a teacher's or parent's involvement matter?",
- short:"Adult support can help, but being nearby is not the same as teaching. The studies do not give a clear answer about how much it helps across ages and tools. What adults and children do together matters.",
- certainty:"mixed",
- shows:"A kindergarten experiment favored an adult-instructed e-book approach on some reading skills. Other comparisons vary in adult support, and parent–toddler studies observe different kinds of talk even when adults are present in every condition. Co-viewing is linked with language outcomes in observational evidence.",
- doesnt:"The co-viewing link does not prove cause and effect. Unequal teaching across formats cannot isolate the device’s contribution, and adult presence alone is not a measure of instructional quality.",
- classroom:"Plan questions, explanations and feedback rather than simply putting an adult next to the device.",
- change:"Trials that vary the type of adult instruction while holding the book and teaching time constant, with follow-up across age groups.",
- refs:["S6","furenes","segal","munzer"],thin:"Thin for the size of the adult-support contribution across ages and tools; comparisons are not consistently matched."},
- {n:5,id:"q5-handwritten-notes",group:0,
+ {n:2,id:"q2-handwritten-notes",group:0,
  question:"Should students take notes by hand?",
  short:"There is no clear rule that all students should take notes by hand. Studies with college students often favor handwriting, but some repeat studies find little or no difference. These results do not settle what works best for younger children.",
  certainty:"mixed",
@@ -100,7 +73,7 @@ const essentialQuestions=[
  classroom:"Match the note-taking method to the learner and task, and teach students to select, explain and review ideas.",
  change:"Replicated school-age trials comparing note methods, with accessible options, equivalent note review and later tests of understanding.",
  refs:["longhand","replication","synthesis","eeg"],thin:"Thin for younger pupils and accessibility needs; college findings are mixed."},
- {n:6,id:"q6-school-screen-time",group:1,
+ {n:3,id:"q3-school-screen-time",group:1,
  question:"How much screen time at school is too much?",
  short:"The research here does not set a safe daily screen-time limit for school. Heavier use and distraction are often linked with lower scores, but those links do not show that screen time caused the difference. Purpose and what the activity replaces also need attention.",
  certainty:"limited",
@@ -109,7 +82,7 @@ const essentialQuestions=[
  classroom:"Review the purpose and length of each activity, protect movement and non-digital work, and respond when attention or learning suffers.",
  change:"School-based trials of different time limits with comparable teaching, tracking learning and wellbeing by age, purpose and out-of-school use.",
  refs:["P1","P2","P3","P4","P6","P7","movement","bettinger"],thin:"Thin for a causal, age-specific school-day limit. The randomized homework-dose study is not a trial of total daily school screen time."},
- {n:7,id:"q7-wellbeing",group:1,
+ {n:4,id:"q4-wellbeing",group:1,
  question:"Does screen use affect sleep, attention or mental health? Is school use different from home use?",
  short:"Some screen-use patterns are linked with poorer sleep, attention and mental health, but results vary. Much of this research concerns leisure use or social media, not teacher-led lessons. It does not show that school and home use have the same effects.",
  certainty:"mixed",
@@ -118,7 +91,7 @@ const essentialQuestions=[
  classroom:"Watch the child’s sleep, attention and wellbeing, and review the content, timing and purpose of use rather than only the minutes.",
  change:"Studies separating school instruction from home leisure, with repeated measures and stronger causal designs that account for prior wellbeing and family circumstances.",
  refs:["sleep","attention","mental","social","development","allcott","vuorre","odgers"],thin:"Thin for a direct school-versus-home causal comparison. Ecological associations, adolescent reviews and quasi-experimental personal-phone restrictions answer different questions."},
- {n:8,id:"q8-test-score-declines",group:1,
+ {n:5,id:"q5-test-score-declines",group:1,
  question:"Are test scores falling because of classroom technology?",
  short:"The evidence here does not show that classroom technology caused falling test scores. Changes happening at the same time are not proof of cause and effect. Some planned digital lessons have improved learning, while other uses are linked with poorer results.",
  certainty:"not yet studied",
@@ -127,7 +100,7 @@ const essentialQuestions=[
  classroom:"Investigate specific practices and learning problems instead of treating a national trend as a verdict on every classroom tool.",
  change:"Credible policy or rollout comparisons that isolate changes in classroom technology from other changes and track achievement before and after.",
  refs:["pulling","P3","P4","D1","D2"],thin:"No direct test in the dashboard of the causal explanation for national score declines."},
- {n:9,id:"q9-sweden",group:1,
+ {n:6,id:"q6-sweden",group:1,
  question:"What did Sweden do, and has it worked?",
  short:"Sweden moved toward more printed books, reading time and less screen use, especially for younger children. The dashboard documents those policy changes but does not show that they improved learning. A policy announcement is not an evaluation of its results.",
  certainty:"not yet studied",
@@ -136,7 +109,7 @@ const essentialQuestions=[
  classroom:"Track Sweden’s results, but do not treat its policy change as proof of what will work locally.",
  change:"An independent evaluation of implemented Swedish policies, with comparison groups and learning, wellbeing and equity outcomes over time.",
  refs:["pulling"],thin:"No evaluation of the Swedish policy’s effects is included in the dashboard."},
- {n:10,id:"q10-phones-and-school-devices",group:1,
+ {n:7,id:"q7-phones-and-school-devices",group:1,
  question:"If New York banned phones, should the same rules apply to school devices?",
  short:"Not automatically: personal phones and school devices can serve different purposes. New York’s phone-free rules exclude school-issued devices. The research here does not show that extending the same rules would improve learning or wellbeing.",
  certainty:"limited",
@@ -145,7 +118,7 @@ const essentialQuestions=[
  classroom:"Set clear limits on distraction while reviewing the learning purpose and access needs of school-device use separately.",
  change:"Evaluations of New York’s phone policy and separate school-device policies, with comparable schools and measures of learning, wellbeing and access.",
  refs:["pulling","P3","law","allcott"],thin:"Thin for transferring phone-policy effects to school-issued instructional devices. Allcott is not an RCT or a peer-reviewed journal article."},
- {n:11,id:"q11-digital-divide",group:2,
+ {n:8,id:"q8-digital-divide",group:2,
  question:"Could limiting school technology widen the digital divide?",
  short:"It could, but no study cited here directly tests the equity effects of removing school technology. Students differ in access, skills and the help they receive. At the same time, providing a home computer alone has not reliably improved school results.",
  certainty:"not yet studied",
@@ -154,7 +127,7 @@ const essentialQuestions=[
  classroom:"Check whether restrictions preserve supported digital learning and accessible alternatives for students with fewer resources outside school.",
  change:"Comparative evaluations of actual school restrictions, measuring access, digital skills, learning and wellbeing across income groups and existing home resources.",
  refs:["equity"],thin:"No direct study in the cited set tests the equity effects of removing school technology."},
- {n:12,id:"q12-access-needs",group:2,
+ {n:9,id:"q9-access-needs",group:2,
  question:"What about students with disabilities and English learners?",
  short:"These students’ needs cannot be settled by average results for all students. The research here is too limited to say which tools work for each disability or language need. Any change must consider access supports and translation, not just screen use.",
  certainty:"limited",
@@ -163,25 +136,25 @@ const essentialQuestions=[
  classroom:"Review each learner’s access and language needs with the relevant specialists before changing a tool or its alternative.",
  change:"Accessible, independently evaluated studies of specific tools for clearly described disability and language groups, measuring learning, participation and unintended barriers.",
  refs:["N1","law","screener","aire","equity","fernandez"],thin:"Thin for tool-specific causal effects for particular disability and language groups. The descriptive assistive-technology review has reporting inconsistencies and does not determine legal eligibility."},
- {n:13,id:"q13-ai-reading",group:3,
- question:"Can AI help young children learn to read without replacing the teacher?",
- short:"It may be possible, but the dashboard does not yet show that the proposed AI tools improve children’s reading. The projects aim to support teachers, not prove that teachers can be replaced. Gains from older digital reading lessons do not show that today’s AI tools work.",
+ {n:10,id:"q10-ai-reading",group:3,
+ question:"Can AI help teachers differentiate or personalize reading instruction in early grades?",
+ short:"AI may eventually help teachers tailor reading practice and feedback, but the dashboard does not yet include completed trials proving reading gains from AI differentiation in early grades. Current university projects are designed to assist teacher-led reading instruction rather than automate differentiation on their own. Findings from older reading software and secondary-grade tutoring systems do not establish that today’s AI tools improve early reading.",
  certainty:"not yet studied",
- shows:"The AIRE project describes planned personalized reading support and a pilot. Létourneau’s school-age intelligent-tutoring review reports generally positive results against traditional teaching, but weaker and mixed results against non-intelligent tutoring systems. Its evidence is concentrated in older pupils and STEM, not early-literacy AI for young children.",
- doesnt:"No completed classroom-achievement trial of the proposed AIRE implementation was located in the official sources reviewed for this dashboard. Planned capabilities, technical papers and general digital-reading results do not prove AI efficacy or safety.",
- classroom:"Keep the teacher responsible for instruction and treat the proposed AI reading tools as research-stage tools needing evaluation.",
- change:"Independent classroom trials of a defined AI tool plus teacher instruction versus equally supported instruction without it, with lasting reading outcomes and safety checks.",
- refs:["aire","safeguards","L1","segal","letourneau"],thin:"No completed classroom-achievement trial for the proposed implementation is included. General intelligent-tutoring findings are not early-literacy AI validation."},
- {n:14,id:"q14-screening-and-learning",group:3,
- question:"If an AI tool can spot reading difficulties, does that mean it improves reading?",
- short:"No. A tool can flag a possible difficulty without helping a child read better. It still needs testing to show that using its results leads to better teaching and reading.",
+ shows:"The AIRE project describes planned tools to generate personalized text, analyze oral reading and help early-grade teachers tailor phonics, fluency, word recognition and comprehension support, with a planned classroom pilot. Elementary literacy-technology syntheses and adult-instructed e-book studies examine pre-generative tools with mixed-to-positive findings and smaller randomized subsets, while Létourneau’s school-age intelligent-tutoring review reports generally positive results against traditional teaching alongside mixed results against non-intelligent tutoring, concentrated in older grades and STEM.",
+ doesnt:"No completed classroom-achievement trial of AI-assisted reading differentiation in early grades was located in the official sources reviewed for this dashboard. Planned capabilities, technical papers and results from older literacy software or secondary mathematics tutoring do not prove early-grade reading gains, subgroup fairness or safety.",
+ classroom:"Keep teachers in charge of grouping, text selection and feedback, avoid routine text releveling that lowers core text complexity, and treat early-grade AI reading tools as pilot-stage supports checked with off-screen reading tasks.",
+ change:"Independent early-grade classroom trials comparing teacher-led reading differentiation with a defined AI tool against equally supported teacher differentiation without it, measuring lasting off-screen reading growth across learner subgroups.",
+ refs:["aire","safeguards","L1","N4","segal","furenes","letourneau"],thin:"No completed classroom-achievement trial of early-grade AI reading differentiation is included. General intelligent-tutoring and pre-generative digital-reading findings do not validate current early-literacy AI."},
+ {n:11,id:"q11-screening-and-learning",group:3,
+ question:"If an AI tool can spot reading difficulties in young children will that support targeted reading instruction?",
+ short:"Early identification can support targeted reading instruction only when accurate screening is paired with educator review and effective follow-up teaching, not automatically on its own. In the evidence reviewed here, researchers validated an automated language-screening score on archival recordings rather than testing whether AI flags improve classroom instruction or children’s reading. Spotting a possible difficulty is a starting point for diagnostic confirmation, not proof that an automated recommendation helps a child read better.",
  certainty:"limited",
- shows:"The screening card describes proposed early screening and a related study validating automated scores from recorded sentence recall. That is evidence about a screening-related measure, not about gains from a classroom reading program.",
- doesnt:"It does not validate every part of the proposed Screener or Orchestrator, establish reading-difficulty detection in every group, or show that screening leads to better reading. Missed cases, false alarms and follow-up support still need review.",
- classroom:"Require professional review and a clear route from a screening result to assessment and instruction.",
- change:"Studies that validate detection in the intended learners and compare reading outcomes when teachers use the results versus usual assessment and support.",
- refs:["screener","law","safeguards"],thin:"Thin for the proposed tools’ detection-to-learning pathway; validation of a measure is not an achievement trial."},
- {n:15,id:"q15-ai-evidence-gaps",group:3,
+ shows:"The screening card describes a proposed universal early screener and an orchestrator intended to help teachers and specialists coordinate individualized support, alongside a peer-reviewed study validating automated scoring from recorded sentence recall. In broader K-to-secondary mathematics syntheses, digital monitoring or assessment alone had an uncertain average effect, whereas diagnostic information paired with teacher preparation and instructional follow-through produced clearer gains.",
+ doesnt:"Validating a scoring measure on archival recordings does not test live classroom screening across diverse speech and language backgrounds, validate the proposed instructional orchestrator, or show that AI flags lead to better targeted reading instruction or reading achievement. Missed cases, false alarms, subgroup fairness, privacy and statutory limits on universal early screening still require review.",
+ classroom:"Treat any validated screening flag as a prompt for teacher and specialist review, diagnostic confirmation and evidence-based reading instruction rather than automated placement or standalone app assignment.",
+ change:"Classroom studies that validate early-reading detection across diverse young learners and compare targeted instruction and reading outcomes when educators use the AI screening results versus standard screening and support.",
+ refs:["screener","aire","ran","law","safeguards"],thin:"Thin for the full pathway from AI detection to better targeted reading instruction and reading gains; archival scoring validation is not a classroom intervention trial."},
+ {n:12,id:"q12-ai-evidence-gaps",group:3,
  question:"What don't we know yet about AI and young learners, and what evidence should a pilot require?",
  short:"We still do not know enough about lasting reading gains, safety or how well AI works for different children. A pilot should test a named tool against a strong teaching option, not just show that children use it. It also needs clear privacy checks and rules for stopping.",
  certainty:"limited",
@@ -190,7 +163,7 @@ const essentialQuestions=[
  classroom:"Before starting, specify the learning outcome, comparison, adult role, data safeguards, subgroup checks and stopping rules.",
  change:"Independent, replicated studies of the actual tool and version, with longer follow-up, reading transfer, subgroup results, harms reporting and privacy audits.",
  refs:["aire","screener","safeguards","law","letourneau"],thin:"Thin for current AI implementations’ lasting benefit, safety and subgroup performance. The general tutoring review reports no formal risk-of-bias grade or pooled estimate; pilot requirements are proposed safeguards."},
- {n:16,id:"q16-worth-it",group:4,
+ {n:13,id:"q13-worth-it",group:4,
  question:"How can a school tell whether a digital activity is worth it, and when should it scale back or stop?",
  short:"There is no proven checklist here that tells a school when a digital activity is worth it. Compare learning with a strong non-digital option, and watch what the activity replaces. Set review and stopping rules before the pilot starts.",
  certainty:"limited",
@@ -235,7 +208,7 @@ function renderEssentialQuestions(){
  $("#questions").innerHTML=`
  <div class="questions-heading"><div><div class="eyebrow">ESSENTIAL QUESTIONS</div><h2>Start with a question</h2><p>Explore what the research supports, where it is uncertain, and what that means for a classroom.</p></div><a class="questions-policy-link" href="#policy" data-view="policy">For Policymakers summary →</a></div>
  <aside class="questions-draft"><strong>Draft for co-author review</strong><p>These answers are proposed wording, not a final statement approved by all five authors. This label remains until all five authors approve the final wording.</p></aside>
- <nav class="questions-most" aria-label="Most asked questions"><h3>Most asked</h3><div>${[6,8,11].map(n=>{const q=essentialQuestions[n-1];return `<a href="#${q.id}"><span class="question-number">${n}.</span><span>${esc(q.question)}</span></a>`}).join("")}</div></nav>
+ <nav class="questions-most" aria-label="Most asked questions"><h3>Most asked</h3><div>${[3,5,8].map(n=>{const q=essentialQuestions[n-1];return `<a href="#${q.id}"><span class="question-number">${n}.</span><span>${esc(q.question)}</span></a>`}).join("")}</div></nav>
  <div class="questions-layout"><nav class="questions-menu" aria-label="Essential Questions topics"><span class="eyebrow">BROWSE BY TOPIC</span>${questionGroups.map(g=>`<a href="#${g.id}">${g.title}</a>`).join("")}<a class="question-methods" href="#answer-confidence">How to read the research labels</a></nav>
  <div class="questions-list">${questionGroups.map((g,i)=>`<section class="question-group" id="${g.id}" tabindex="-1" aria-labelledby="${g.id}-title"><h3 id="${g.id}-title">${g.title}</h3>${essentialQuestions.filter(q=>q.group===i).map(q=>`
  <details class="question-answer" id="${q.id}" data-question="${q.n}">
@@ -266,12 +239,29 @@ function renderEssentialQuestions(){
   }
  }));
 }
+const legacyQuestionHashes={
+ "q5-handwritten-notes":"q2-handwritten-notes",
+ "q6-school-screen-time":"q3-school-screen-time",
+ "q7-wellbeing":"q4-wellbeing",
+ "q8-test-score-declines":"q5-test-score-declines",
+ "q9-sweden":"q6-sweden",
+ "q10-phones-and-school-devices":"q7-phones-and-school-devices",
+ "q11-digital-divide":"q8-digital-divide",
+ "q12-access-needs":"q9-access-needs",
+ "q13-ai-reading":"q10-ai-reading",
+ "q14-screening-and-learning":"q11-screening-and-learning",
+ "q15-ai-evidence-gaps":"q12-ai-evidence-gaps",
+ "q16-worth-it":"q13-worth-it"
+};
 function routeEssentialQuestion(hash){
- const q=essentialQuestions.find(q=>q.id===hash);
- const group=questionGroups.find(g=>g.id===hash);
+ const resolved=legacyQuestionHashes[hash]||hash;
+ if(hash==="q2-paper-reading"){setTab("analog");return true;}
+ if(hash==="q3-reading-features"||hash==="q4-adult-support"){setTab("reading");resetReading();return true;}
+ const q=essentialQuestions.find(q=>q.id===resolved);
+ const group=questionGroups.find(g=>g.id===resolved);
  if(q||group){
   setTab("questions");
-  const el=document.getElementById(hash);
+  const el=document.getElementById(resolved);
   if(q){el.open=true;el.querySelector("summary").focus({preventScroll:true})}
   else el.focus({preventScroll:true});
   el.scrollIntoView({block:"start"});return true;

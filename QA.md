@@ -1,5 +1,12 @@
 # Acceptance and QA inventory
 
+## Essential Questions streamlining & Q10/Q11 update: 23 November 2026
+
+- Eliminated former Essential Questions 2, 3 and 4 while keeping all paper-versus-screen and early-reading research intact in `Paper & Notes` (`#analog`) and `Early Reading Evidence` (`#reading`); renumbered the remaining 13 Essential Questions (`1`–`13`) across the five existing topic groups (`[0,0,1,1,1,1,1,2,2,3,3,3,4]`).
+- Updated `Most asked` links to `3`, `5` and `8`, updated the `Instructional Added Value` cross-reference to `#q13-worth-it`, and mapped legacy bookmark hashes (`#q2-paper-reading`..`#q16-worth-it`) to their live destinations.
+- Revised Question 10 (`#q10-ai-reading`: `"Can AI help teachers differentiate or personalize reading instruction in early grades?"`, `not yet studied`) and Question 11 (`#q11-screening-and-learning`: `"If an AI tool can spot reading difficulties in young children will that support targeted reading instruction?"`, `limited`) using only existing verified dashboard sources (`aire`, `screener`, `L1`, `N4`, `segal`, `furenes`, `letourneau`, `ran`, `study-mindspark`, `study-assistments-maine`, `study-escueta`, `study-rand2017`, `study-federal2007`, `study-federal2009`, `study-instruction-partners`, `study-apa-2026`, `law`, `safeguards`).
+- `site/data.js` SHA-256 remains `6d6798992562ee89aeecd8304fd732c543209f4f195cf8db0fda442496dddf12`, numerical register remains 36 rows, `site/new-values-ledger.csv` remains byte-identical, and all four Node test suites (`questions`, `study-additions`, `personalized`, `nov19-updates`) pass.
+
 ## Seven-study update: 18 November 2026
 
 Local acceptance checks passed against baseline `a688b1d04cc95fa828c9b2d1d7f4aa1f480bb9e2`. Hosted verification and the preserved release revision are recorded in the session and Project storage provenance.

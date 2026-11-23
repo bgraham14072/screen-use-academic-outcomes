@@ -19,7 +19,7 @@ const nov19ContextStudies=[
  locator:"pp. 1, 3 (release framing, 6 conclusions, 10 recommendations); pp. 4–5 Recs. 1–2 (engagement vs learning, “show me” moments, one-week independent validation); pp. 5–6 Rec. 3 (displacement vs screen time); pp. 7–12 Recs. 4–10 (learning science, distraction-free design, generative AI, adult role, equity, data privacy, teacher support); p. 13 (panel authors). Sept. 3, 2026 release date verified in official APA announcement.",
  companions:[["https://www.apa.org/news/press/releases/2026/09/education-technology-engagement","Official APA release date record (Sept. 3, 2026)"]],
  values:"Sept. 3, 2026 release: APA release record | 6 conclusions: p. 3 | 10 recommendations: pp. 1, 4–12 | at least 1 week retention/transfer standard and “show me” moments: Rec. 2, p. 5 | 15 panel authors: p. 13",
- placements:"Q1, Q16; Instructional Added Value show-me transfer test; Methods engagement-versus-learning and independent-validation standards; Evidence explorer context."
+ placements:"Q1, Q10, Q13; Instructional Added Value show-me transfer test; Methods engagement-versus-learning and independent-validation standards; Evidence explorer context."
 },
 {
  id:"study-instruction-partners",view:"explorer",verified:"19 November 2026",
@@ -43,7 +43,7 @@ const nov19ContextStudies=[
   ["https://ailearningtour.instructionpartners.org/insights/subject-specific-takeaways","Subject-Specific Takeaways (literacy drills and text releveling)"]
  ],
  values:"20 products; 32 observations; 16 systems; 7 states; 50+ teachers; 25+ leaders; 100+ students; 13 observed and 7 interview-only: About the Tour | 3 chatbots, 5 multipurpose, 13 targeted; 16 profiled; 7 independent U.S. subgroup studies (2 non-U.S., 4 underway, 3 internal): How Products Vary",
- placements:"Q13, Q15, Q16; Evidence explorer qualitative context."
+ placements:"Q10, Q12, Q13; Evidence explorer qualitative context."
 }
 ];
 addedStudies.push(...nov19ContextStudies);
@@ -52,23 +52,23 @@ for(const c of nov19ContextStudies){
  questionCardTargets[c.id]={view:"explorer",selector:"#"+c.id,index:0};
 }
 {
- const q1=essentialQuestions.find(q=>q.n===1);
+ const q1=essentialQuestions.find(q=>q.id==="q1-learning");
  q1.shows+=" A professional-association evidence synthesis from the American Psychological Association likewise concludes that educational technology is neither inherently beneficial nor harmful: focused practice with feedback and adult involvement can support defined goals, whereas engagement, enjoyment and completion metrics are not learning, distracting design features and multitasking impede recall, and what technology replaces matters more than screen time alone.";
  q1.classroom="Start with a subject-specific learning need and pupils’ actual level. Compare the supported digital approach with strong non-digital teaching, and use off-screen show-me checks to verify whether students can remember, explain and apply learning after the app is closed.";
  q1.refs.push("study-apa-2026");
 
- const q13=essentialQuestions.find(q=>q.n===13);
- q13.shows+=" Qualitative classroom observations by Instruction Partners, a nonprofit field inquiry rather than outcome evidence, found teachers central in every strong classroom observed: targeted instructional tools with a clear teacher role were strongest, general-purpose chatbots posed the sharpest threat to student thinking, results depended on teacher routines, and literacy uses risked drifting into isolated skill practice or text releveling that lowered core text complexity.";
- q13.doesnt+=" Nonprofit classroom observations also cannot establish causal reading gains, and most profiled AI products lacked independent subgroup achievement evaluations.";
- q13.refs.push("study-instruction-partners");
+ const q10=essentialQuestions.find(q=>q.id==="q10-ai-reading");
+ q10.shows+=" Qualitative classroom observations by Instruction Partners, a nonprofit field inquiry rather than outcome evidence, found teachers central in every strong classroom observed: targeted instructional tools with clear teacher routines were strongest, general-purpose chatbots posed the sharpest threat to student thinking, and literacy uses risked drifting into isolated skill drills or routine text releveling that lowered core text complexity.";
+ q10.doesnt+=" Nonprofit classroom observations also cannot establish causal reading gains, and most profiled AI products lacked independent subgroup achievement evaluations.";
+ q10.refs.push("study-instruction-partners","study-apa-2026");
 
- const q15=essentialQuestions.find(q=>q.n===15);
- q15.shows+=" Qualitative observations and evidence scans from Instruction Partners, which are field observations rather than outcome evidence, found that fewer than half of studied student-facing AI products had independent domestic subgroup achievement studies, results depended on teacher routines and leader expectations, general-purpose chatbots posed the biggest risk to student thinking, and literacy uses warranted caution around isolated skill practice and routine text releveling.";
- q15.classroom="Before starting, specify the learning outcome, comparison, teacher routines, chatbot guardrails, subgroup checks, data protections and stopping rules.";
- q15.refs.push("study-instruction-partners");
+ const q12=essentialQuestions.find(q=>q.id==="q12-ai-evidence-gaps");
+ q12.shows+=" Qualitative observations and evidence scans from Instruction Partners, which are field observations rather than outcome evidence, found that fewer than half of studied student-facing AI products had independent domestic subgroup achievement studies, results depended on teacher routines and leader expectations, general-purpose chatbots posed the biggest risk to student thinking, and literacy uses warranted caution around isolated skill practice and routine text releveling.";
+ q12.classroom="Before starting, specify the learning outcome, comparison, teacher routines, chatbot guardrails, subgroup checks, data protections and stopping rules.";
+ q12.refs.push("study-instruction-partners");
 
- const q16=essentialQuestions.find(q=>q.n===16);
- q16.shows+=" The American Psychological Association’s professional-association evidence synthesis adds that engagement, enjoyment and usage reports do not demonstrate learning; stronger review relies on independent validation and off-screen show-me checks of whether students can remember, explain and apply learning after the app is closed. Qualitative classroom observations from Instruction Partners reinforce that implementation depends on predictable teacher routines, flag risks from general-purpose chatbots, isolated skill drills and routine text releveling, and note how few student-facing AI products have independent subgroup outcome studies.";
- q16.classroom="Specify the comparison, independent learning measure, subgroup checks and review date before the pilot, and ask students to show they can remember, explain and apply learning with the app closed. Adapt, reduce or stop the activity if gains stay confined to the platform, if it displaces valuable teaching, or if access, safety or privacy concerns persist.";
- q16.refs.push("study-apa-2026","study-instruction-partners");
+ const q13Worth=essentialQuestions.find(q=>q.id==="q13-worth-it");
+ q13Worth.shows+=" The American Psychological Association’s professional-association evidence synthesis adds that engagement, enjoyment and usage reports do not demonstrate learning; stronger review relies on independent validation and off-screen show-me checks of whether students can remember, explain and apply learning after the app is closed. Qualitative classroom observations from Instruction Partners reinforce that implementation depends on predictable teacher routines, flag risks from general-purpose chatbots, isolated skill drills and routine text releveling, and note how few student-facing AI products have independent subgroup outcome studies.";
+ q13Worth.classroom="Specify the comparison, independent learning measure, subgroup checks and review date before the pilot, and ask students to show they can remember, explain and apply learning with the app closed. Adapt, reduce or stop the activity if gains stay confined to the platform, if it displaces valuable teaching, or if access, safety or privacy concerns persist.";
+ q13Worth.refs.push("study-apa-2026","study-instruction-partners");
 }

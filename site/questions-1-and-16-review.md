@@ -1,6 +1,6 @@
-# Essential Questions 1 and 13: Review Draft
+# Essential Questions 1 and 13: Full Answer Text
 
-November 23, 2026. Full answer text from the public dashboard, retained as draft wording for co-author review. These are editorial summaries, not new pooled research results.
+November 23, 2026. Full answer text from the public dashboard. These are editorial summaries, not new pooled research results.
 
 ## Question 1: Does technology help children learn, and does it matter how it's used?
 

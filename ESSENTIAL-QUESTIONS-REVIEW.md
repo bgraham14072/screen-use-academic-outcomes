@@ -1,6 +1,6 @@
 # Essential Questions: Citation Map and Review Flags
 
-Draft for co-author review, updated November 23, 2026. The wording remains proposed until all five authors approve it; no approval is inferred from publication of this dashboard.
+Updated November 23, 2026.
 
 ## Scope of this revision
 

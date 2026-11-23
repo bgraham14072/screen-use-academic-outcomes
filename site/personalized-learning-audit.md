@@ -1,6 +1,6 @@
 # Personalized Instruction: Source Audit and Placement Table
 
-Public dashboard update, November 18, 2026. The Essential Questions remain drafts for co-author review. The original register and all prior numerical additions are preserved; the new Maine row is a single reanalysis of an existing trial family, not another independent trial.
+Public dashboard update, November 18, 2026. The original register and all prior numerical additions are preserved; the new Maine row is a single reanalysis of an existing trial family, not another independent trial.
 
 ## Admission and balance
 
@@ -223,6 +223,6 @@ Favorable, mixed and null findings use the same card component, typography, fiel
 - **Software time:** the first federal report’s fourth-grade association and the follow-on report’s null change-in-usage analysis concern different analyses; neither is a randomized dose test. [Federal 2007, pp. 47–49](https://ies.ed.gov/sites/default/files/migrated/nces_pubs/ncee/pdf/20074005.pdf); [Federal 2009, executive summary](https://ies.ed.gov/sites/default/files/migrated/nces_pubs/ncee/pubs/20094041/pdf/20094041.pdf).
 - **WWC discrepancy:** the 2026 Cognitive Tutor page’s domain heading conflicts with its nonsignificant outcome rows; the earlier government report documents a multiple-comparison adjustment. The draft discloses both rather than selecting the favorable heading. [2026 review](https://ies.ed.gov/ncee/wwc/study/82101); [2016 report, pp. 30–31](https://files.eric.ed.gov/fulltext/ED566735.pdf).
 
-## Review status
+## Unresolved items
 
-Publication does not record co-author approval of the revised answers. Missing or conflicting items stay withheld until resolved and approved.
+Missing or conflicting items stay withheld until verified in original sources.

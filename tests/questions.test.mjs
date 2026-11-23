@@ -42,4 +42,5 @@ for(const q of questions){
  for(const key of q.refs)assert(evidence[key],`Q${q.n}: unknown evidence ${key}`);
 }
 assert(!/https?:\/\//.test(text),"Question module must only link existing dashboard evidence");
+assert(!/co-author|five authors|proposed wording|questions-draft/i.test(text),"No co-author draft review banner or meta label in questions.js");
 console.log("PASS: exact questions/order/groups, all fixed fields, allowed labels, short-answer lengths, no research numbers or external sources.");

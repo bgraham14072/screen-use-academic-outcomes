@@ -148,11 +148,7 @@
   </section>`);
  }
 
- // Update Essential Questions draft banner and modified question dates
- const draftNote=document.querySelector("#questions .questions-draft p");
- if(draftNote){
-  draftNote.textContent=draftNote.textContent.replace("November 18, 2026","November 23, 2026");
- }
+ // Update modified question dates
  for(const qid of ["q1-learning","q12-ai-evidence-gaps","q13-worth-it"]){
   const timeEl=document.querySelector(`#${qid} .question-meta time`);
   if(timeEl){

@@ -41,7 +41,7 @@
 - Supersedes earlier default-view instructions: no-fragment visits open Start with a question, not For Policymakers. The eight primary tabs remain unchanged; a separate entry link returns to the questions, which link to the policymaker summary.
 - Preserve the user's exact 16 questions and five uppercase group headings, in order. Most asked links expose questions 6, 8 and 11 without reordering the main list.
 - Every answer has the same fields: short answer (2–3 plain-language sentences), one allowed confidence label, shows/doesn't-show columns, classroom line, specific evidence that could change the answer, internal evidence links and a date.
-- Draft for co-author review remains visible. No author approval is inferred or recorded; release status cannot change automatically.
+- Updated dates and direct links appear inside each expanded question.
 - Define the four editorial labels once in Methods; no formal grades. No new sources, research numbers or register changes.
 - Each question opens via its own plain fragment, including cold load, reload, repeat link, Back/Forward and keyboard use. Category menu links select and scroll to the right group.
 - Specific narrative-card anchors route to the right existing view. Reading-card anchors reset conflicting filters so the cited record is visible, without erasing educator notes.

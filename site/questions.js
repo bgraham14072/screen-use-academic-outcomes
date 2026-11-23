@@ -207,14 +207,13 @@ const questionLink=key=>{
 function renderEssentialQuestions(){
  $("#questions").innerHTML=`
  <div class="questions-heading"><div><div class="eyebrow">ESSENTIAL QUESTIONS</div><h2>Start with a question</h2><p>Explore what the research supports, where it is uncertain, and what that means for a classroom.</p></div><a class="questions-policy-link" href="#policy" data-view="policy">For Policymakers summary →</a></div>
- <aside class="questions-draft"><strong>Draft for co-author review</strong><p>These answers are proposed wording, not a final statement approved by all five authors. This label remains until all five authors approve the final wording.</p></aside>
  <nav class="questions-most" aria-label="Most asked questions"><h3>Most asked</h3><div>${[3,5,8].map(n=>{const q=essentialQuestions[n-1];return `<a href="#${q.id}"><span class="question-number">${n}.</span><span>${esc(q.question)}</span></a>`}).join("")}</div></nav>
  <div class="questions-layout"><nav class="questions-menu" aria-label="Essential Questions topics"><span class="eyebrow">BROWSE BY TOPIC</span>${questionGroups.map(g=>`<a href="#${g.id}">${g.title}</a>`).join("")}<a class="question-methods" href="#answer-confidence">How to read the research labels</a></nav>
  <div class="questions-list">${questionGroups.map((g,i)=>`<section class="question-group" id="${g.id}" tabindex="-1" aria-labelledby="${g.id}-title"><h3 id="${g.id}-title">${g.title}</h3>${essentialQuestions.filter(q=>q.group===i).map(q=>`
  <details class="question-answer" id="${q.id}" data-question="${q.n}">
  <summary><span class="question-number">${q.n}.</span><span class="question-text">${esc(q.question)}</span><span class="question-toggle" aria-hidden="true">+</span></summary>
  <div class="question-body">
- <div class="question-meta"><span>Draft for co-author review</span><span>Updated <time datetime="2026-11-18">November 18, 2026</time></span><a href="#${q.id}">Link to this question</a></div>
+ <div class="question-meta"><span>Updated <time datetime="2026-11-18">November 18, 2026</time></span><a href="#${q.id}">Link to this question</a></div>
  <section class="question-short"><h4>Short answer</h4><p>${esc(q.short)}</p></section>
  <section class="question-certainty"><h4>How sure is the research?</h4><p><span class="question-label">${q.certainty}</span><a href="#answer-confidence">What these labels mean</a></p></section>
  <div class="question-evidence-columns"><section><h4>What the research shows</h4><p>${esc(q.shows)}</p></section><section><h4>What it doesn't show</h4><p>${esc(q.doesnt)}</p></section></div>

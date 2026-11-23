@@ -41,7 +41,7 @@ Local verification completed:
 - Question metadata, label, guidance and topic-link colors were measured against their resolved backgrounds; all tested small-text combinations exceed 4.5:1. No browser page errors were observed.
 - The first long browser-test batch timed out. Smaller batches were rerun successfully; the timed-out run is not used as signoff evidence.
 - `site/data.js` retains SHA-256 `6d6798992562ee89aeecd8304fd732c543209f4f195cf8db0fda442496dddf12`. No evidence data, existing narrative prose, source URLs or policy-brief files changed. This is not a new full-text source audit.
-- Hosted verification is recorded separately after publication; no co-author approval has been inferred.
+- Hosted verification is recorded separately after publication.
 
 ## Digital equity card: 18 November 2026
 

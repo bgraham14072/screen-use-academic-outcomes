@@ -42,4 +42,4 @@ These items are not used as dashboard evidence or entered as numerical results. 
 
 The existing Furenes, Goodyear and Orben references were not added again. The original register file and earlier estimates remain unchanged, and the new numerical estimate stays in the existing g/intervention comparison group without any cross-scale conversion or combined ranking.
 
-The sixteen question titles, five group headings, eight primary navigation groups, answer-field structure and co-author-review draft status are preserved. Only the requested answer bodies and citations, the third pulling-back comparison row, and the disability-exception crosswalk are updated; the print brief is unchanged.
+The sixteen question titles, five group headings, eight primary navigation groups and answer-field structure are preserved. Only the requested answer bodies and citations, the third pulling-back comparison row, and the disability-exception crosswalk are updated; the print brief is unchanged.

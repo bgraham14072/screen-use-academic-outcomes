@@ -5,7 +5,7 @@ const {questions,groups,evidence}=JSON.parse(vm.runInNewContext(
  ["pulling-back.js","study-additions.js","questions.js","personalized-studies.js","nov19-sources.js"].map(p=>fs.readFileSync("site/"+p,"utf8")).join("\n")+";JSON.stringify({questions:essentialQuestions,groups:questionGroups,evidence:questionEvidence})"
 ));
 const base="https://bgraham14072.github.io/screen-use-academic-outcomes/";
-let md="# Essential Questions: Citation Map and Review Flags\n\nDraft for co-author review, updated November 23, 2026. The wording remains proposed until all five authors approve it; no approval is inferred from publication of this dashboard.\n\n";
+let md="# Essential Questions: Citation Map and Review Flags\n\nUpdated November 23, 2026.\n\n";
 md+="## Scope of this revision\n\nUpdated November 23, 2026 to focus on 13 Essential Questions (retaining the underlying paper-versus-screen and early-reading evidence in Paper & Notes and Early Reading Evidence) and to revise Questions 10 and 11 around teacher-led early-grades reading differentiation and early reading-difficulty screening.\n\n";
 for(let i=0;i<groups.length;i++){
  md+=`## ${groups[i].title}\n\n`;

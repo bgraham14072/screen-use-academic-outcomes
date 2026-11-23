@@ -230,7 +230,7 @@ fs.writeFileSync("site/nov19-source-audit.md",auditMd);
 
 // 3. Rebuild ESSENTIAL-QUESTIONS-REVIEW.md and site/questions-1-and-16-review.md from live data (including nov19-sources.js)
 const base="https://bgraham14072.github.io/screen-use-academic-outcomes/";
-let qReview="# Essential Questions: Citation Map and Review Flags\n\nDraft for co-author review, updated November 23, 2026. The wording remains proposed until all five authors approve it; no approval is inferred from publication of this dashboard.\n\n";
+let qReview="# Essential Questions: Citation Map and Review Flags\n\nUpdated November 23, 2026.\n\n";
 qReview+="## Scope of this revision\n\nUpdated November 23, 2026 to focus on 13 Essential Questions (retaining the underlying paper-versus-screen and early-reading evidence in Paper & Notes and Early Reading Evidence) and to revise Questions 10 and 11 around teacher-led early-grades reading differentiation and early reading-difficulty screening.\n\n";
 for(let i=0;i<ctx.groups.length;i++){
  qReview+=`## ${ctx.groups[i].title}\n\n`;
@@ -260,7 +260,7 @@ function reviewProse(q,key){
   return s+(refs.length?" ("+refs.map(([u,l])=>`[${l}](${u})`).join("; ")+")":"");
  }).join(" ");
 }
-let q116="# Essential Questions 1 and 13: Review Draft\n\nNovember 23, 2026. Full answer text from the public dashboard, retained as draft wording for co-author review. These are editorial summaries, not new pooled research results.\n\n";
+let q116="# Essential Questions 1 and 13: Full Answer Text\n\nNovember 23, 2026. Full answer text from the public dashboard. These are editorial summaries, not new pooled research results.\n\n";
 for(const n of [1,13]){
  const q=ctx.questions.find(q=>q.n===n);
  q116+=`## Question ${n}: ${q.question}\n\n`;

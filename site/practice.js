@@ -98,6 +98,16 @@ const practiceSources = {
     finding: "Engagement, enjoyment and completion metrics do not demonstrate learning. Recommendation 2 urges off-screen “show me” checks asking whether students can remember, explain and apply concepts after the app is closed, and calls for independent validation showing retention or skill transfer at least one week after use.",
     limits: "Professional-association evidence synthesis rather than a single randomized trial or product certification. Evaluates broad principles of learning science, adult mediation, distraction-free design, subgroup equity and displacement rather than certifying individual products.",
     accessed: "19 November 2026"
+  },
+  bastani2025: {
+    id: "bastani2025", label: "Bastani et al. · 2025",
+    title: "Generative AI without guardrails can harm learning: Evidence from high school mathematics",
+    url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC12232635/",
+    type: "Additional research · peer-reviewed classroom-cluster RCT · PNAS",
+    scope: "Nearly 1,000 high-school math students across about 50 classes (grades 9–11, Turkey; 2,848 student-session observations across four 90-minute sessions).",
+    finding: "Access to an unguarded GPT-4 chatbot (GPT Base) raised assisted practice scores by +48% (+0.137 on a 0–1 scale, SE = 0.031) over textbook/notes control (0.284), but lowered subsequent unaided closed-book exam scores by 17% (−0.054, SE = 0.022, p < 0.05 vs 0.321 control). A teacher-primed scaffolded version (GPT Tutor) raised assisted practice by +127% (+0.361, SE = 0.032) and avoided the harm (−0.004, SE = 0.013, null vs control) without beating standard unaided instruction.",
+    limits: "Four-session high-school math trial, not an elementary or reading study. GPT Base answered practice items accurately only 51% of the time (42% logical errors, 8% arithmetic errors), and students did not perceive their own unaided learning loss.",
+    accessed: "23 November 2026"
   }
 };
 

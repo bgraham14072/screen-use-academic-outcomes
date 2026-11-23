@@ -3,7 +3,7 @@ const originalRegisterSnapshot = JSON.stringify(records);
 const viewNames = ["policy","explorer","wellbeing","emerging","practice","added","reading","analog","reflection","methods","about"];
 const academicScope = "This dashboard focuses on academic outcomes. Health and wellbeing effects are summarized separately on the Wellbeing Context tab and are not part of the numerical evidence register.";
 const publicDashboard = "https://bgraham14072.github.io/screen-use-academic-outcomes/";
-const sourceCategory = id => id==="ran" ? "Review/meta-analysis · peer-reviewed" : id==="oecd" ? "Government/intergovernmental report" : id==="liao" ? "Secondary summary (commissioned government review)" : "Peer-reviewed";
+const sourceCategory = id => (id==="ran"||id==="ma2014") ? "Review/meta-analysis · peer-reviewed" : id==="oecd" ? "Government/intergovernmental report" : id==="liao" ? "Secondary summary (commissioned government review)" : "Peer-reviewed";
 const recordAudit = {
  D2:"Audit clarification: the stored count of 13 studies is derived from 18 minus the five removed studies, not an explicitly printed sensitivity count. The effect and interval are directly reported; sensitivity participant N is NR. Original record preserved.",
  L2:'Audit enrichment, not a change to this record: Table 7 reports a 95% CI of [0.20, 0.38]. The original register’s missing interval is incomplete. <a href="https://link.springer.com/content/pdf/10.1007/s11423-024-10354-0.pdf" target="_blank" rel="noopener">Original publication, Table 7</a>.',

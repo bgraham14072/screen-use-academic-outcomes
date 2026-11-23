@@ -146,10 +146,11 @@ function addedStudyCard(c){
  <div><dt>Limits and disagreement</dt><dd>${prose(c.limits,"limits")}</dd></div></dl>
  <p class="source-line">Source locations: ${c.locator} ${cite}</p>
  ${c.companions?`<p class="source-line">${c.companions.map(([u,l])=>out(u,l)).join(" · ")}</p>`:""}
- <p class="source-line">${c.register?`${rec(c.register,"Inspect the sole numerical register estimate")}; this card adds no second estimate.`:"Narrative only; not a numerical register entry."} Verified ${c.verified||"18 November 2026"}.</p></article>`;
+ <p class="source-line">${c.registers?`${c.registers.map(([id,l])=>rec(id,l)).join(" · ")}; this card adds no separate pooled estimate.`:c.register?`${rec(c.register,"Inspect the sole numerical register estimate")}; this card adds no second estimate.`:"Narrative only; not a numerical register entry."} Verified ${c.verified||"18 November 2026"}.</p></article>`;
 }
 $("#wellbeing").insertAdjacentHTML("beforeend",addedStudies.filter(c=>c.view==="wellbeing").map(addedStudyCard).join(""));
 $("#explorer").insertAdjacentHTML("beforeend",`<section class="policy-section" aria-label="Instructional study context"><h2>Instructional study context</h2><p>Read findings with their comparison, design and limits. Narrative cards do not enter the numerical plots or participant counts.</p>${addedStudies.filter(c=>c.view==="explorer").map(addedStudyCard).join("")}</section>`);
+$("#emerging").insertAdjacentHTML("beforeend",addedStudies.filter(c=>c.view==="emerging").length?`<section class="policy-section" id="emerging-ai-studies" tabindex="-1" aria-label="AI tutoring and human-AI field trials"><h2>AI tutoring and human-AI field trials</h2><p>Peer-reviewed experiments and emerging working papers distinguish scaffolded versus unguarded AI, short university crossover lessons versus multi-year middle-school remediation, and adult-facing co-pilots versus standalone student chatbots. Narrative cards do not enter the numerical register.</p>${addedStudies.filter(c=>c.view==="emerging").map(addedStudyCard).join("")}</section>`:"");
 $("#methods").insertAdjacentHTML("beforeend",'<section class="about-block"><h2>Original-source addition audit</h2><p>The new study cards identify publication status, design, mixed findings and limits. <a href="study-additions-audit.md">Read the study-by-study audit and withheld items</a> or <a href="new-values-ledger.csv" download>download the exact-value ledger</a>.</p></section>');
 renderEssentialQuestions();
 function route(){
@@ -167,7 +168,7 @@ function route(){
   setTab("wellbeing");
   $(`#${hash}`)?.focus({preventScroll:true});
   $(`#${hash}`)?.scrollIntoView({block:"start"});
- }else if(hash==="federal-policy-context"||hash==="nyc-screen-policy"){
+ }else if(hash==="federal-policy-context"||hash==="nyc-screen-policy"||hash==="emerging-ai-studies"){
   if($("#detail").open)$("#detail").close();
   setTab("emerging");
   $(`#${hash}`)?.focus({preventScroll:true});
@@ -177,7 +178,7 @@ function route(){
   setTab("policy");
   $(`#${hash}`)?.focus({preventScroll:true});
   $(`#${hash}`)?.scrollIntoView({block:"start"});
- }else if(hash==="apa-synthesis-methods"){
+ }else if(hash==="apa-synthesis-methods"||hash==="ai-tutoring-packet-methods"){
   if($("#detail").open)$("#detail").close();
   setTab("methods");
   $(`#${hash}`)?.focus({preventScroll:true});

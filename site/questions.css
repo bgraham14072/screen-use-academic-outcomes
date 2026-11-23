@@ -1,5 +1,16 @@
-.questions-entry{display:inline-flex;align-items:center;min-height:44px;margin-bottom:var(--s2);font-size:var(--text-sm);font-weight:700}
-.questions-entry[aria-current="page"]{text-decoration-thickness:2px}
+.questions-entry{display:flex;align-items:center;justify-content:space-between;gap:var(--s5);padding:var(--s4) var(--s5);margin-bottom:var(--s5);background:var(--active-tint);border:1px solid #bddcd3;border-left:5px solid var(--active);border-radius:8px;text-decoration:none;color:var(--ink);box-shadow:0 2px 8px rgba(23,102,87,.07);transition:background-color .15s ease,border-color .15s ease,box-shadow .15s ease,transform .15s ease}
+.questions-entry:hover{text-decoration:none;background:#e3f3ec;border-color:#95c8ba;box-shadow:0 4px 14px rgba(23,102,87,.12);transform:translateY(-1px)}
+.questions-entry-copy{display:flex;flex-direction:column;gap:2px;min-width:0}
+.questions-entry-kicker{font-size:var(--text-xs);font-weight:700;letter-spacing:.09em;color:var(--active)}
+.questions-entry-title{font-size:clamp(1.25rem,1.1rem + .4vw,1.5rem);font-weight:700;line-height:1.2;letter-spacing:-.02em;color:var(--ink)}
+.questions-entry-sub{font-size:var(--text-sm);color:var(--muted);line-height:1.45}
+.questions-entry-cta{flex-shrink:0;display:inline-flex;align-items:center;padding:10px 18px;border-radius:999px;background:var(--active);color:#fff;font-size:var(--text-sm);font-weight:700;white-space:nowrap;transition:background-color .15s ease}
+.questions-entry:hover .questions-entry-cta{background:#115044}
+.questions-entry .cta-active{display:none}
+.questions-entry[aria-current="page"]{box-shadow:none;transform:none}
+.questions-entry[aria-current="page"] .cta-open{display:none}
+.questions-entry[aria-current="page"] .cta-active{display:inline}
+.questions-entry[aria-current="page"] .questions-entry-cta{background:var(--paper);color:var(--active);border:1px solid #95c8ba}
 #questions{padding-top:var(--s6)}
 .questions-heading{display:flex;justify-content:space-between;gap:var(--s6);align-items:center;margin-bottom:var(--s5)}
 .questions-heading h2{margin:var(--s2) 0}
@@ -50,4 +61,4 @@
 .question-group:focus-visible,.question-definitions:focus-visible{outline:3px solid var(--active);outline-offset:4px}
 .evidence-card[id],.reading-record[id],#focus-crosswalk,#research-safeguards{scroll-margin-top:var(--s5)}
 @media(max-width:1000px){.questions-layout{grid-template-columns:1fr}.questions-menu{position:static;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--s3)}.questions-menu>.eyebrow{grid-column:1/-1}.questions-menu .question-methods{margin:0;border:0}.questions-heading{display:block}.questions-policy-link{margin-top:var(--s2)}}
-@media(max-width:700px){.questions-most>div{grid-template-columns:1fr;gap:var(--s3)}.questions-most a+a{padding-top:var(--s3);border-top:1px solid var(--line)}.questions-menu{grid-template-columns:1fr;gap:var(--s1)}.questions-menu>a{padding:var(--s2) var(--s3);background:var(--paper);border:1px solid var(--line);border-radius:3px}.questions-menu .question-methods{padding:var(--s2) 0;background:none}.question-answer summary,.question-body{padding:var(--s4)}.question-evidence-columns,.question-definitions dl{grid-template-columns:1fr}.question-evidence-columns>section+section{border-left:0;border-top:1px solid var(--line);padding:var(--s4) 0 0}.question-meta{display:block}.question-meta>span{display:block}.questions-most{padding:var(--s4)}}
+@media(max-width:700px){.questions-most>div{grid-template-columns:1fr;gap:var(--s3)}.questions-most a+a{padding-top:var(--s3);border-top:1px solid var(--line)}.questions-menu{grid-template-columns:1fr;gap:var(--s1)}.questions-menu>a{padding:var(--s2) var(--s3);background:var(--paper);border:1px solid var(--line);border-radius:3px}.questions-menu .question-methods{padding:var(--s2) 0;background:none}.question-answer summary,.question-body{padding:var(--s4)}.question-evidence-columns,.question-definitions dl{grid-template-columns:1fr}.question-evidence-columns>section+section{border-left:0;border-top:1px solid var(--line);padding:var(--s4) 0 0}.question-meta{display:block}.question-meta>span{display:block}.questions-most{padding:var(--s4)}.questions-entry{flex-direction:column;align-items:flex-start;padding:var(--s4);gap:var(--s3)}}

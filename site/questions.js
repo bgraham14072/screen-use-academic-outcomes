@@ -206,7 +206,7 @@ const questionLink=key=>{
 };
 function renderEssentialQuestions(){
  $("#questions").innerHTML=`
- <div class="questions-heading"><div><div class="eyebrow">ESSENTIAL QUESTIONS</div><h2>Start with a question</h2><p>Explore what the research supports, where it is uncertain, and what that means for a classroom.</p></div><a class="questions-policy-link" href="#policy" data-view="policy">For Policymakers summary →</a></div>
+ <div class="questions-heading"><div><div class="eyebrow">ESSENTIAL QUESTIONS</div><h2>Browse the 13 essential questions</h2><p>Explore what the research supports, where it is uncertain, and what that means for a classroom.</p></div><a class="questions-policy-link" href="#policy" data-view="policy">For Policymakers summary →</a></div>
  <nav class="questions-most" aria-label="Most asked questions"><h3>Most asked</h3><div>${[3,5,8].map(n=>{const q=essentialQuestions[n-1];return `<a href="#${q.id}"><span class="question-number">${n}.</span><span>${esc(q.question)}</span></a>`}).join("")}</div></nav>
  <div class="questions-layout"><nav class="questions-menu" aria-label="Essential Questions topics"><span class="eyebrow">BROWSE BY TOPIC</span>${questionGroups.map(g=>`<a href="#${g.id}">${g.title}</a>`).join("")}<a class="question-methods" href="#answer-confidence">How to read the research labels</a></nav>
  <div class="questions-list">${questionGroups.map((g,i)=>`<section class="question-group" id="${g.id}" tabindex="-1" aria-labelledby="${g.id}-title"><h3 id="${g.id}-title">${g.title}</h3>${essentialQuestions.filter(q=>q.group===i).map(q=>`
